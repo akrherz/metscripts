@@ -431,7 +431,7 @@ GDATTIM	= f06-f48-06
 
 GLEVEL	= 250  
 GVCORD	= pres !pres  !pres
-GFUNC	= sped !hght  !sm9s(sm9s(div(wnd)))
+GFUNC	= sped !hght  !sm9s(sm9s(sm9s(div(wnd))))
 GVECT	= ! !
 CINT	= 10;20;30;40;50;60;70;80;90! 120 !2
 LINE	= 7/5/1/2           !31/1/2/2  !29/1/1/1
@@ -488,7 +488,7 @@ GDATTIM	= f60-f120-12
 
 GLEVEL	= 250  
 GVCORD	= pres !pres  !pres
-GFUNC	= sped !hght  !sm9s(sm9s(div(wnd)))
+GFUNC	= sped !hght  !sm9s(sm9s(sm9s(div(wnd))))
 GVECT	= ! !
 CINT	= 10;20;30;40;50;60;70;80;90! 120 !2
 LINE	= 7/5/1/2           !31/1/2/2  !29/1/1/1
