@@ -12,11 +12,16 @@ def main(argv):
     interval = datetime.timedelta(hours=1)
     now = sts
     while now < ets:
-        fn = now.strftime((".../%Y/%m/%d/mrms/ncep/RadarOnly_QPE_01H/"
-                          "RadarOnly_QPE_01H_00.00_%Y%m%d-%H0000.grib2.gz"))
+        fn = now.strftime(
+            (
+                ".../%Y/%m/%d/mrms/ncep/RadarOnly_QPE_01H/"
+                "RadarOnly_QPE_01H_00.00_%Y%m%d-%H0000.grib2.gz"
+            )
+        )
         if not os.path.isfile(fn):
             print("Missing: %s" % (fn.split("/")[-1],))
         now += interval
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main(sys.argv)

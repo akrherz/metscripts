@@ -21,7 +21,7 @@ def dodate(date):
             continue
         files.sort()
         content = "\n".join([fn for fn in files if fn != INDEXFN])
-        output = open("%s/%s" % (root, INDEXFN), 'w')
+        output = open("%s/%s" % (root, INDEXFN), "w")
         output.write(content)
         output.close()
 
@@ -32,9 +32,9 @@ def main(argv):
         valid = datetime.datetime.utcnow() - datetime.timedelta(minutes=90)
     else:
         valid = datetime.datetime(int(argv[1]), int(argv[2]), int(argv[3]))
-        print("Manual run for: %s" % (valid.date(), ))
+        print("Manual run for: %s" % (valid.date(),))
     dodate(valid.date())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(sys.argv)

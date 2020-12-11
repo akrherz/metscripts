@@ -8,7 +8,7 @@ data_dest = "/mnt/archivewx/data/"
 
 def main():
     now = time.time()
-    now = now - 2*86400
+    now = now - 2 * 86400
     now_tuple = time.localtime(now)
 
     filename = time.strftime("Severe.%d", now_tuple)
@@ -17,9 +17,14 @@ def main():
     new_filename2 = time.strftime("pub%Y_%m_%d.txt", now_tuple)
     dirname = time.strftime("%Y_%m_%d/", now_tuple)
 
-    os.system("cp "+svr_orig+filename+" "+data_dest+dirname+new_filename+" ")
+    os.system(
+        "cp " + svr_orig + filename + " " + data_dest + dirname + new_filename + " "
+    )
 
-    os.system("cp "+pub_orig+filename2+" "+data_dest+dirname+new_filename2+" ")
+    os.system(
+        "cp " + pub_orig + filename2 + " " + data_dest + dirname + new_filename2 + " "
+    )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
