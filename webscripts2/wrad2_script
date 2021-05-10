@@ -8,7 +8,7 @@
 source ~/webscripts/COMMON
 
 #
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/N0R
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/N0Q
 if ( ! -e ${DATA_DIR} ) then
 	exit
 endif
