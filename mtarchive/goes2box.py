@@ -10,7 +10,7 @@ from pyiem.util import logger
 
 LOG = logger()
 TMPDIR = "/isu/mtarchive/tmp"
-ARCHIVE = "https://drive.google.com/drive/folders/1CaKEmYK5UBio7iro_6JjiLOFJiPvBLaj"
+ARCHIVE = "https://iastate.box.com/s/yyxa7bbyofebhjmqnn7zp29qqvmylk4j"
 
 
 def run(bird, dt, offset, sector):
@@ -51,7 +51,7 @@ def run(bird, dt, offset, sector):
             )
         zips.append(zipfn)
     with open("HEADER.html", "w") as fh:
-        fh.write(f'{sector} imagery found <a href="{ARCHIVE}">on Google Drive</a>')
+        fh.write(f'{sector} imagery found <a href="{ARCHIVE}">on CyBox</a>')
     if not zips:
         return
     os.chdir(TMPDIR)
