@@ -18,26 +18,28 @@ def do(mydir, reporterror=True):
         if reporterror:
             LOG.info("Wanted to upload dir %s, but not found?!?", mydir)
         return
-    zipfn = "%s.zip" % (mydir,)
+    zipfn = f"{mydir}.zip"
     if os.path.isfile(zipfn):
         os.unlink(zipfn)
-    subprocess.call("zip -r -q %s %s" % (zipfn, mydir), shell=True)
+    subprocess.call(f"zip -r -q {zipfn} {mydir}", shell=True)
 
     # Send to metvm0 for caching
-    remotepath = "/export/mrms/%s/%s/%s" % (mydir[:4], mydir[4:6], mydir[6:8])
+    remotepath = f"/export/mrms/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
-        'rsync -a --rsync-path="mkdir -p %s && rsync" ' "%s meteor_ldm@192.168.0.200:%s"
-    ) % (remotepath, zipfn, remotepath)
+        f'rsync -a --rsync-path="mkdir -p {remotepath} && rsync" '
+        f"{zipfn} meteor_ldm@192.168.0.208:{remotepath}"
+    )
     subprocess.call(cmd, shell=True)
 
     # Send to metl60 en-route for Google Drive
-    remotepath = "/stage/MRMS/%s/%s/%s" % (mydir[:4], mydir[4:6], mydir[6:8])
+    remotepath = f"/stage/MRMS/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
-        'rsync -a --remove-source-files --rsync-path="mkdir -p %s && rsync" '
-        "%s meteor_ldm@metl60.agron.iastate.edu:%s"
-    ) % (remotepath, zipfn, remotepath)
+        "rsync -a --remove-source-files "
+        f'--rsync-path="mkdir -p {remotepath} && rsync" '
+        f"{zipfn} meteor_ldm@metl60.agron.iastate.edu:{remotepath}"
+    )
     subprocess.call(cmd, shell=True)
-    subprocess.call("rm -rf %s" % (mydir,), shell=True)
+    subprocess.call(f"rm -rf {mydir}", shell=True)
 
 
 def main(argv):
