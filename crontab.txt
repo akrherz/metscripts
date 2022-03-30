@@ -6,6 +6,9 @@ PROJDIR="projects/metscripts"
 1,11-60/5 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh
 6 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh save
 
+12 12 * * * python $PROJDIR/mtarchive/archive_awc.py
+13 13 * * * python $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
+
 50 * * * * python $PROJDIR/archivewx/Every3.py
 15 18 * * * python $PROJDIR/archivewx/getRadar.py
 10 5 * * * python $PROJDIR/archivewx/mk_dir.py
