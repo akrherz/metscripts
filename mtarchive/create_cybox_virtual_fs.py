@@ -23,7 +23,7 @@ FILENAME_RE = re.compile(r"^\d{10}\.zip$")
 MTARCHIVE_PATH = "/isu/mtarchive/data"
 
 # Need to adjust the boxsdk default logging level
-logging.getLogger("boxsdk").setLevel(logging.INFO)
+logging.getLogger("boxsdk").setLevel(logging.WARNING)
 
 
 def store_tokens_cb(access_token, refresh_token):
