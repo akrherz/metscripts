@@ -35,6 +35,27 @@ def store_tokens_cb(access_token, refresh_token):
         json.dump(data, fh)
 
 
+def walk(client, folder, dirpath):
+    """Walk the directory tree."""
+    items = client.folder(folder_id=folder).get_items(limit=1000)
+    for item in items:
+        if item.type == "file":
+            item.dirpath = dirpath
+            yield item
+        elif item.type == "folder":
+            yield from walk(client, item.id, os.path.join(dirpath, item.name))
+
+
+def find_in_folder(client, baseid, lookfor):
+    """Walk the directory tree."""
+    items = client.folder(folder_id=baseid).get_items(limit=1000)
+    for item in items:
+        if item.name == lookfor:
+            return item.id
+    LOG.info("Failed to find %s in %s, aborting", lookfor, baseid)
+    sys.exit()
+
+
 def main(argv):
     """Go Main."""
     dt = datetime.date(int(argv[1]), int(argv[2]), int(argv[3]))
@@ -52,22 +73,19 @@ def main(argv):
     )
 
     client = boxsdk.Client(oauth)
-    # Search for a filename within the MRMS folder
-    items = client.search().query(
-        ancestor_folder_ids=154472948128,
-        content_types="name",
-        query=f'"{dt:%Y%m%d}"',
-        type="file",
-    )
+    # Searching is not working as not all files are returned for sad reasons
+    # So we must do some manual walking
+    folder = find_in_folder(client, 0, "mtarchive")
+    folder = find_in_folder(client, folder, f"{dt.year}")
+    folder = find_in_folder(client, folder, f"{dt:%m}")
+    folder = find_in_folder(client, folder, f"{dt:%d}")
+    folder = find_in_folder(client, folder, "cod")
+    folder = find_in_folder(client, folder, "sat")
+    dirpath = f"{dt:%Y/%m/%d}/cod/sat"
+    items = list(walk(client, folder, dirpath))
     for item in items:
         filename = item.name
-        pc = item.path_collection
-        # Should always have at least 5 paths
-        if pc["total_count"] < 5:
-            LOG.warning("Got <5 length path to: %s", filename)
-            continue
-        dirpath = os.path.join(*[a.name for a in pc["entries"][2:]])
-        dirpath = f"{MTARCHIVE_PATH}/{dirpath}"
+        dirpath = f"{MTARCHIVE_PATH}/{item.dirpath}"
         os.makedirs(dirpath, exist_ok=True)
         localfn = os.path.join(dirpath, filename)
         if os.path.isfile(localfn):

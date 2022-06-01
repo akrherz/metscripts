@@ -32,6 +32,16 @@ def store_tokens_cb(access_token, refresh_token):
         json.dump(data, fh)
 
 
+def find_in_folder(client, baseid, lookfor):
+    """Walk the directory tree."""
+    items = client.folder(folder_id=baseid).get_items(limit=1000)
+    for item in items:
+        if item.name == lookfor:
+            return item.id
+    LOG.info("Failed to find %s in %s, aborting", lookfor, baseid)
+    sys.exit()
+
+
 def main(argv):
     """Go Main."""
     dt = datetime.date(int(argv[1]), int(argv[2]), int(argv[3]))
@@ -49,13 +59,13 @@ def main(argv):
     )
 
     client = boxsdk.Client(oauth)
-    # Search for a filename within the MRMS folder
-    items = client.search().query(
-        ancestor_folder_ids=154474545014,
-        content_types="name",
-        query=f'"{dt:%Y%m%d}"',
-        type="file",
-    )
+    # Found out that searching is fickle as Box's search index is not updated
+    # or in some corrupted state, so we need to manually walk the directory
+    folder = find_in_folder(client, 0, "MRMS")
+    folder = find_in_folder(client, folder, f"{dt.year}")
+    folder = find_in_folder(client, folder, f"{dt:%m}")
+    folder = find_in_folder(client, folder, f"{dt:%d}")
+    items = client.folder(folder_id=folder).get_items()
     for item in items:
         filename = item.name
         if FILENAME_RE.match(filename) is None:
