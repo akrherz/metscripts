@@ -20,6 +20,7 @@ from pyiem.util import get_properties, logger
 LOG = logger()
 FILENAME_RE = re.compile(r"^\d{10}\.zip$")
 MRMS_PATH = "/mnt/mrms"
+TOKEN_PATH = "/home/meteor_ldm/projects/metscripts/mtarchive/cybox.json"
 
 
 def store_tokens_cb(access_token, refresh_token):
@@ -27,7 +28,7 @@ def store_tokens_cb(access_token, refresh_token):
     LOG.info("Saving tokens")
     data = {"access_token": access_token, "refresh_token": refresh_token}
     # Write this json to file
-    with open("cybox.json", "w", encoding="utf-8") as fh:
+    with open(TOKEN_PATH, "w", encoding="utf-8") as fh:
         json.dump(data, fh)
 
 
@@ -36,7 +37,7 @@ def main(argv):
     dt = datetime.date(int(argv[1]), int(argv[2]), int(argv[3]))
     LOG.info("Running for %s", dt)
     props = get_properties()
-    with open("cybox.json", encoding="utf-8") as fh:
+    with open(TOKEN_PATH, encoding="utf-8") as fh:
         data = json.load(fh)
     # Get the Box oauth
     oauth = boxsdk.OAuth2(
