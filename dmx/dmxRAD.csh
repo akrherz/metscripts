@@ -13,7 +13,7 @@ setenv ARCHIVE $ARCHIVE/${YY}_${mm}_${dd}/
 setenv TIMESTAMP ${yy}${mm}${dd}${hh}
 
 
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/N0Q
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/N0B
 setenv LOGFILE 	www_rad.log
 
 set device="GF|dmxRAD.gif"
