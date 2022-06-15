@@ -14,6 +14,7 @@ import requests
 
 PQINSERT = "/home/meteor_ldm/bin/pqinsert"
 BASE = "/isu/mtarchive/data"
+M30 = datetime.timedelta(minutes=30)
 M60 = datetime.timedelta(minutes=60)
 M2 = datetime.timedelta(minutes=2)
 M10 = datetime.timedelta(minutes=10)
@@ -28,6 +29,7 @@ PRODS = {
     "RadarOnly_QPE_01H": M60,
     "RadarOnly_QPE_24H": M60,
     "RadarOnly_QPE_72H": M60,
+    "MESH_Max_1440min": M30,
     "SeamlessHSR": M2,
 }
 FLASH_PRODS = {
@@ -69,27 +71,27 @@ def fetch(prod, now, extra, level):
 
         try:
             res = requests.get(uri, timeout=60)
-        except requests.exceptions.ReadTimeout as _exp:
-            print("Read timeout on %s %s" % (uri, _exp))
+        except requests.exceptions.ReadTimeout as exp:
+            print(f"Read timeout on {uri} {exp}")
             continue
-        except requests.exceptions.ConnectionError as _exp:
-            print("Error for %s %s" % (uri, _exp))
+        except requests.exceptions.ConnectionError as exp:
+            print(f"Error for {uri} {exp}")
             continue
         if res.status_code == 200:
             if is_gzipped(res.content):
                 print(
-                    "LDM miss %s %s, fix by HTTP %s server"
-                    % (prod, now.strftime("%Y-%m-%dT%H:%MZ"), center)
+                    f"LDM miss {prod} {now:%Y-%m-%dT%H:%MZ}, "
+                    f"fix by HTTP {center} server"
                 )
                 break
             print(
-                "----> Not gzipped res from %s for %s %s"
-                % (center, prod, now.strftime("%Y-%m-%dT%H:%MZ"))
+                f"----> Not gzipped res from {center} for {prod} "
+                f"{now:%Y-%m-%dT%H:%MZ}"
             )
         if center == "bldr":
             print(
-                ("----> LDM miss %s %s and missing on both HTTP websites")
-                % (prod, now.strftime("%Y-%m-%dT%H:%MZ"))
+                f"----> LDM miss {prod} {now:%Y-%m-%dT%H:%MZ} "
+                "and missing on both HTTP websites"
             )
             return
 
@@ -98,18 +100,10 @@ def fetch(prod, now, extra, level):
     os.close(tmpfd)
 
     pattern = now.strftime(
-        (
-            "/data/realtime/outgoing/grib2/CONUS/"
-            + "MRMS_"
-            + extra2
-            + prod
-            + "_"
-            + level
-            + "_"
-            + "%Y%m%d-%H%M%S.grib2.gz"
-        )
+        f"/data/realtime/outgoing/grib2/CONUS/MRMS_{extra2}{prod}_{level}"
+        "_%Y%m%d-%H%M%S.grib2.gz"
     )
-    cmd = "%s -p '%s' %s" % (PQINSERT, pattern, tmpfn)
+    cmd = f"{PQINSERT} -p '{pattern}' {tmpfn}"
     subprocess.call(cmd, shell=True)
     os.remove(tmpfn)
 
@@ -117,20 +111,11 @@ def fetch(prod, now, extra, level):
 def workflow(prod, sts, ets, extra):
     """Process this stuff now!"""
     now = sts
-    level = "00.50" if prod == "MESH" else "00.00"
+    level = "00.50" if prod.startswith("MESH") else "00.00"
     while now < ets:
         fn = now.strftime(
-            (
-                BASE
-                + "/%Y/%m/%d/mrms/ncep/"
-                + extra
-                + prod
-                + "/"
-                + prod
-                + "_"
-                + level
-                + "_%Y%m%d-%H%M%S.grib2.gz"
-            )
+            f"{BASE}/%Y/%m/%d/mrms/ncep/{extra}{prod}/{prod}_{level}"
+            "_%Y%m%d-%H%M%S.grib2.gz"
         )
         if not os.path.isfile(fn):
             fetch(prod, now, extra, level)
