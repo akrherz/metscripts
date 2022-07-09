@@ -12,9 +12,13 @@ def main():
     for i in range(24):
         i = ("0" + str(i))[-2:]
         timestamp = time.strftime("nowrad%y%m%d" + i + ".gif", gmtNow_tuple)
-        getFile = time.strftime("%Y/%m/%Y%m%d_" + i + "00_nowrad.gif", gmtNow_tuple)
+        getFile = time.strftime(
+            "%Y/%m/%Y%m%d_" + i + "00_nowrad.gif", gmtNow_tuple
+        )
 
-        remoteURL = "http://www.ncdc.noaa.gov/pub/data/nexrad/natcompnew/" + getFile
+        remoteURL = (
+            "http://www.ncdc.noaa.gov/pub/data/nexrad/natcompnew/" + getFile
+        )
         localFile = dataDir + timestamp
 
         urllib.urlretrieve(remoteURL, localFile)

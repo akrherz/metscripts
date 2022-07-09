@@ -18,7 +18,10 @@ def run(date):
     os.chdir("/data/tmp")
     tarfn = date.strftime("mtarchive_%Y%m%d.tgz")
     # Step 1: Create a gzipped tar file
-    cmd = "tar -czf %s /mnt/mtarchive/data/%s" % (tarfn, date.strftime("%Y/%m/%d"))
+    cmd = "tar -czf %s /mnt/mtarchive/data/%s" % (
+        tarfn,
+        date.strftime("%Y/%m/%d"),
+    )
     LOG.debug(cmd)
     subprocess.call(cmd, shell=True, stderr=subprocess.PIPE)
     sz = Path(tarfn).stat().st_size

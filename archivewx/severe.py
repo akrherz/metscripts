@@ -18,11 +18,25 @@ def main():
     dirname = time.strftime("%Y_%m_%d/", now_tuple)
 
     os.system(
-        "cp " + svr_orig + filename + " " + data_dest + dirname + new_filename + " "
+        "cp "
+        + svr_orig
+        + filename
+        + " "
+        + data_dest
+        + dirname
+        + new_filename
+        + " "
     )
 
     os.system(
-        "cp " + pub_orig + filename2 + " " + data_dest + dirname + new_filename2 + " "
+        "cp "
+        + pub_orig
+        + filename2
+        + " "
+        + data_dest
+        + dirname
+        + new_filename2
+        + " "
     )
 
 

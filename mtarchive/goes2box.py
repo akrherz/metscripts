@@ -30,7 +30,12 @@ def run(bird, dt, offset, sector):
     for dirname in os.listdir("."):
         if dirname == "HEADER.html":
             continue
-        zipfn = "goes%s_%s_%s_%s.zip" % (bird, sector, dirname, dt.strftime("%Y%m%d"))
+        zipfn = "goes%s_%s_%s_%s.zip" % (
+            bird,
+            sector,
+            dirname,
+            dt.strftime("%Y%m%d"),
+        )
         LOG.debug("creating %s", zipfn)
         proc = subprocess.Popen(
             "zip -q -r %s/%s %s" % (TMPDIR, zipfn, dirname),
