@@ -108,10 +108,6 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	exit
 EOF
 
-
-cp ${OUTPUT0} ${ARCHIVE2}/temp${TIMESTAMP}.gif
-
-
 # Surface Temps and Winds for MidWest
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -192,10 +188,6 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	exit
 EOF
 
-
-cp ${OUTPUT1} ${ARCHIVE2}/dew${TIMESTAMP}.gif
-
-
 # Mid West Dew Points
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -269,9 +261,6 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
 	exit
 EOF
-
-
-cp ${OUTPUT2} ${ARCHIVE2}/moist${TIMESTAMP}.gif
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GLEVEL   = 0

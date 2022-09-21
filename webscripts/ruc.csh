@@ -46,17 +46,11 @@ EOF
 #
 
 if (-e ruc1.gif) then
-  cp ruc1.gif $CURRENT/rucTHKF00.gif
-  cp ruc1.gif.001 $CURRENT/rucTHKF03.gif
-  cp ruc1.gif.002 $CURRENT/rucTHKF06.gif
-  cp ruc1.gif.003 $CURRENT/rucTHKF09.gif
-  cp ruc1.gif.004 $CURRENT/rucTHKF12.gif
-
-  mv ruc1.gif ${ARCHIVE2}/rucTHK${date}${1}F00.gif
-  mv ruc1.gif.001 ${ARCHIVE2}/rucTHK${date}${1}F03.gif
-  mv ruc1.gif.002 ${ARCHIVE2}/rucTHK${date}${1}F06.gif
-  mv ruc1.gif.003 ${ARCHIVE2}/rucTHK${date}${1}F09.gif
-  mv ruc1.gif.004 ${ARCHIVE2}/rucTHK${date}${1}F12.gif
+  mv ruc1.gif $CURRENT/rucTHKF00.gif
+  mv ruc1.gif.001 $CURRENT/rucTHKF03.gif
+  mv ruc1.gif.002 $CURRENT/rucTHKF06.gif
+  mv ruc1.gif.003 $CURRENT/rucTHKF09.gif
+  mv ruc1.gif.004 $CURRENT/rucTHKF12.gif
 endif
 
 #
@@ -93,12 +87,6 @@ EOF
 #
 
 if (-e ruc2.gif) then
-  cp ruc2.gif ${ARCHIVE2}/rucVORT${date}${1}F00.gif
-  cp ruc2.gif.001 ${ARCHIVE2}/rucVORT${date}${1}F03.gif
-  cp ruc2.gif.002 ${ARCHIVE2}/rucVORT${date}${1}F06.gif
-  cp ruc2.gif.003 ${ARCHIVE2}/rucVORT${date}${1}F09.gif
-  cp ruc2.gif.004 ${ARCHIVE2}/rucVORT${date}${1}F12.gif
-
   mv ruc2.gif $CURRENT/rucVORTF00.gif
   mv ruc2.gif.001 $CURRENT/rucVORTF03.gif
   mv ruc2.gif.002 $CURRENT/rucVORTF06.gif
@@ -138,15 +126,11 @@ EOF
 
 
 if (-e ruc3.gif) then
-  cp ruc3.gif.002 $CURRENT/rucPRECF03.gif
-  cp ruc3.gif.005 $CURRENT/rucPRECF06.gif
-  cp ruc3.gif.008 $CURRENT/rucPRECF09.gif
-  cp ruc3.gif.011 $CURRENT/rucPRECF12.gif
+  mv ruc3.gif.002 $CURRENT/rucPRECF03.gif
+  mv ruc3.gif.005 $CURRENT/rucPRECF06.gif
+  mv ruc3.gif.008 $CURRENT/rucPRECF09.gif
+  mv ruc3.gif.011 $CURRENT/rucPRECF12.gif
 
-  mv ruc3.gif.002 ${ARCHIVE2}/rucPREC${date}${1}F03.gif
-  mv ruc3.gif.006 ${ARCHIVE2}/rucPREC${date}${1}F06.gif
-  mv ruc3.gif.008 ${ARCHIVE2}/rucPREC${date}${1}F09.gif
-  mv ruc3.gif.011 ${ARCHIVE2}/rucPREC${date}${1}F12.gif
   rm -f ruc3.gif*
 endif
 
@@ -199,17 +183,11 @@ EOF
 # Copy ps.plt to different name for ruc model
 
 if (-e ruc4.gif) then
-  cp ruc4.gif $CURRENT/ruc85PF00.gif
-  cp ruc4.gif.001 $CURRENT/ruc85PF03.gif
-  cp ruc4.gif.002 $CURRENT/ruc85PF06.gif
-  cp ruc4.gif.003 $CURRENT/ruc85PF09.gif
-  cp ruc4.gif.004 $CURRENT/ruc85PF12.gif
-
-  mv ruc4.gif ${ARCHIVE2}/ruc85P${date}${1}F00.gif
-  mv ruc4.gif.001 ${ARCHIVE2}/ruc85P${date}${1}F03.gif
-  mv ruc4.gif.002 ${ARCHIVE2}/ruc85P${date}${1}F06.gif
-  mv ruc4.gif.003 ${ARCHIVE2}/ruc85P${date}${1}F09.gif
-  mv ruc4.gif.004 ${ARCHIVE2}/ruc85P${date}${1}F12.gif
+  mv ruc4.gif $CURRENT/ruc85PF00.gif
+  mv ruc4.gif.001 $CURRENT/ruc85PF03.gif
+  mv ruc4.gif.002 $CURRENT/ruc85PF06.gif
+  mv ruc4.gif.003 $CURRENT/ruc85PF09.gif
+  mv ruc4.gif.004 $CURRENT/ruc85PF12.gif
 endif
 
 
@@ -249,12 +227,6 @@ EOF
 # Run GPEND to clean up
 #
 if (-e ruc5.gif) then
-  cp ruc5.gif ${ARCHIVE2}/ruc70P${date}${1}F00.gif
-  cp ruc5.gif.001 ${ARCHIVE2}/ruc70P${date}${1}F03.gif
-  cp ruc5.gif.002 ${ARCHIVE2}/ruc70P${date}${1}F06.gif
-  cp ruc5.gif.003 ${ARCHIVE2}/ruc70P${date}${1}F09.gif
-  cp ruc5.gif.004 ${ARCHIVE2}/ruc70P${date}${1}F12.gif
-
   mv ruc5.gif $CURRENT/ruc70PF00.gif
   mv ruc5.gif.001 $CURRENT/ruc70PF03.gif
   mv ruc5.gif.002 $CURRENT/ruc70PF06.gif
@@ -297,17 +269,12 @@ EOF
 # Copy ps.plt to different name for eta model
 
 if (-e ruc6.gif) then 
-  cp ruc6.gif $CURRENT/ruc25PF00.gif
-  cp ruc6.gif.001 $CURRENT/ruc25PF03.gif
-  cp ruc6.gif.002 $CURRENT/ruc25PF06.gif
-  cp ruc6.gif.003 $CURRENT/ruc25PF09.gif
-  cp ruc6.gif.004 $CURRENT/ruc25PF12.gif
+  mv ruc6.gif $CURRENT/ruc25PF00.gif
+  mv ruc6.gif.001 $CURRENT/ruc25PF03.gif
+  mv ruc6.gif.002 $CURRENT/ruc25PF06.gif
+  mv ruc6.gif.003 $CURRENT/ruc25PF09.gif
+  mv ruc6.gif.004 $CURRENT/ruc25PF12.gif
 
-  mv ruc6.gif ${ARCHIVE2}/ruc25P${date}${1}F00.gif
-  mv ruc6.gif.001 ${ARCHIVE2}/ruc25P${date}${1}F03.gif
-  mv ruc6.gif.002 ${ARCHIVE2}/ruc25P${date}${1}F06.gif
-  mv ruc6.gif.003 ${ARCHIVE2}/ruc25P${date}${1}F09.gif
-  mv ruc6.gif.004 ${ARCHIVE2}/ruc25P${date}${1}F12.gif
 endif
 
 #
@@ -364,15 +331,9 @@ EOF
 #
 # Copy images to different name for eta model
 if (-e ruc7.gif) then
-  cp ruc7.gif $CURRENT/rucTEMPF00.gif
-  cp ruc7.gif.001 $CURRENT/rucTEMPF03.gif
-  cp ruc7.gif.002 $CURRENT/rucTEMPF06.gif
-  cp ruc7.gif.003 $CURRENT/rucTEMPF09.gif
-  cp ruc7.gif.004 $CURRENT/rucTEMPF12.gif
-
-  mv ruc7.gif ${ARCHIVE2}/rucTEMP${date}${1}F00.gif
-  mv ruc7.gif.001 ${ARCHIVE2}/rucTEMP${date}${1}F03.gif
-  mv ruc7.gif.002 ${ARCHIVE2}/rucTEMP${date}${1}F06.gif
-  mv ruc7.gif.003 ${ARCHIVE2}/rucTEMP${date}${1}F09.gif
-  mv ruc7.gif.004 ${ARCHIVE2}/rucTEMP${date}${1}F12.gif
+  mv ruc7.gif $CURRENT/rucTEMPF00.gif
+  mv ruc7.gif.001 $CURRENT/rucTEMPF03.gif
+  mv ruc7.gif.002 $CURRENT/rucTEMPF06.gif
+  mv ruc7.gif.003 $CURRENT/rucTEMPF09.gif
+  mv ruc7.gif.004 $CURRENT/rucTEMPF12.gif
 endif

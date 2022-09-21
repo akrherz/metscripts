@@ -42,5 +42,4 @@ end
 
 cd ~/projects/metscripts/webscripts
 
-cp zonalWind.gif ${ARCHIVE2}/zonalWind${date}${1}.gif
 mv zonalWind.gif $CURRENT/zonalWind_0.gif

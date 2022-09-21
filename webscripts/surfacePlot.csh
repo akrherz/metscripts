@@ -37,11 +37,6 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
 	exit
 EOF
 
-#
-# Run GPEND to clean up
-#
-
-cp ${OUTPUT0} ${ARCHIVE2}/sfcPLOT${TIMESTAMP}.gif
 
 $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 	DEVICE	= GF|${OUTPUT05}|720;540
@@ -74,8 +69,8 @@ EOF
 cd $CURRENT
 
 foreach num (4 3 2 1)
-	mv ${num}${OUTPUT0} `echo ${num} + 1 | bc`${OUTPUT0}
-        mv ${num}${OUTPUT05} `echo ${num} + 1 | bc`${OUTPUT05}
+    mv ${num}${OUTPUT0} `echo ${num} + 1 | bc`${OUTPUT0}
+    mv ${num}${OUTPUT05} `echo ${num} + 1 | bc`${OUTPUT05}
 end
 
 mv ${OUTPUT0}  1${OUTPUT0}

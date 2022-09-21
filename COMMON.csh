@@ -23,6 +23,3 @@ set DATE2 = `date -u +%Y/%m/%d`
 set hh=`date -u +%H`
 set ddir2 = ${ddir}${DATE2}
 setenv TIMESTAMP ${yy}${mm}${dd}${hh}
-
-
-setenv ARCHIVE2 /mnt/archivewx/data/${yyyy}_${mm}_${dd}/

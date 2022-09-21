@@ -5,7 +5,7 @@ setenv LOGFILE  logs/www_lap.log
 set grid=${MODEL}/nam/${DATE}${1}_nam212.gem
 set grid1=${MODEL}/nam/${DATE}${1}_nam211.gem
 
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+$GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
         GDFILE  = $grid
         GDATTIM = f00

@@ -9,23 +9,24 @@ PROJDIR="projects/metscripts"
 12 12 * * * python $PROJDIR/mtarchive/archive_awc.py
 13 13 * * * python $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
 
-50 * * * * python $PROJDIR/archivewx/Every3.py
-15 18 * * * python $PROJDIR/archivewx/getRadar.py
-10 5 * * * python $PROJDIR/archivewx/mk_dir.py
-10 11 * * * python $PROJDIR/archivewx/severe.py
-
-00 8 * * * cd $PROJDIR/webscripts ; csh gem_scripts.csh 1
-10 8 * * * cd $PROJDIR/webscripts ; csh get_text.csh 1
-
-40 13 * * * cd $PROJDIR/newdifax2; csh get_difax.csh 12
-40 1  * * * cd $PROJDIR/newdifax2; csh get_difax.csh 00
-30 0-23/3 * * * cd $PROJDIR/newdifax2; csh get_difax.csh 03
-
+# Create directories to populate data into
 05 00 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
 
+# Copy some realtime data into /mnt/mtarchive
+00 8 * * * cd $PROJDIR/webscripts ; csh gem_scripts.csh 1
+
+# Copy some text data into /mnt/mtarchive
+10 8 * * * cd $PROJDIR/webscripts ; csh get_text.csh 1
+
+# Get a legacy DIFAX image
+40 13 * * * cd $PROJDIR/newdifax2; csh get_difax.csh 12
+40 1  * * * cd $PROJDIR/newdifax2; csh get_difax.csh 00
+
+# NAM stuff
 01 04 * * * cd $PROJDIR/webscripts2; csh wlapse_script.csh 00
 01 15 * * * cd $PROJDIR/webscripts2; csh wlapse_script.csh 12
 
+# GFS MOS
 55 04 * * * cd $PROJDIR/webscripts2; csh wmos_gfs00_script.csh 00
 55 16 * * * cd $PROJDIR/webscripts2; csh wmos_gfs12_script.csh 12
 
@@ -115,5 +116,3 @@ PROJDIR="projects/metscripts"
 15 17 * * * cd $PROJDIR/webscripts; csh upperAir.csh 12 
 15 08 * * * cd $PROJDIR/webscripts; csh hemis.csh 00 
 16 08 * * * cd $PROJDIR/webscripts; csh zonalWind.csh 00 
-
-50 * * * * cd $PROJDIR/scripts; csh hourly_down.csh

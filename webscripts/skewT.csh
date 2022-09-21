@@ -8,7 +8,6 @@ setenv DEVICE GF\|${IMAGE}\|720\;540
 setenv DATA_DIR	/data/gempak/upperair
 
 setenv OUTFILE1 $CURRENT/skew/skew${2}.gif
-setenv OUTFILE2 ${ARCHIVE2}/skew/skew${2}${TIMESTAMP}.gif
 
 set grid=${DATA_DIR}/${DATE}_upa.gem
 
@@ -45,6 +44,5 @@ $GEMEXE/snprof_gf << EOF > logs/skewT_${1}_${2}.log
 EOF
 
 if (-e ${IMAGE} ) then
-  cp ${IMAGE} ${OUTFILE1}
-  mv ${IMAGE} ${OUTFILE2}
+    mv ${IMAGE} ${OUTFILE1}
 endif

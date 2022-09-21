@@ -1,9 +1,1 @@
-QTTA01.TIF MinT.gif          Minimum temperatures at 1200 UTC
-QETA00.TIF Prec24hr.gif      24 hour precipitation ending at 0000 UTC
-QSTA00.TIF snowcover.gif     Snow cover
-QHUA04.TIF 850mb.gif         850 mb analysis
-QHTA07.TIF 700mb.gif         700 mb analysis
-QHTA11.TIF 500mb.gif         500 mb analysis
-QHUA15.TIF 300mb.gif         300 mb analysis
-QHUA17.TIF 200mb.gif         200 mb analysis
 PGBE99.TIF sfcprog12-24.gif  12-24 hour forecast

@@ -17,7 +17,7 @@ endif
 
 
 ##################################
-#  ETA EMSLP and 500 hPa Thickness
+#  NAM EMSLP and 500 hPa Thickness
 
 $GEMEXE/gdplot_gf << EOF > $LOGFILE
 
@@ -42,7 +42,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 	CINT	= 6                         ! 4
 	LINE	= 3/3/1                     ! 20//2
 	GVECT	=
-	TITLE	= 5/-2/~ ETA  MSL PRESSURE, 1000-500 MB THICKNESS
+	TITLE	= 5/-2/~ NAM MSL PRESSURE, 1000-500 MB THICKNESS
 	SKIP	= 1
 	FINT	=
 	FLINE	=
@@ -64,7 +64,7 @@ endif
 
 
 ###############################################
-# ETA 500 hPa heights and vort
+# NAM 500 hPa heights and vort
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -80,7 +80,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	LINE	= 7/5/1/2               !4/5/1/2               !19/1/2/1
 	HILO	= 2;6/X;N/10-99;10-99   !
 	SCALE	= 5                     !5                     ! -1
-	TITLE	= 5/-2/~ ETA  500 HEIGHTS AND VORTICITY
+	TITLE	= 5/-2/~ NAM 500 HEIGHTS AND VORTICITY
 	PROJ	= lcc/25;-95;25/1,3,0,0
 	FINT	= 16;20;24;28;32;36;40;44
 	FLINE	= 0;23-15
@@ -99,7 +99,7 @@ if (-e eta1.gif) then
 endif
 
 ############################################
-# ETA 6 hr Precip, EMSLP, 700 w
+# NAM 6 hr Precip, EMSLP, 700 w
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -112,7 +112,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GVECT	=
 	CINT	= /.1/.1!0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0!4!4
 	LINE	= 20//1/0          !30//1/0          ! 5/1/1/3    !2/1/1/1
-	TITLE	= 5/-2/~ ETA  6-HR TOTAL PCPN, MSLP, 700 VV
+	TITLE	= 5/-2/~ NAM  6-HR TOTAL PCPN, MSLP, 700 VV
 	SCALE	= 0                !0                !0            !3
 	SKIP	= 0
 	FINT    = 0.01;0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0
@@ -134,7 +134,7 @@ if (-e eta1.gif) then
 endif
 
 ##########################################
-# ETA Prec Water, Lifted Index, Helicity
+# NAM Prec Water, Lifted Index, Helicity
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GDFILE	= $grid2
@@ -146,7 +146,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GVECT   =
 	CINT    = .5;.75;1.0;1.25;1.5;1.75;2.0!-14.;-12.;-10.;-8.;-6.;-4.;-2.;0.;2.!150.;250.;300.;400.;600.
 	LINE    = 0              !15/1/2          ! 30/5/2
-	TITLE   = 5/-2/ ~ ETA  PWTR,LI AND HELICITY    |^ PREC.WATER, LI, HELICITY  !0
+	TITLE   = 5/-2/ ~ NAM  PWTR,LI AND HELICITY    |^ PREC.WATER, LI, HELICITY  !0
 	SCALE   = 0
 	SKIP    = 0
 	FINT    = .5;.75;1.0;1.25;1.5;1.75;2.0
@@ -168,7 +168,7 @@ if (-e eta1.gif) then
 endif
 
 #########################################################
-# ETA CAPE, CIN, 850 Wind
+# NAM CAPE, CIN, 850 Wind
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GDFILE	= $grid
@@ -193,7 +193,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	SKIP    = 0                !       ! /4
 	CINT    = 500!-300.;-200.;-160.;-120.;-80.;-40.;0.
 	LINE    = 3/1/1/2           !15/1/2
-	TITLE   = 5/-2/ ~ ETA  CAPE,CIN AND 850 WIND   |^ CAPE,CIN,850 WIND ! 0
+	TITLE   = 5/-2/ ~ NAM  CAPE,CIN AND 850 WIND   |^ CAPE,CIN,850 WIND ! 0
 	SKIP    = /4;4
 	FINT    = 500;1000;1500;2000;2500;3000;3500;4000;5000;6000
 	FLINE   = 0;26-16--2;14-8--2
@@ -213,7 +213,7 @@ if (-e eta1.gif) then
 endif
 
 ##############################################################
-# ETA temps
+# NAM temps
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -236,7 +236,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GVECT   =
 	CINT    = 0.10;0.25;0.50;0.75;1.0;1.25;1.5;2.0!-5.0;0.0;2.0!-2.0;0.0;2.0 !-5.;0.;2.
 	LINE    = 20//2/0           !6/1/2          ! 7/1/2  ! 2/4/2
-	TITLE   = 5/-2/ ~ ETA 2M(RED),850MB(BLUE),700 MB T(C)|^ 2M,850,700 MB TMPC, PREC !0!0
+	TITLE   = 5/-2/ ~ NAM 2M(RED),850MB(BLUE),700 MB T(C)|^ 2M,850,700 MB TMPC, PREC !0!0
 	SCALE   = 0
 	SKIP    = 0
 	FINT    = 0.01;0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0
@@ -258,7 +258,7 @@ if (-e eta1.gif) then
 endif
 
 ########################################################
-# ETA 850 hPa Heights, Dew Points, Winds
+# NAM 850 hPa Heights, Dew Points, Winds
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -284,7 +284,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	LINE	= 7/5/1/2                  ! 2/1/2/1
 	GVECT	= WND
 	WIND    = bk4
-	TITLE	= 5/-2/ ~ ETA   850 HGHTS, DEW POINTS (C) AND WIND|^ 850 Z, TD, WIND!0
+	TITLE	= 5/-2/ ~ NAM   850 HGHTS, DEW POINTS (C) AND WIND|^ 850 Z, TD, WIND!0
 	SKIP	= /4;4 !
 	FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
 	FLINE	= 0;26-16--1;14-8--2 !
@@ -304,7 +304,7 @@ if (-e eta1.gif) then
 endif 
 
 ###################################################
-# ETA 250 hPa plot
+# NAM 250 hPa plot
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -318,7 +318,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	GVECT	= ! !
 	CINT	= 10;20;30;40;50;60;70;80;90! 120 !2
 	LINE	= 7/5/1/2           !31/1/2/2  !29/1/1/1
-	TITLE	= 5/-2/ ~ ETA  250 MB HGHTS, WIND SPEED (M/S) AND DIV
+	TITLE	= 5/-2/ ~ NAM  250 MB HGHTS, WIND SPEED (M/S) AND DIV
 	SCALE	= 0 ! 0 ! 5
 	SKIP	= 0 ! 0 ! 0
 	FINT    = 10;20;30;40;50;60;70;80;90!!
@@ -339,7 +339,7 @@ if (-e eta1.gif) then
 endif 
 
 ################################################
-# ETA 700 hPa Plots
+# NAM 700 hPa Plots
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
@@ -359,7 +359,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	HLSYM   = 
 	HILO    = 
 	SCALE	= 0  !0 !0 
-	TITLE	= 5/-2/ ~ ETA  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
+	TITLE	= 5/-2/ ~ NAM  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
 	FINT	= 10;30;50;70;90
 	FLINE	= 0;11;17-23-2
 	CTYPE	= f ! c
@@ -376,13 +376,13 @@ if (-e eta1.gif) then
 endif
 
 ########################################################
-# ETA EHI, Surface Temp and Dew Point
+# NAM EHI, Surface Temp and Dew Point
 
 
 ##set param1="mul(quo(cape@0%none,1000.),quo(hlcy@0:3000%hagl,150.))"
 ##set param1="MUL(WSHR(OBS),SQRT(CAPE%NONE@0))"
 #
-# Run GDPLOT and generate ETA model gfs
+# Run GDPLOT and generate NAM model gfs
 ##GFUNC=quo(mul(cape,hlcy@3000:0%hagl),160000.)!dwpf!tmpf
 ##GFUNC=quo(mul(cape,hlcy@3000:0%hagl),160000.)!dwpf!MUL(WSHR(OBS),SQRT(CAPE%NONE@0))
 ##CINT    = 0;0.5;1;1.5;2;3;4;5;6;7;8!45;50;55;60;65;70;75;80!60;70;75;80;85;90;95;100
@@ -412,7 +412,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 	SCALE   = 0 ! 0 ! 0
 	CINT    = 0;0.5;1;1.5;2;3;4;5;6;7;8!45;50;55;60;65;70;75;80!60;70;75;80;85;90;95;100
 	LINE    = 3/1/1/2           !15/1/2 ! 31/1/1/1
-	TITLE   = 5/-2/ ~ ETA EHI, SFC T & DEW POINT   |^ EHI, SFC T & DEW POINT ! 0
+	TITLE   = 5/-2/ ~ NAM EHI, SFC T & DEW POINT   |^ EHI, SFC T & DEW POINT ! 0
 	FINT    = 1;1.5;2;3;4;5;6;7;8!
 	FLINE   = 0;26-16--2;14-8--2
 	CTYPE   = f                !c ! c
