@@ -2,13 +2,13 @@
 # This is local archiving!
 set tdir=~/archive
 set month=`date -u +%Y%b`
-set time=`date -u +%d%H%M`
+set tm=`date -u +%d%H%M`
 foreach file ($*)
         mkdir -p ${tdir}/${month}
         set target=${file:r}
         set target=${target:t}
         mkdir -p ${tdir}/${month}/${target}
   if (-e ${file}) then
-    cp ${file} ${tdir}/${month}/${target}/${time}.gif
+    cp ${file} ${tdir}/${month}/${target}/${tm}.gif
   endif
 end

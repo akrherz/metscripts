@@ -1,7 +1,6 @@
 #!/bin/csh 
 
 source ../COMMON.csh
-
 set yy=`date -u +%y`
 set YY=`date -u +%Y`
 set mm=`date -u +%m`
@@ -26,46 +25,41 @@ set tmp="`echo ${file} | cut -c 7-12`"
 set tmp2="`echo ${file} | cut -c 14-16`"
 set tmp3="`echo ${file} | cut -c 17`"
 if ( $tmp3 > "4" ) then
-	set tmp3 = "5"
+    set tmp3 = "5"
 else
-	set tmp3 = "0"
+    set tmp3 = "0"
 endif
 
-set time=${tmp}${tmp2}${tmp3}
+set tm=${tmp}${tmp2}${tmp3}
 set grid=${DATA_DIR}/${file}
 
 
-#
-# Run GPMAP to generate radar plot
-#
 gpmap_gf << EOF > $LOGFILE
-	DEVICE   = $device
-	MAP      = 5/1/1
-	GAREA    = dsm*
-	PROJ     = rad
-	SATFIL   = 
-	RADFIL   = ${grid}
-	LATLON   = 0
-	PANEL    = 0 
-	TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${time}
-	TEXT     = 1/2/1/hw
-	LUTFIL   = RADAR
-	STNPLT   = 7|0|$GEMTBL/stns/sfmetar_sa.tbl
-	CLEAR    = yes
-	MAP	= 5/1/1 + 21/1/5
-	\$mapfil=HICNUS.NWS + hipowo.cia
-	list
-	run
+    DEVICE   = $device
+    MAP      = 5/1/1
+    GAREA    = dsm*
+    PROJ     = rad
+    SATFIL   = 
+    RADFIL   = ${grid}
+    LATLON   = 0
+    PANEL    = 0 
+    TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${tm}
+    TEXT     = 1/2/1/hw
+    LUTFIL   = RADAR
+    STNPLT   = 7|0|$GEMTBL/stns/sfmetar_sa.tbl
+    CLEAR    = yes
+    MAP	= 5/1/1 + 21/1/5
+    \$mapfil=HICNUS.NWS + hipowo.cia
+    list
+    run
 
 exit
-
-
 EOF
 
 
 cd $CURRENT/restricted
 foreach num (11 10 9 8 7 6 5 4 3 2 1 0)
-	mv dmxRAD_${num}.gif dmxRAD_`echo ${num} + 1 | bc`.gif
+    mv dmxRAD_${num}.gif dmxRAD_`echo ${num} + 1 | bc`.gif
 end
 
 cd ~/projects/metscripts/dmx
