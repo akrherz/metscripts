@@ -59,7 +59,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 EOF
 
 if (-e eta1.gif) then
-../scripts/saveEta.csh eta1 etaTHK${date}${1} etaTHK
+csh ../scripts/saveEta.csh eta1 etaTHK${date}${1} etaTHK
 endif
 
 
@@ -95,7 +95,7 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaVORT${date}${1} etaVORT
+  csh ../scripts/saveEta.csh eta1 etaVORT${date}${1} etaVORT
 endif
 
 ############################################
@@ -130,7 +130,7 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaPREC${date}${1} etaPREC
+  csh ../scripts/saveEta.csh eta1 etaPREC${date}${1} etaPREC
 endif
 
 ##########################################
@@ -164,7 +164,7 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaHEL${date}${1} etaHEL
+  csh ../scripts/saveEta.csh eta1 etaHEL${date}${1} etaHEL
 endif
 
 #########################################################
@@ -209,7 +209,7 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaCCW${date}${1} etaCCW
+  csh ../scripts/saveEta.csh eta1 etaCCW${date}${1} etaCCW
 endif
 
 ##############################################################
@@ -254,7 +254,7 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaTEMP${date}${1} etaTEMP
+  csh ../scripts/saveEta.csh eta1 etaTEMP${date}${1} etaTEMP
 endif
 
 ########################################################
@@ -300,7 +300,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 EOF
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 eta85P${date}${1} eta85P
+  csh ../scripts/saveEta.csh eta1 eta85P${date}${1} eta85P
 endif 
 
 ###################################################
@@ -335,7 +335,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 EOF
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 eta25P${date}${1} eta25P
+  csh ../scripts/saveEta.csh eta1 eta25P${date}${1} eta25P
 endif 
 
 ################################################
@@ -372,7 +372,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 EOF
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 eta70P${date}${1} eta70P
+  csh ../scripts/saveEta.csh eta1 eta70P${date}${1} eta70P
 endif
 
 ########################################################
@@ -428,5 +428,5 @@ EOF
 
 
 if (-e eta1.gif) then
-  ../scripts/saveEta.csh eta1 etaEHI${date}${1} etaEHI
+  csh ../scripts/saveEta.csh eta1 etaEHI${date}${1} etaEHI
 endif

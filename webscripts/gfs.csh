@@ -49,7 +49,7 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs1 gfsTHK${date}${1} gfsTHK
+csh ../scripts/savegfs.csh gfs1 gfsTHK${date}${1} gfsTHK
 
 ######################
 
@@ -83,7 +83,7 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs1 gfsVORT${date}${1} gfsVORT
+csh ../scripts/savegfs.csh gfs1 gfsVORT${date}${1} gfsVORT
 
 #########################
 
@@ -174,7 +174,7 @@ EOF
 
  # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs1 gfsPREC${date}${1} gfsPREC
+csh ../scripts/savegfs.csh gfs1 gfsPREC${date}${1} gfsPREC
 
 #########################
 
@@ -211,7 +211,6 @@ set device="GF|gfs2.gif"
 
 #$GEMEXE/gpend
 
-#../scripts/savegfs.csh gfs2 gfsHEL${date}${1} gfsHEL
 
 #######################
 
@@ -259,7 +258,6 @@ set device="GF|gfs3.gif"
 
 #$GEMEXE/gpend
 
-#../scripts/savegfs.csh gfs3 gfsCCW${date}${1} gfsCCW
 
 #################
 
@@ -303,7 +301,7 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs3 gfsTEMP${date}${1} gfsTEMP
+csh ../scripts/savegfs.csh gfs3 gfsTEMP${date}${1} gfsTEMP
 
 ############
 
@@ -353,7 +351,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 EOF
 
 # $GEMEXE/gpend
-../scripts/savegfs.csh gfs5 gfs85P${date}${1} gfs85P
+csh ../scripts/savegfs.csh gfs5 gfs85P${date}${1} gfs85P
 
 ######################
 
@@ -387,7 +385,7 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs5 gfs25P${date}${1} gfs25P
+csh ../scripts/savegfs.csh gfs5 gfs25P${date}${1} gfs25P
 
 ############
 
@@ -424,7 +422,7 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs5 gfs70P${date}${1} gfs70P
+csh ../scripts/savegfs.csh gfs5 gfs70P${date}${1} gfs70P
 
 #############
 
@@ -470,5 +468,5 @@ EOF
 
 # $GEMEXE/gpend
 
-../scripts/savegfs.csh gfs6 gfsEHI${date}${1} gfsEHI
+csh ../scripts/savegfs.csh gfs6 gfsEHI${date}${1} gfsEHI
 
