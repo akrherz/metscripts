@@ -6,8 +6,8 @@ PROJDIR="projects/metscripts"
 1,11-60/5 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh
 6 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh save
 
-12 12 * * * python $PROJDIR/mtarchive/archive_awc.py
-13 13 * * * python $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
+12 12 * * * python3 $PROJDIR/mtarchive/archive_awc.py
+13 13 * * * python3 $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
 
 # Create directories to populate data into
 05 00 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
