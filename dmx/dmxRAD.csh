@@ -8,7 +8,6 @@ set dd=`date -u +%d`
 set date=${yy}${mm}${dd}
 set hh=`date -u +%H`
 set bigdate=`date -u +%Y.%m.%d\ %HZ`
-setenv ARCHIVE $ARCHIVE/${YY}_${mm}_${dd}/
 setenv TIMESTAMP ${yy}${mm}${dd}${hh}
 
 
@@ -65,10 +64,6 @@ end
 cd ~/projects/metscripts/dmx
 
 cp dmxRAD.gif $CURRENT/restricted/dmxRAD_0.gif
-
-if ( $1 == 'save') then
-        cp dmxRAD.gif ${ARCHIVE}/DMX${TIMESTAMP}.gif
-endif
 
 cd ~/projects/metscripts/dmx
 

@@ -11,5 +11,3 @@ Part of the biggest issue is that we currently archive things in 3 places!
 | --------------- | ---- |
 | $CURRENT        | /home/www/meteor/html/wx/data/current |
 | $WEBPIX         | /home/www/meteor/html/pix |
-| $ARCHIVE        | /mnt/mtarchive/data |
-| $ddir2          | /mnt/mtarchive/data/%Y/%m/%d |
