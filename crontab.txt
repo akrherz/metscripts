@@ -9,6 +9,10 @@ PROJDIR="projects/metscripts"
 12 12 * * * python3 $PROJDIR/mtarchive/archive_awc.py
 13 13 * * * python3 $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
 
+###
+# Save metfs1 content to mtarchive
+0 8 * * * cd $PROJDIR/mtarchive; sh gempak_save.sh 1
+
 # Create directories to populate data into
 05 00 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
 

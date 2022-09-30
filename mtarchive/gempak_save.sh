@@ -11,7 +11,7 @@ www="http://metfs1.agron.iastate.edu/data/"
 
 mygetter ()
 {
-	wget -q -O $2 $www/$1	
+    wget -q -O $2 $www/$1	
 }
 
 mkdir -p ${ddir}${date1}/text/{Public,Severe,records,Climate,boy,mod,rad,sao,syn,upa}
@@ -71,8 +71,3 @@ mygetter gempak/model/gfs/${date2}12_gfs215.gem ${ddir}/${date1}/gempak/model/${
 
 mygetter gempak/model/gfs/${date2}00_thin.gem ${ddir}/${date1}/gempak/model/${date2}00_thin.gem
 mygetter gempak/model/gfs/${date2}12_thin.gem ${ddir}/${date1}/gempak/model/${date2}12_thin.gem
-
-
-# Pull over anything else that upstream mtarchive has and we would like
-cd ${ddir}/${date1}
-rsync -a --ignore-existing /mnt/mtarchive/data/${date1}/. .
