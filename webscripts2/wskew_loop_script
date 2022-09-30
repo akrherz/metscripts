@@ -11,11 +11,6 @@
 #
 source /nawips/Gemenviron
 setenv DISPLAY mesonet.agron.iastate.edu:3.0
-#
-# Set the root Ntrans directory
-#
-# setenv NTRANSHOME  ${NAWIPS}/nprogs/ntrans2.1
-#
 # cd to temporary directory. This is where the Nmeta file 
 # will be kept while the script is running.
 #
