@@ -1,5 +1,6 @@
 source ../COMMON.csh
 
+# Note that TZ variable is set, so this runs as UTC date
 set date1 = `date --date "${1} days" '+%Y/%m/%d'`
 set d1="${ddir}${date1}"
 

@@ -14,7 +14,7 @@ PROJDIR="projects/metscripts"
 0 8 * * * cd $PROJDIR/mtarchive; sh gempak_save.sh 1
 
 # Create directories to populate data into
-05 00 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
+18 18 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
 
 # Copy some realtime data into /mnt/mtarchive
 00 8 * * * cd $PROJDIR/webscripts ; csh gem_scripts.csh 1
