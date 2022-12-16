@@ -7,7 +7,7 @@ set device="GF|eta2.gif"
 set grid=${DATA_DIR}/nam/${DATE}${1}_nam212.gem
 set grid1=${DATA_DIR}/nam/${DATE}${1}_nam211.gem
 
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+$GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f12-f60-12

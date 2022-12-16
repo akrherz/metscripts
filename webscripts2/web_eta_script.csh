@@ -6,7 +6,7 @@ mkdir -p ${ddir2}/pix/eta/${1}z
 set device="GF|eta.gif"
 set grid=${DATA_DIR}/nam/${DATE}${1}_nam212.gem
 
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+$GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f12-f60-12
