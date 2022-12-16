@@ -2,7 +2,7 @@ source ../COMMON.csh
 setenv LOGFILE 	logs/www_ruc1b.log
 
 set device="GF|ruc1b.gif"
-set grid=/data/gempak/model/rap/${DATE}${1}_rap236.gem
+set grid=/data/gempak/model/ruc/${DATE}${1}_ruc236.gem
 
 $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
@@ -65,7 +65,7 @@ CLRBAR  = 31
 
 GLEVEL	= 700 
 GVCORD  = pres !pres !pres
-GFUNC	= relh(tmpc,dwpc)    !tmpc           !hght
+GFUNC	= relh    !tmpc           !hght
 GVECT   = wnd  ! !
 WIND    = bk2/0.9
 skip    = /4;4 !

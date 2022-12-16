@@ -138,7 +138,7 @@ CLRBAR  = 31
 
 GLEVEL	= 700 
 GVCORD  = pres !pres !pres
-GFUNC	= relh(tmpc,dwpc)    !tmpc           !hght
+GFUNC	= relh  !tmpc           !hght
 GVECT   = wnd  ! !
 WIND    = bk2
 skip    = /4;4 !

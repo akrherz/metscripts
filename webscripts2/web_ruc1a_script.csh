@@ -2,7 +2,7 @@ source ../COMMON.csh
 setenv LOGFILE 	logs/www_ruc1a.log
 
 set device="GF|ruc1a.gif"
-set grid=/data/gempak/model/rap/${DATE}${1}_rap236.gem
+set grid=/data/gempak/model/ruc/${DATE}${1}_ruc236.gem
 
 $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
@@ -27,7 +27,7 @@ SCALE	= -1                        ! 0
 CINT	= 6                         ! 4
 LINE	= 3/3/1                     ! 20//2
 GVECT	=
-TITLE	= 5/-2/ ~ RAP   MSL PRESSURE, 1000-500 MB THICKNESS|^ MSLP, 1000-500 THKN!0
+TITLE	= 5/-2/ ~ RUC  MSL PRESSURE, 1000-500 MB THICKNESS|^ MSLP, 1000-500 THKN!0
 SKIP	= 1
 FINT	=
 FLINE	=
@@ -70,7 +70,7 @@ CINT	= 2/10/99               !2/4/8                 !6
 LINE	= 7/5/1/2               !4/5/1/2               !19/1/2/1
 HILO	= 2;6/X;N/10-99;10-99   !
 SCALE	= 5                     !5                     ! -1
-TITLE	= 5// ~ RAP  500 HEIGHTS AND VORTICITY|^ 500 HGHT AND VORTICITY!0
+TITLE	= 5// ~ RUC 500 HEIGHTS AND VORTICITY|^ 500 HGHT AND VORTICITY!0
 PROJ	= lcc/25;-95;25/1,3,0,0
 FINT	= 16;20;24;28;32;36;40;44
 FLINE	= 0;23-15
@@ -109,7 +109,7 @@ GFUNC	= (quo(p01m,25.4)) !(quo(p01m,25.4)) ! mmsl@0%none
 GVECT	=
 CINT	= /.1/.1!0.10;0.20;0.30;0.50;0.75;1.00;1.25;1.5;1.75;2.0;2.25;2.5;3.0!4
 LINE	= 20//1/0           !30//1/0          ! 5/1/1/3 
-TITLE	= 5// ~ RAP  01-HR TOTAL PCPN, MSLP|^ 01-HOURLY TOTAL PCPN, MSLP!0
+TITLE	= 5// ~ RUC 01-HR TOTAL PCPN, MSLP|^ 01-HOURLY TOTAL PCPN, MSLP!0
 SCALE	= 0 !0!0
 SKIP	= 0
 FINT    = 0.01;0.05;0.10;0.15;0.25;0.35;0.5;0.75;1.0;1.25;1.5;1.75;2.0;3.0
