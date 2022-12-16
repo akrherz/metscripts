@@ -2,7 +2,7 @@ source ../COMMON.csh
 setenv LOGFILE 	logs/ww_ruc1c.log
 
 set device="GF|ruc1c.gif"
-set grid=/data/gempak/model/rap/${DATE}${1}_rap236.gem
+set grid=/data/gempak/model/ruc/${DATE}${1}_ruc236.gem
 
 $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES

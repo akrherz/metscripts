@@ -1,6 +1,6 @@
 source ../COMMON.csh
 
-setenv LOGFILE 	logs/www_ruc2.log
+setenv LOGFILE logs/www_ruc2.log
 
 set device="GF|ruc2.gif"
 set grid=/data/gempak/model/ruc/${DATE}${1}_ruc236.gem
@@ -16,11 +16,9 @@ CONTUR	= 1
 MAP     = 31/1/1
 CLEAR	= yes
 CLRBAR  = 31
-
 GAREA	= grid
 PROJ	= lcc/25;-95;25
 LATLON	= 0
-
 GLEVEL	= 850                      !850  !850   
 GVCORD	= pres                     !pres !pres   
 GFUNC	= dwpc                     !hght !tmpc  
@@ -73,10 +71,9 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 GAREA	= grid
 PROJ	= lcc/25;-95;25
 CLRBAR  = 31
-
 GLEVEL	= 700 
 GVCORD  = pres !pres !pres
-GFUNC	= relh(tmpc,dwpc)    !tmpc           !hght
+GFUNC	= relh  !tmpc           !hght
 GVECT   = wnd  ! !
 WIND    = bk2/0.9
 skip    = /4;4 !
@@ -126,7 +123,6 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 GAREA	= grid
 PROJ	= lcc/25;-95;25
 CLRBAR  = 31
-
 GLEVEL	= 250  
 GVCORD	= pres !pres  !pres
 GFUNC	= sped !hght  !div(wnd)
@@ -148,13 +144,7 @@ run
 
 exit
 EOF
-#
-# Run GPEND to clean up
-#
-#$GEMEXE/gpend
 
-# Copy ps.plt to different name for eta model
-#mv ps.plt ps.plt_ruc
 if (-e ruc2.gif) then
  
   cp ruc2.gif ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_250mb_heights_winds_DIV_f00.gif
