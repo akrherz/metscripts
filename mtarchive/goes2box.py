@@ -27,6 +27,9 @@ def run(bird, dt, offset, sector):
     for dirname in os.listdir("."):
         if dirname == "HEADER.html":
             continue
+        # Save one
+        if sector == "regional" and dirname == "midwest":
+            continue
         zipfn = f"goes{bird}_{sector}_{dirname}_{dt:%Y%m%d}.zip"
         LOG.debug("creating %s", zipfn)
         with subprocess.Popen(
@@ -78,11 +81,11 @@ def main(argv):
         dt = datetime.datetime(int(argv[1]), int(argv[2]), int(argv[3]))
     else:
         dt = datetime.date.today() - datetime.timedelta(days=14)
-    # as of 6 Feb, we need to be backprocessing 1 Jan 2018 data, can offload
-    for offset in (0, 1, 14, 250, 800):
+    # 23 Jan 2023 added regional, so thus the ancient of dates
+    for offset in (0, 1, 14, 250, 800, 1600):
         LOG.info("processing offset %s", offset)
         for bird in (16, 17, 18):
-            for sector in ["global", "meso", "subregional"]:
+            for sector in ["global", "meso", "subregional", "regional"]:
                 run(bird, dt, offset, sector)
 
 
