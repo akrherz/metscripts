@@ -29,10 +29,10 @@ turbulence - too much data
 wafs - GIS data
 wind - too much data
 """
-from datetime import date, timedelta
 import os
 import subprocess
 import sys
+from datetime import date, timedelta
 
 DIRS_TO_SYNC = "ecfp gfa progs swh swl swm".split()
 BASEDIR = "/isu/mtarchive/data"

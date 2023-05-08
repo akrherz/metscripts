@@ -6,11 +6,10 @@ look at our archive and attempt to fill those holes.
 """
 import datetime
 import os
-import tempfile
 import subprocess
+import tempfile
 
 import requests
-
 
 PQINSERT = "/home/meteor_ldm/bin/pqinsert"
 BASE = "/isu/mtarchive/data"

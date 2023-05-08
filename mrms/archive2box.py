@@ -2,12 +2,12 @@
 
 Runs on iem13 at the moment.
 """
-import sys
 import datetime
 import os
 import subprocess
+import sys
 
-from pyiem.util import utc, logger
+from pyiem.util import logger, utc
 
 LOG = logger()
 

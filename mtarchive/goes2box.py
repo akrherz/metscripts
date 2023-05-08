@@ -1,10 +1,10 @@
 """Offload some COD GOES Imagery to CyBox.
 
 see: akrherz/metscripts#1"""
-import sys
-import os
 import datetime
+import os
 import subprocess
+import sys
 
 from pyiem.util import logger
 
