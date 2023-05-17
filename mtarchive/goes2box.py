@@ -9,7 +9,7 @@ import sys
 from pyiem.util import logger
 
 LOG = logger()
-TMPDIR = "/isu/mtarchive/tmp"
+TMPDIR = "/mnt/mtarchivetmp"
 ARCHIVE = "https://iastate.box.com/s/yyxa7bbyofebhjmqnn7zp29qqvmylk4j"
 
 
