@@ -59,7 +59,7 @@ def main(argv):
                 webfolder,
             ],
             check=True,
-            timeout=600,
+            timeout=1800,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
