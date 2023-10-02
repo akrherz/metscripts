@@ -5,7 +5,7 @@
 source ~/projects/metscripts/COMMON.csh
 
 #
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/NTP
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/DTA
 setenv LOGFILE 	www_radp
 #
 # Remove last hour's  www file
@@ -13,7 +13,7 @@ rm -f radp.gif* >& /dev/null
 #
 #
 set device="GF|radp.gif"
-set grid=`ls ${DATA_DIR}/NTP_${DATE}_18?? | tail -1`
+set grid=`ls ${DATA_DIR}/DTA_${DATE}_18?? | tail -1`
 #
 # Run GPMAP to generate radar plot
 #

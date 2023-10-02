@@ -1,10 +1,10 @@
 
 source ../COMMON.csh
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/NTP
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/DTA
 setenv LOGFILE 	logs/www_raddp00.log
 
 set device="GF|radp.gif"
-set grid=`ls ${DATA_DIR}/NTP_${DATE}_00?? | tail -1`
+set grid=`ls ${DATA_DIR}/DTA_${DATE}_00?? | tail -1`
 
 #
 # Run GPMAP to generate radar plot

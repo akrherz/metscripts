@@ -1,9 +1,9 @@
 
 source ../COMMON.csh
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/NTP
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/DTA
 
 set device="GF|radp.gif"
-set grid=`ls ${DATA_DIR}/NTP_${DATE}_06?? | tail -1`
+set grid=`ls ${DATA_DIR}/DTA_${DATE}_06?? | tail -1`
 
 set LOGFILE="logs/www_radp06.log"
 

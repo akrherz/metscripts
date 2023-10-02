@@ -1,11 +1,11 @@
 #!/bin/csh 
 
 source ~/projects/metscripts/COMMON.csh
-setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/NTP
+setenv DATA_DIR	/data/gempak/nexrad/NIDS/DMX/DTA
 setenv LOGFILE 	logs/www_radp12
 
 set device="GF|radp.gif"
-set grid=`ls ${DATA_DIR}/NTP_${DATE}_12?? | tail -1`
+set grid=`ls ${DATA_DIR}/DTA_${DATE}_12?? | tail -1`
 
 
 $GEMEXE/gpmap_gf << EOF > $LOGFILE
