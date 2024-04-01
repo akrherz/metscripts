@@ -1,5 +1,5 @@
-"""Bundle up our MRMS data.
-"""
+"""Bundle up our MRMS data."""
+
 import datetime
 import os
 import subprocess
