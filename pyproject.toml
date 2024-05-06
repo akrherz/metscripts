@@ -1,5 +1,11 @@
 
 [tool.ruff]
 line-length = 79
-lint.select = ["E", "F", "I"]
 
+[tool.ruff.lint]
+select = [
+    "B",  # bugbear
+    "E",
+    "F",
+    "I",
+]
