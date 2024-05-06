@@ -1,6 +1,7 @@
 """Offload some COD GOES Imagery to CyBox.
 
 see: akrherz/metscripts#1"""
+
 import datetime
 import os
 import subprocess

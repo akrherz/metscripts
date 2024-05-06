@@ -1,9 +1,10 @@
 """Generate Index Files within the COD folders
 
-    We are run from cron each hour and run for the day that was 90 minutes
-    in the past.  Will have to see if this does what we want!
+We are run from cron each hour and run for the day that was 90 minutes
+in the past.  Will have to see if this does what we want!
 
 """
+
 from __future__ import print_function
 
 import datetime
