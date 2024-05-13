@@ -25,7 +25,7 @@ def do(mydir, reporterror=True):
     remotepath = f"/export/mrms/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
         f'rsync -a --rsync-path="mkdir -p {remotepath} && rsync" '
-        f"{zipfn} meteor_ldm@192.168.0.56:{remotepath}"
+        f"{zipfn} meteor_ldm@192.168.0.51:{remotepath}"
     )
     subprocess.call(cmd, shell=True)
 
