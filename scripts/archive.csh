@@ -34,4 +34,4 @@ tar cfz ${target} \
         gempak/mos/${day}*.gem
 
 set remotedir="/stage/DailyMetArchive/daily/$yyyy"
-rsync -a --remove-source-files --rsync-path "mkdir -p $remotedir && rsync" $target meteor_ldm@metl60.agron.iastate.edu:$remotedir
+rsync -a --remove-source-files --rsync-path "mkdir -p $remotedir && rsync" $target meteor_ldm@akrherz-desktop.agron.iastate.edu:$remotedir

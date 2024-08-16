@@ -63,7 +63,8 @@ def run(bird, dt, offset, sector):
     rsyncpath = f"mkdir -p {dirname} && rsync"
     cmd = (
         f'rsync -a --rsync-path="{rsyncpath}" --remove-source-files '
-        f"{' '.join(zips)} meteor_ldm@metl60.agron.iastate.edu:{dirname}/"
+        f"{' '.join(zips)} "
+        f"meteor_ldm@akrherz-desktop.agron.iastate.edu:{dirname}/"
     )
     with subprocess.Popen(
         cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
