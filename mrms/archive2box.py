@@ -29,12 +29,12 @@ def do(mydir, reporterror=True):
     )
     subprocess.call(cmd, shell=True)
 
-    # Send to metl60 en-route for Google Drive
+    # Send to en-route for Google Drive
     remotepath = f"/stage/MRMS/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
         "rsync -a --remove-source-files "
         f'--rsync-path="mkdir -p {remotepath} && rsync" '
-        f"{zipfn} meteor_ldm@metl60.agron.iastate.edu:{remotepath}"
+        f"{zipfn} meteor_ldm@akrherz-desktop.agron.iastate.edu:{remotepath}"
     )
     subprocess.call(cmd, shell=True)
     subprocess.call(f"rm -rf {mydir}", shell=True)
