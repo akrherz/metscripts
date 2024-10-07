@@ -88,7 +88,7 @@ $GEMEXE/gpend
 gdplot << EOF >> $LOGFILE
     GDFILE	= $grid
     GDATTIM	= f00
-    DEVICE	= GF|up700.gif|720;540
+    DEVICE	= GIF|up700.gif|720;540
 
     GLEVEL   = 700
     GVCORD   = pres
