@@ -9,5 +9,3 @@ csh makedirs.csh ${n}
 @ n = $n + 1
 
 end
-
-

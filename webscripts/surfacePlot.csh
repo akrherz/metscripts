@@ -10,59 +10,59 @@ set grid=${DATA_DIR}/${DATE}${1}_sao.gem
 
 
 $GEMEXE/sfmap_gf << EOF > $LOGFILE
-	\$RESPOND = YES
-	DEVICE	= GF|${OUTPUT0}|720;540
-	AREA     = 20;-128;53;-54
-	GAREA    = 20;-116;51;-62
-	SATFIL   = 
-	RADFIL   = 
-	STNPLT  =  
-	SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
-	DATTIM   = ${date}/${hh}00
-	SFFILE   = $grid
-	COLORS   = 31;5;5;6;3;31
-	MAP      = 25/1/1
-	LATLON   = 0
-	MARKER   = 0
-	TITLE    = 31/-2/~  SURFACE DATA
-	CLEAR    = yes
-	PANEL    = 0
-	PROJ     = lcc
-	FILTER   = 0.8
-	TEXT     = 1/21/2/hw
-	SKPMIS   = NO
-	list
-	run
+    \$RESPOND = YES
+    DEVICE	= GF|${OUTPUT0}|720;540
+    AREA     = 20;-128;53;-54
+    GAREA    = 20;-116;51;-62
+    SATFIL   = 
+    RADFIL   = 
+    STNPLT  =  
+    SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
+    DATTIM   = ${date}/${hh}00
+    SFFILE   = $grid
+    COLORS   = 31;5;5;6;3;31
+    MAP      = 25/1/1
+    LATLON   = 0
+    MARKER   = 0
+    TITLE    = 31/-2/~  SURFACE DATA
+    CLEAR    = yes
+    PANEL    = 0
+    PROJ     = lcc
+    FILTER   = 0.8
+    TEXT     = 1/21/2/hw
+    SKPMIS   = NO
+    list
+    run
 
-	exit
+    exit
 EOF
 
 
 $GEMEXE/sfmap_gf << EOF >> $LOGFILE
-	DEVICE	= GF|${OUTPUT05}|720;540
-	AREA    = 37;-101;44;-87
-	GAREA    = 37;-101;44;-87
-	SATFIL   = 
-	RADFIL   = 
-	STNPLT  =  
-	SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
-	DATTIM   = ${date}/${hh}00
-	SFFILE   = $grid
-	COLORS   = 31;5;5;6;3;31
-	MAP      = 25/1/1
-	LATLON   = 0
-	MARKER   = 0
-	TITLE    = 31/-2/~  SURFACE DATA
-	CLEAR    = yes
-	PANEL    = 0
-	PROJ     = lcc
-	FILTER   = 0.8
-	TEXT     = 1/21/2/hw
-	SKPMIS   = NO
-	list
-	run
+    DEVICE	= GF|${OUTPUT05}|720;540
+    AREA    = 37;-101;44;-87
+    GAREA    = 37;-101;44;-87
+    SATFIL   = 
+    RADFIL   = 
+    STNPLT  =  
+    SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
+    DATTIM   = ${date}/${hh}00
+    SFFILE   = $grid
+    COLORS   = 31;5;5;6;3;31
+    MAP      = 25/1/1
+    LATLON   = 0
+    MARKER   = 0
+    TITLE    = 31/-2/~  SURFACE DATA
+    CLEAR    = yes
+    PANEL    = 0
+    PROJ     = lcc
+    FILTER   = 0.8
+    TEXT     = 1/21/2/hw
+    SKPMIS   = NO
+    list
+    run
 
-	exit
+    exit
 EOF
 
 
