@@ -20,7 +20,7 @@ def run(bird, dt, offset, sector):
     path = f"/isu/mtarchive/data/{dt:%Y/%m/%d}/cod/sat/goes{bird}/{sector}"
     if not os.path.isdir(path):
         if offset == 0:
-            lvl = LOG.warning if bird == 16 else LOG.info
+            lvl = LOG.warning if bird == 18 else LOG.info
             lvl(" %s not found", path)
         return
     os.chdir(path)
@@ -86,7 +86,7 @@ def main(argv):
     # 23 Jan 2023 added regional, so thus the ancient of dates
     for offset in (0, 1, 14, 250, 800, 1600):
         LOG.info("processing offset %s", offset)
-        for bird in (16, 17, 18):
+        for bird in (16, 17, 18, 19):
             for sector in ["global", "meso", "subregional", "regional"]:
                 run(bird, dt, offset, sector)
 
