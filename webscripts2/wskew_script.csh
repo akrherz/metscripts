@@ -38,9 +38,8 @@ run
 exit
 EOF
 
-# Rename ps file to indicate sfc data
-cp skew_01.gif ${ddir}${DATE2}/pix/skew/${1}z/${DATE}${1}_skewt_OAX.gif
 if (-e skew_01.gif) then
+  cp skew_01.gif ${ddir}${DATE2}/pix/skew/${1}z/${DATE}${1}_skewt_OAX.gif
   mv skew_01.gif $WEBPIX/skew_01.gif
   keep $WEBPIX/skew_01.gif
 endif
@@ -75,12 +74,6 @@ run
 exit
 EOF
 
-#
-# Run GPEND to clean up
-#
-#$GEMEXE/gpend
-#
-# Rename ps file to indicate sfc data
 cp skew_02.gif ${ddir}${DATE2}/pix/skew/${1}z/${DATE}${1}_skewt_DVN.gif
 if (-e skew_02.gif) then
   mv skew_02.gif $WEBPIX/skew_02.gif
