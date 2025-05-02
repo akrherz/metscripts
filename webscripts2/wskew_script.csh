@@ -74,8 +74,8 @@ run
 exit
 EOF
 
-cp skew_02.gif ${ddir}${DATE2}/pix/skew/${1}z/${DATE}${1}_skewt_DVN.gif
 if (-e skew_02.gif) then
+  cp skew_02.gif ${ddir}${DATE2}/pix/skew/${1}z/${DATE}${1}_skewt_DVN.gif
   mv skew_02.gif $WEBPIX/skew_02.gif
   keep $WEBPIX/skew_02.gif
 endif
