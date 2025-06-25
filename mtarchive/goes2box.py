@@ -79,8 +79,7 @@ def run(bird, dt, offset, sector, dryrun: bool):
         with subprocess.Popen(
             cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
         ) as proc:
-            stdout = proc.stdout.read()
-            stderr = proc.stderr.read()
+            stdout, stderr = proc.communicate()
         if stdout != b"" or stderr != b"":
             print(cmd)
             print(stdout.decode("ascii", "ignore"))
