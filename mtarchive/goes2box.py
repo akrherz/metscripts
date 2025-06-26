@@ -70,7 +70,8 @@ def run(bird, dt, offset, sector, dryrun: bool):
     cmd = [
         "rsync",
         "-a",
-        f'--rsync-path="{rsyncpath}"',
+        "--rsync-path",
+        rsyncpath,
         "--remove-source-files",
         *zips,
         f"meteor_ldm@akrherz-desktop.agron.iastate.edu:{dirname}/",
