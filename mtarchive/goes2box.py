@@ -24,6 +24,8 @@ def run(bird, dt, offset, sector, dryrun: bool):
             lvl(" %s not found", path)
         return
     os.chdir(path)
+    # Debug something happening in the wild
+    LOG.warning("Processing `%s` with pwd now `%s`", path, os.getcwd())
     zips = []
     for dirname in os.listdir("."):
         if dirname == "HEADER.html":
