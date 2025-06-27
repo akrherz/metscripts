@@ -24,14 +24,13 @@ def run(bird, dt, offset, sector, dryrun: bool):
             lvl(" %s not found", path)
         return
     os.chdir(path)
-    # Debug something happening in the wild
-    LOG.warning("Processing `%s` with pwd now `%s`", path, os.getcwd())
     zips = []
     for dirname in os.listdir("."):
-        if dirname == "HEADER.html":
-            continue
+        # Whilst processing old content, there could be the placeholder zip
+        # files or the HEADER.html file, those we ignore
         if not os.path.isdir(dirname):
-            LOG.warning("skipping %s, not a directory", dirname)
+            if dirname != "HEADER.html" and not dirname.endswith(".zip"):
+                LOG.warning("Ignore unexpected file %s/%s", path, dirname)
             continue
         # Save one
         if sector == "regional" and dirname == "midwest":
@@ -61,7 +60,11 @@ def run(bird, dt, offset, sector, dryrun: bool):
                 )
             with open("HEADER.html", "w", encoding="utf-8") as fh:
                 fh.write(
-                    f'{sector} imagery found <a href="{ARCHIVE}">on CyBox</a>'
+                    "This directory listing contains sus looking 70 byte zip "
+                    "files, but they are shortcuts to the actual massive zip "
+                    f'file found on <a href="{ARCHIVE}">CyBox</a>.  Just '
+                    "click the zipfile and observe the magic.  If you are "
+                    "scripting this, add a follow redirect flag to your code."
                 )
         zips.append(zipfn)
     if not zips:
