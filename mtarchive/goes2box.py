@@ -101,8 +101,8 @@ def main(dt: datetime | None, dryrun: bool) -> None:
     """Go Main Go."""
     if dt is None:
         dt = date.today() - timedelta(days=14)
-    # 23 Jan 2023 added regional, so thus the ancient of dates
-    for offset in (0, 1, 14, 250, 800, 1600):
+    # 14 Jul 2025, found cruft on 4 Jan 2018, so we start there
+    for offset in (0, 1, 14, 250, 800, 1600, 2750):
         LOG.info("processing offset %s", offset)
         for bird in (16, 17, 18, 19):
             for sector in ["global", "meso", "subregional", "regional"]:
