@@ -5,19 +5,19 @@ look at our archive and attempt to fill those holes.
 
 """
 
-import datetime
 import os
 import subprocess
 import tempfile
+from datetime import datetime, timedelta, timezone
 
 import requests
 
 PQINSERT = "/home/meteor_ldm/bin/pqinsert"
 BASE = "/isu/mtarchive/data"
-M30 = datetime.timedelta(minutes=30)
-M60 = datetime.timedelta(minutes=60)
-M2 = datetime.timedelta(minutes=2)
-M10 = datetime.timedelta(minutes=10)
+M30 = timedelta(minutes=30)
+M60 = timedelta(minutes=60)
+M2 = timedelta(minutes=2)
+M10 = timedelta(minutes=10)
 PRODS = {
     "MultiSensor_QPE_01H_Pass2": M60,
     "MultiSensor_QPE_24H_Pass2": M60,
@@ -124,11 +124,11 @@ def workflow(prod, sts, ets, extra):
 
 def main():
     """Do Something"""
-    ets = datetime.datetime.utcnow().replace(minute=0, second=0, microsecond=0)
+    ets = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
     # Don't worry about files for the past hour, some of them come a bit
     # delayed, like GaugeCorr_QPE_01H
-    ets -= datetime.timedelta(hours=1)
-    sts = ets - datetime.timedelta(hours=24)
+    ets -= timedelta(hours=1)
+    sts = ets - timedelta(hours=24)
     for prod in PRODS:
         workflow(prod, sts, ets, "")
     for prod in FLASH_PRODS:
