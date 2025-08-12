@@ -87,6 +87,16 @@ def main(argv):
     for item in items:
         filename = item.name
         dirpath = f"{MTARCHIVE_PATH}/{item.dirpath}"
+        # Atone for past sins.  We uploaded some cruft in the past, which
+        # should now be gone, but always better to be safe than sorry
+        if len(filename.split(".zip")) >= 3:
+            print(f"Deleting {filename}")
+            item.delete()
+            localfn = os.path.join(dirpath, filename)
+            if os.path.isfile(localfn):
+                print(f"Deleting {localfn}")
+                os.unlink(localfn)
+            continue
         os.makedirs(dirpath, exist_ok=True)
         localfn = os.path.join(dirpath, filename)
         if os.path.isfile(localfn):
