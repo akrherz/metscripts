@@ -21,7 +21,6 @@ def do(mydir, reporterror=True):
         os.unlink(zipfn)
     subprocess.call(f"zip -r -q {zipfn} {mydir}", shell=True)
 
-    # Send to metvm0 for caching
     remotepath = f"/export/mrms/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
         f'rsync -a --rsync-path="mkdir -p {remotepath} && rsync" '
@@ -29,8 +28,7 @@ def do(mydir, reporterror=True):
     )
     subprocess.call(cmd, shell=True)
 
-    # Send to en-route for Google Drive
-    remotepath = f"/stage/MRMS/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
+    remotepath = f"/offline/MRMS/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
         "rsync -a --remove-source-files "
         f'--rsync-path="mkdir -p {remotepath} && rsync" '
