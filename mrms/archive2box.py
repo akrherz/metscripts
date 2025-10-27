@@ -21,10 +21,10 @@ def do(mydir, reporterror=True):
         os.unlink(zipfn)
     subprocess.call(f"zip -r -q {zipfn} {mydir}", shell=True)
 
-    remotepath = f"/export/mrms/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
+    remotepath = f"/export/mrms2/{mydir[:4]}/{mydir[4:6]}/{mydir[6:8]}"
     cmd = (
         f'rsync -a --rsync-path="mkdir -p {remotepath} && rsync" '
-        f"{zipfn} meteor_ldm@iemvm1.agron.iastate.edu:{remotepath}"
+        f"{zipfn} meteor_ldm@iemvm2.agron.iastate.edu:{remotepath}"
     )
     subprocess.call(cmd, shell=True)
 
