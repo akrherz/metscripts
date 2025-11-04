@@ -11,6 +11,16 @@ from pyiem.util import logger
 
 LOG = logger()
 
+# inclusive start date, end date, and path
+SHARDS = [
+    (date(2018, 1, 1), date(2018, 12, 31), "/mnt/mtarchive0a/data"),
+    (date(2019, 1, 1), date(2019, 12, 31), "/mnt/mtarchive13a/data"),
+    (date(2020, 1, 1), date(2020, 12, 31), "/mnt/mtarchive6a/data"),
+    (date(2021, 1, 1), date(2023, 12, 31), "/mnt/mtarchive8a/data"),
+    (date(2024, 1, 1), date(2024, 12, 31), "/mnt/mtarchive0a/data"),
+    (date(2025, 1, 1), date(2030, 12, 31), "/mnt/mtarchive2a/data"),
+]
+
 
 @click.command()
 @click.option("--date", "dt", type=click.DateTime(formats=["%Y-%m-%d"]))
@@ -18,7 +28,19 @@ def main(dt: datetime | None) -> None:
     """Go Main Go."""
     if dt is None:
         dt = date.today() - timedelta(days=14)
-    LOG.info("Running for %s", dt)
+    # Compute the shard this date belongs to
+    shard_path = None
+    for sdate, edate, path in SHARDS:
+        if sdate <= dt.date() <= edate:
+            shard_path = path
+            break
+    if shard_path is None:
+        LOG.warning("No shard found for date %s", dt)
+        return
+
+    shard_path = Path(shard_path) / f"{dt:%Y}/{dt:%m}/{dt:%d}/cod"
+
+    LOG.info("Running for %s [%s]", dt, shard_path)
     basedir = Path(f"/isu/mtarchive/data/{dt:%Y}/{dt:%m}/{dt:%d}/cod/sat")
     if not basedir.exists():
         # Ensure this gets emailed
@@ -31,16 +53,14 @@ def main(dt: datetime | None) -> None:
     # We have work to do, move up one directory as the sat folder will
     # eventually be the sym link
     os.chdir(basedir.parent)
-    # will fix this eventually.
-    destdir = Path(f"/mnt/mtarchive2a/data/{dt:%Y}/{dt:%m}/{dt:%d}/cod")
-    destdir.mkdir(parents=True, exist_ok=True)
+    shard_path.mkdir(parents=True, exist_ok=True)
     with subprocess.Popen(
         [
             "rsync",
             "-a",
             "--remove-source-files",
             "sat",
-            f"{destdir}/",
+            f"{shard_path}/",
         ],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -56,7 +76,7 @@ def main(dt: datetime | None) -> None:
     LOG.info("Removing source directory %s", basedir)
     shutil.rmtree("sat")
     # symlink the new location
-    satdir = destdir / "sat"
+    satdir = shard_path / "sat"
     LOG.info("Creating symlink to %s", satdir)
     os.symlink(satdir, "sat")
     LOG.info("Done.")
