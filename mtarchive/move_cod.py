@@ -28,10 +28,12 @@ def main(dt: datetime | None) -> None:
     """Go Main Go."""
     if dt is None:
         dt = date.today() - timedelta(days=14)
+    else:
+        dt = dt.date()
     # Compute the shard this date belongs to
     shard_path = None
     for sdate, edate, path in SHARDS:
-        if sdate <= dt.date() <= edate:
+        if sdate <= dt <= edate:
             shard_path = path
             break
     if shard_path is None:
