@@ -11,14 +11,20 @@ from pyiem.util import logger
 
 LOG = logger()
 
+A0A = "/mnt/mtarchive0a/data"
+A2A = "/mnt/mtarchive2a/data"
+A6A = "/mnt/mtarchive6a/data"
+A6Z = "/mnt/mtarchive6z/data"
+A8A = "/mnt/mtarchive8a/data"
+A13A = "/mnt/mtarchive13a/data"
 # inclusive start date, end date, and path
 SHARDS = [
-    (date(2018, 1, 1), date(2018, 12, 31), "/mnt/mtarchive0a/data"),
-    (date(2019, 1, 1), date(2019, 12, 31), "/mnt/mtarchive13a/data"),
-    (date(2020, 1, 1), date(2020, 12, 31), "/mnt/mtarchive6a/data"),
-    (date(2021, 1, 1), date(2023, 12, 31), "/mnt/mtarchive8a/data"),
-    (date(2024, 1, 1), date(2024, 12, 31), "/mnt/mtarchive0a/data"),
-    (date(2025, 1, 1), date(2030, 12, 31), "/mnt/mtarchive2a/data"),
+    (date(2018, 1, 1), date(2018, 12, 31), A0A),
+    (date(2019, 1, 1), date(2019, 12, 31), A13A),
+    (date(2020, 1, 1), date(2020, 12, 31), A6A),
+    (date(2021, 1, 1), date(2023, 12, 31), A8A),
+    (date(2024, 1, 1), date(2024, 12, 31), A0A),
+    (date(2025, 1, 1), date(2030, 12, 31), A2A),
 ]
 
 
@@ -48,9 +54,19 @@ def main(dt: datetime | None) -> None:
         # Ensure this gets emailed
         LOG.warning("Exit as directory does not exist: %s", basedir)
         return
-    # Check if this path is a symlink, if so, we are done
+    # Check if this path is a symlink
     if basedir.is_symlink():
-        LOG.info("Path %s is a symlink, exiting", basedir)
+        # Check that this basedir actually points to the shard_path
+        realpath = basedir.resolve()
+        if realpath == shard_path / "sat":
+            LOG.info("Path %s points to %s, exiting", basedir, realpath)
+            return
+        LOG.info("Path %s is a symlink to %s, needs update", basedir, realpath)
+        # Remove the symlink to prepare for new one
+        basedir.unlink()
+        # create new symlink
+        os.symlink(shard_path / "sat", basedir)
+        LOG.info("Created symlink for %s to %s", basedir, shard_path / "sat")
         return
     # We have work to do, move up one directory as the sat folder will
     # eventually be the sym link
