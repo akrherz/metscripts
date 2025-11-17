@@ -1,8 +1,5 @@
 #!/bin/csh
 
-#source /home/nawips/Gemenviron
-#source /usr/local/nawips/Gemenviron
-#source /usr/local/nawips-5.10.1/Gemenviron
 source /usr/local/nawips/Gemenviron
 
 rm -f overlay.err *.nts overlay.gif >& /dev/null
@@ -34,9 +31,6 @@ title=0
 run
 
 EOF
-
-echo "hi"
-
 
 # plot DDS front data
 gpfront << EOF >> overlay.err

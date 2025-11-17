@@ -2,7 +2,7 @@
 
 source ~/projects/metscripts/COMMON.csh
 
-setenv LOGFILE 	logs/www_uab
+setenv LOGFILE logs/www_uab
 #
 # Remove last upper grid file and upper ps plot
 #

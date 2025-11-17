@@ -137,11 +137,6 @@ def main():
         outpath = root_path / "index.html"
         outpath.write_text(html_text, encoding="utf-8")
         LOG.info("Wrote %s", outpath)
-    # Finally, generate for the target itself
-    html_text = generate_fancyindex(target)
-    outpath = target / "index.html"
-    outpath.write_text(html_text, encoding="utf-8")
-    LOG.info("Wrote %s", outpath)
 
 
 if __name__ == "__main__":

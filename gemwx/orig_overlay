@@ -2,7 +2,6 @@
 
 # prepare to make overlay image
 source /archive/tmp/nawips/Gemenviron
-#source /nawips/Gemenviron
 rm -f overlay.err *.nts overlay.gif >& /dev/null
 setenv RADAR `ls -1t /data/mcidas/AREA020? | head -1`
 setenv FRONT `ls -1t /data/*.frt | head -1`
