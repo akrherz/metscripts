@@ -6,8 +6,13 @@ from __future__ import annotations
 
 import datetime
 import html
+import os
 import sys
 from pathlib import Path
+
+from pyiem.util import logger
+
+LOG = logger()
 
 # Column widths similar to Apache's output
 NAME_COL = 23
@@ -119,15 +124,24 @@ def generate_fancyindex(path: Path) -> str:
 
 
 def main():
-    target = Path(sys.argv[1] if len(sys.argv) > 1 else ".").resolve()
+    """Go Main Go."""
+    target = Path(sys.argv[1]).resolve()
     if not target.is_dir():
-        print(f"Not a directory: {target}", file=sys.stderr)
+        LOG.warning("Not a directory: %s", target)
         sys.exit(1)
 
+    # Recursively generate index.html files below the given target directory
+    for root, _dirs, _files in os.walk(target):
+        root_path = Path(root)
+        html_text = generate_fancyindex(root_path)
+        outpath = root_path / "index.html"
+        outpath.write_text(html_text, encoding="utf-8")
+        LOG.info("Wrote %s", outpath)
+    # Finally, generate for the target itself
     html_text = generate_fancyindex(target)
     outpath = target / "index.html"
     outpath.write_text(html_text, encoding="utf-8")
-    print(f"Wrote {outpath}")
+    LOG.info("Wrote %s", outpath)
 
 
 if __name__ == "__main__":
