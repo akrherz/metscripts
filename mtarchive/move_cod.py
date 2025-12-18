@@ -14,12 +14,11 @@ LOG = logger()
 A0A = "/mnt/mtarchive0a/data"
 A2A = "/mnt/mtarchive2a/data"
 A6A = "/mnt/mtarchive6a/data"
-A6Z = "/mnt/mtarchive6z/data"
 A8Z = "/mnt/mtarchive8z/data"
 A13Z = "/mnt/mtarchive13z/data"
 # inclusive start date, end date, and path
 SHARDS = [
-    (date(2018, 1, 1), date(2018, 12, 31), A6Z),
+    (date(2018, 1, 1), date(2018, 12, 31), A8Z),
     (date(2019, 1, 1), date(2019, 12, 31), A13Z),
     (date(2020, 1, 1), date(2020, 12, 31), A6A),
     (date(2021, 1, 1), date(2021, 12, 31), A13Z),
@@ -27,8 +26,7 @@ SHARDS = [
     (date(2023, 1, 1), date(2023, 12, 31), A8Z),
     (date(2024, 1, 1), date(2024, 12, 31), A0A),
     (date(2025, 1, 1), date(2025, 10, 31), A2A),
-    (date(2025, 11, 1), date(2025, 12, 1), A6Z),
-    (date(2025, 12, 2), date(2030, 12, 31), A8Z),
+    (date(2025, 11, 1), date(2030, 12, 31), A8Z),
 ]
 
 
