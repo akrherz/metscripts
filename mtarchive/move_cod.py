@@ -32,7 +32,8 @@ SHARDS = [
 
 @click.command()
 @click.option("--date", "dt", type=click.DateTime(formats=["%Y-%m-%d"]))
-def main(dt: datetime | None) -> None:
+@click.option("--force", is_flag=True, help="Ignore directory doesn't exist")
+def main(dt: datetime | None, force: bool) -> None:
     """Go Main Go."""
     if dt is None:
         dt = date.today() - timedelta(days=14)
@@ -52,7 +53,7 @@ def main(dt: datetime | None) -> None:
 
     LOG.info("Running for %s [%s]", dt, shard_path)
     basedir = Path(f"/isu/mtarchive/data/{dt:%Y}/{dt:%m}/{dt:%d}/cod/sat")
-    if not basedir.exists():
+    if not basedir.exists() and not force:
         # Ensure this gets emailed
         LOG.warning("Exit as directory does not exist: %s", basedir)
         return
