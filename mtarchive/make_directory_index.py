@@ -92,8 +92,8 @@ def generate_fancyindex(path: Path) -> str:
     entries = sorted(path.iterdir(), key=lambda p: p.name.lower())
 
     for e in entries:
-        # Don't index an existing index.html
-        if e.name == "index.html":
+        # Don't index an existing index.html or legacy COD imagery index
+        if e.name in ["index.html", "000index.txt"]:
             continue
         try:
             st = e.stat()
