@@ -19,7 +19,7 @@ A6A = "/mnt/mtarchive6a/data"
 A8Z = "/mnt/mtarchive8z/data"
 # inclusive start date, end date, and path
 SHARDS = [
-    (date(2018, 1, 1), date(2018, 12, 31), A8Z),
+    (date(2017, 4, 15), date(2018, 12, 31), A8Z),
     (date(2019, 1, 1), date(2019, 12, 31), A1Z),
     (date(2020, 1, 1), date(2020, 12, 31), A6A),
     (date(2021, 1, 1), date(2021, 12, 31), A1Z),
