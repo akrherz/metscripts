@@ -11,7 +11,7 @@ cp /data/gempak/model/nam/${date2}12_nam212.gem ${ddir}/${date1}/gempak/model/${
 cp /data/gempak/model/nam/${date2}00_nam211.gem ${ddir}/${date1}/gempak/model/${date2}00_nam211.gem
 cp /data/gempak/model/nam/${date2}12_nam211.gem ${ddir}/${date1}/gempak/model/${date2}12_nam211.gem
 
-cp /data/gempak/surface/sao/${date2}_sao.gem ${ddir}/${date1}/gempak/surface/sao/${date2}_sao.gem
+cp /data/gempak/surface/${date2}_sao.gem ${ddir}/${date1}/gempak/surface/sao/${date2}_sao.gem
 cp /data/gempak/upperair/${date2}_upa.gem ${ddir}/${date1}/gempak/upperair/${date2}_upa.gem
  
 cp /data/gempak/model/ruc/${date2}00_ruc130.gem ${ddir}/${date1}/gempak/model/${date2}00_ruc130.gem
