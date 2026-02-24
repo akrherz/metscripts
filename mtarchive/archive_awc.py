@@ -36,7 +36,7 @@ import sys
 from datetime import date, timedelta
 
 DIRS_TO_SYNC = "ecfp gfa progs swh swl swm".split()
-BASEDIR = "/isu/mtarchive/data"
+BASEDIR = "/mnt/mtarchive2/data"
 WEBBASE = "https://www.aviationweather.gov/data/products/"
 
 

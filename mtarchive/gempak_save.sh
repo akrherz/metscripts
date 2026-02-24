@@ -2,7 +2,7 @@
 # called with number of days ago to run, usually 1
 # set -x
 
-ddir="/isu/mtarchive/data/"
+ddir="/mnt/mtarchive2/data/"
 date4=$(date -u --date "${1} days ago" +'%d')
 date3=$(date -u --date "${1} days ago" +'%y%m%d')
 date2=$(date -u --date "${1} days ago" +'%Y%m%d')

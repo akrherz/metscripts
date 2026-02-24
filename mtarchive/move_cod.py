@@ -54,7 +54,7 @@ def main(dt: datetime | None, force: bool) -> None:
     shard_path = Path(shard_path) / f"{dt:%Y}/{dt:%m}/{dt:%d}/cod"
 
     LOG.info("Running for %s [%s]", dt, shard_path)
-    basedir = Path(f"/isu/mtarchive/data/{dt:%Y}/{dt:%m}/{dt:%d}/cod/sat")
+    basedir = Path(f"/mnt/mtarchive2/data/{dt:%Y}/{dt:%m}/{dt:%d}/cod/sat")
     if not basedir.exists() and not force:
         # Ensure this gets emailed
         LOG.warning("Exit as directory does not exist: %s", basedir)

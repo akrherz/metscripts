@@ -10,7 +10,7 @@ setenv WEBPIX /home/www/meteor/html/pix
 
 setenv DISPLAY :1
 
-set ddir = "/isu/mtarchive/data/"
+set ddir = "/mnt/mtarchive2/data/"
 
 set yy=`date -u +%y`
 set yyyy=`date -u +%Y`

@@ -13,7 +13,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 PQINSERT = "/home/meteor_ldm/bin/pqinsert"
-BASE = "/isu/mtarchive/data"
+BASE = "/mnt/mtarchive2/data"
 M30 = timedelta(minutes=30)
 M60 = timedelta(minutes=60)
 M2 = timedelta(minutes=2)
