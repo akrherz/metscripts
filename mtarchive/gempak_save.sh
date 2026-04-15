@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Save metfs1 produced gempak files to mtarchive
 # called with number of days ago to run, usually 1
 # set -x
@@ -11,7 +12,26 @@ www="http://metfs1.agron.iastate.edu/data/"
 
 mygetter ()
 {
-    wget -q -O $2 $www/$1	
+    src="$1"
+    dest="$2"
+    tmp="${dest}.tmp.$$"
+
+    if [[ -e "$dest" ]]; then
+        echo "$(date -u +'%Y-%m-%dT%H:%M:%SZ') ERROR: refusing to overwrite existing file $dest" >&2
+        return 1
+    fi
+
+    if wget -q -O "$tmp" "$www/$src"; then
+        if ! mv -n "$tmp" "$dest"; then
+            echo "$(date -u +'%Y-%m-%dT%H:%M:%SZ') ERROR: failed to move $tmp -> $dest" >&2
+            rm -f "$tmp"
+            return 1
+        fi
+    else
+        rm -f "$tmp"
+        echo "$(date -u +'%Y-%m-%dT%H:%M:%SZ') ERROR: wget failed for $www/$src -> $dest" >&2
+        return 1
+    fi
 }
 
 mkdir -p ${ddir}${date1}/text/{Public,Severe,records,Climate,boy,mod,rad,sao,syn,upa}
@@ -45,7 +65,7 @@ mygetter gempak/model/nam/${date2}00_nam211.gem ${ddir}/${date1}/gempak/model/${
 mygetter gempak/model/nam/${date2}12_nam211.gem ${ddir}/${date1}/gempak/model/${date2}12_nam211.gem
 
 mkdir -p ${ddir}/${date1}/gempak/surface/sao
-mygetter gempak/surface/sao/${date2}_sao.gem ${ddir}/${date1}/gempak/surface/sao/${date2}_sao.gem
+mygetter gempak/surface/${date2}_sao.gem ${ddir}/${date1}/gempak/surface/sao/${date2}_sao.gem
 
 mkdir -p ${ddir}/${date1}/gempak/upperair
 mygetter gempak/upperair/${date2}_upa.gem ${ddir}/${date1}/gempak/upperair/${date2}_upa.gem
