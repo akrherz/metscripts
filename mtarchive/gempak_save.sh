@@ -40,7 +40,6 @@ for hh in $(seq -w 0 23);
 do
 mygetter text/boy/${date3}${hh}.boy ${ddir}${date1}/text/boy/${date2}${hh}_boy.txt
 mygetter text/mod/${date3}${hh}.mod ${ddir}${date1}/text/mod/${date2}${hh}_mod.txt
-mygetter text/rad/${date3}${hh}.rad ${ddir}${date1}/text/rad/${date2}${hh}_rad.txt
 mygetter text/sao/${date3}${hh}.sao ${ddir}${date1}/text/sao/${date2}${hh}_sao.txt
 mygetter text/syn/${date3}${hh}.syn ${ddir}${date1}/text/syn/${date2}${hh}_syn.txt
 mygetter text/upa/${date3}${hh}.upa ${ddir}${date1}/text/upa/${date2}${hh}_upa.txt

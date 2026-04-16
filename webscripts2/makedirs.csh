@@ -97,7 +97,6 @@ mkdir -p ${d1}/text/Public
 mkdir -p ${d1}/text/Severe
 mkdir -p ${d1}/text/boy
 mkdir -p ${d1}/text/mod
-mkdir -p ${d1}/text/rad
 mkdir -p ${d1}/text/Climate
 mkdir -p ${d1}/text/records
 mkdir -p ${d1}/text/sao
