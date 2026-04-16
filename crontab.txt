@@ -16,12 +16,6 @@ PROJDIR="projects/metscripts"
 # Create directories to populate data into
 18 18 * * * cd $PROJDIR/webscripts2; csh makedirs.csh 1
 
-# Copy some realtime data into /mnt/mtarchive
-00 8 * * * cd $PROJDIR/webscripts ; csh gem_scripts.csh 1
-
-# Copy some text data into /mnt/mtarchive
-10 8 * * * cd $PROJDIR/webscripts ; csh get_text.csh 1
-
 # Get a legacy DIFAX image
 40 13 * * * cd $PROJDIR/newdifax2; csh get_difax.csh 12
 40 1  * * * cd $PROJDIR/newdifax2; csh get_difax.csh 00

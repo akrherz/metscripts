@@ -36,16 +36,14 @@ mygetter ()
 
 mkdir -p ${ddir}${date1}/text/{Public,Severe,records,Climate,boy,mod,rad,sao,syn,upa}
 
-h=( 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 )
-
-for cc in $(seq 0 23);
+for hh in $(seq -w 0 23);
 do
-mygetter text/boy/${date3}${h[$cc]}.boy ${ddir}${date1}/text/boy/${date2}${h[$cc]}_boy.txt
-mygetter text/mod/${date3}${h[$cc]}.mod ${ddir}${date1}/text/mod/${date2}${h[$cc]}_mod.txt
-mygetter text/rad/${date3}${h[$cc]}.rad ${ddir}${date1}/text/rad/${date2}${h[$cc]}_rad.txt
-mygetter text/sao/${date3}${h[$cc]}.sao ${ddir}${date1}/text/sao/${date2}${h[$cc]}_sao.txt
-mygetter text/syn/${date3}${h[$cc]}.syn ${ddir}${date1}/text/syn/${date2}${h[$cc]}_syn.txt
-mygetter text/upa/${date3}${h[$cc]}.upa ${ddir}${date1}/text/upa/${date2}${h[$cc]}_upa.txt
+mygetter text/boy/${date3}${hh}.boy ${ddir}${date1}/text/boy/${date2}${hh}_boy.txt
+mygetter text/mod/${date3}${hh}.mod ${ddir}${date1}/text/mod/${date2}${hh}_mod.txt
+mygetter text/rad/${date3}${hh}.rad ${ddir}${date1}/text/rad/${date2}${hh}_rad.txt
+mygetter text/sao/${date3}${hh}.sao ${ddir}${date1}/text/sao/${date2}${hh}_sao.txt
+mygetter text/syn/${date3}${hh}.syn ${ddir}${date1}/text/syn/${date2}${hh}_syn.txt
+mygetter text/upa/${date3}${hh}.upa ${ddir}${date1}/text/upa/${date2}${hh}_upa.txt
 
 done
 
@@ -71,10 +69,10 @@ mkdir -p ${ddir}/${date1}/gempak/upperair
 mygetter gempak/upperair/${date2}_upa.gem ${ddir}/${date1}/gempak/upperair/${date2}_upa.gem
 
 mkdir -p ${ddir}${date1}/gempak/nldn
-for cc in $(seq 0 23);
+for hh in $(seq -w 0 23);
 do
-mygetter gempak/nldn/${date2}${h[$cc]}00_nldn.gem ${ddir}${date1}/gempak/nldn/${date2}${h[$cc]}00_nldn.gem 
-mygetter gempak/nldn/${date2}${h[$cc]}30_nldn.gem ${ddir}${date1}/gempak/nldn/${date2}${h[$cc]}30_nldn.gem 
+mygetter gempak/nldn/${date2}${hh}00_nldn.gem ${ddir}${date1}/gempak/nldn/${date2}${hh}00_nldn.gem 
+mygetter gempak/nldn/${date2}${hh}30_nldn.gem ${ddir}${date1}/gempak/nldn/${date2}${hh}30_nldn.gem 
 done
 
 mygetter gempak/model/ruc/${date2}00_ruc130.gem ${ddir}/${date1}/gempak/model/${date2}00_ruc130.gem
