@@ -31,9 +31,6 @@ PROJDIR="projects/metscripts"
 50  2 * * * cd $PROJDIR/webscripts2; csh wskew_script.csh 00
 50 14 * * * cd $PROJDIR/webscripts2; csh wskew_script.csh 12
 
-12  * * * * cd $PROJDIR/webscripts2; csh wltg_script.csh
-14  * * * * cd $PROJDIR/webscripts2; csh wltg1_script.csh
-
 20  * * * * cd $PROJDIR/webscripts2; sh do_sfc.sh
  0 15 * * * cd $PROJDIR/webscripts2; sh do_upa.sh 12
 30  4 * * * cd $PROJDIR/webscripts2; sh do_upa.sh 00

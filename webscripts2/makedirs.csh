@@ -82,8 +82,6 @@ mkdir -p ${d1}/pix/ukmet/12z
 mkdir -p ${d1}/gempak
 mkdir -p ${d1}/gempak/model
 mkdir -p ${d1}/gempak/mos
-# note that archive access is controlled via apache
-mkdir -p ${d1}/gempak/nldn
 mkdir -p ${d1}/gempak/profiler
 mkdir -p ${d1}/gempak/surface
 mkdir -p ${d1}/gempak/surface/rwis
