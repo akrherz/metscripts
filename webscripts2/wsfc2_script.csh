@@ -1,9 +1,9 @@
-#!/bin/csh 
+#!/bin/csh
 
 source ~/projects/metscripts/COMMON.csh
 
 setenv LOGFILE 	logs/www_sfc2
-set grid=/data/gempak/surface/sao/${DATE}${1}_sao.gem
+set grid=/data/gempak/surface/${DATE}${1}_sao.gem
 
 $GEMEXE/sfmap_gf << EOF > $LOGFILE
 \$RESPOND = YES

@@ -41,7 +41,7 @@ rm -f gempak.gif
 set device="GF"
 # set grid=${DATA_DIR}/${date}${1}.gbm
 set grid=${DATA_DIR}/${hh}/${date}${hh}${1}
-set grid1="/data/gempak/surface/sao/"
+set grid1="/data/gempak/surface/"
 #
 # Run GPMAP to generate radar plot
 #

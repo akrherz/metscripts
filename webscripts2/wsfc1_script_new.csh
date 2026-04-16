@@ -3,7 +3,7 @@ source ../COMMON.csh
 setenv LOGFILE 	logs/www_sfc1.log
 
 #
-set grid=/data/gempak/surface/sao/${DATE}${1}_sao.gem
+set grid=/data/gempak/surface/${DATE}${1}_sao.gem
 set grid1=file1.grd
 #
 # Run OAGRID to set up grid of sfc data

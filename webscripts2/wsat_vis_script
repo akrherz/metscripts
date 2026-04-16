@@ -8,7 +8,6 @@ rm -f satvis.gif
 setenv LOGFILE 	www_satvis
 set device="GF|satvis.gif|960;720"
 set grid=`ls -t /data/mcidas/AREA014? | head -1`
-set grid1="/data/gempak/surface/sao/"
 #
 $GEMEXE/gpmap_gf << EOF > $LOGFILE
 \$RESPOND = YES
