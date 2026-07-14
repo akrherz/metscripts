@@ -1,3 +1,5 @@
+#!/bin/csh
+
 source ../COMMON.csh
 setenv DATA_DIR	$SAO
 setenv LOGFILE 	logs/www_tmp.log

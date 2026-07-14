@@ -1,7 +1,8 @@
+#!/bin/csh
 
 source ../COMMON.csh
 
-setenv LOGFILE 	logs/www_eta3.log
+setenv LOGFILE logs/www_eta3.log
 
 set device="GF|eta3.gif"
 set grid=${MODEL}/nam/${DATE}${1}_nam212.gem
