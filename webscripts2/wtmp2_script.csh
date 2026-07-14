@@ -1,4 +1,4 @@
-
+#!/bin/csh
 #
 set yy=`date -u +%y`
 set mm=`date -u +%m`

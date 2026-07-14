@@ -1,3 +1,5 @@
+#!/bin/csh
+
 source ../COMMON.csh
 setenv LOGFILE 	logs/www_theta.log
 
