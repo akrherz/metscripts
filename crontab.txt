@@ -3,8 +3,8 @@ PATH=/usr/bin:/bin:~/bin:/usr/sbin:/sbin:~/projects/metscripts/scripts
 CRON_TZ="UTC"
 TZ="UTC"
 PROJDIR="projects/metscripts"
-1,11-60/5 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh
-6 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh save
+1,11-60/5 * * * * cd $PROJDIR/dmx; bash dmxRAD.sh
+6 * * * * cd $PROJDIR/dmx; bash dmxRAD.sh save
 
 12 12 * * * python3 $PROJDIR/mtarchive/archive_awc.py
 13 13 * * * python3 $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
