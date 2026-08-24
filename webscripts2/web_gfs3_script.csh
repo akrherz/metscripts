@@ -6,9 +6,9 @@ set grid=${MODEL}/gfs/${DATE}${1}_gfs215.gem
 
 $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
-GDFILE	= $grid 
+GDFILE	= $grid
 GDATTIM	= f06-f48-06
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -62,14 +62,14 @@ mv gfs3.gif.004 gfs3_05.gif
 mv gfs3.gif.005 gfs3_06.gif
 mv gfs3.gif.006 gfs3_07.gif
 mv gfs3.gif.007 gfs3_08.gif
-keep gfs3_0[1-8].gif 
+keep gfs3_0[1-8].gif
 mv gfs3_0[1-8].gif  $WEBPIX/
 #
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
-GDFILE	= $grid 
+GDFILE	= $grid
 GDATTIM	= f60-f120-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -119,7 +119,7 @@ mv gfs3.gif.002 gfs3_10a.gif
 mv gfs3.gif.003 gfs3_10b.gif
 mv gfs3.gif.004 gfs3_10c.gif
 mv gfs3.gif.005 gfs3_10d.gif
-keep gfs3_09.gif gfs3_10.gif gfs3_10[a-d].gif 
+keep gfs3_09.gif gfs3_10.gif gfs3_10[a-d].gif
 mv gfs3_09.gif gfs3_10.gif gfs3_10[a-d].gif  $WEBPIX/
 # Run GDPLOT and generate GFS model gfs
 #
@@ -127,19 +127,19 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM = F06-F48-06
-GLEVEL  = 0          !0     
-GVCORD  = atmo!none        
-GFUNC   = (quo(pwtr,25.4)) !lft4              
+GLEVEL  = 0          !0
+GVCORD  = atmo!none
+GFUNC   = (quo(pwtr,25.4)) !lft4
 GVECT   =
 CINT    = .5;.75;1.0;1.25;1.5;1.75;2.0!-14.;-12.;-10.;-8.;-6.;-4.;-2.;0.;2.
-LINE    = 0              !15/1/2        
+LINE    = 0              !15/1/2
 TITLE   = 5/-2/ ~ GFS  PWTR AND LI    |^ PREC.WATER, LI  !0
 SCALE   = 0
 SKIP    = 0
 FINT    = .5;.75;1.0;1.25;1.5;1.75;2.0
 FLINE   = 0;21-25;28-30;14;15;2;5
-CTYPE   = c/f                !c                
-HILO    =                  !                 
+CTYPE   = c/f                !c
+HILO    =                  !
 HLSYM   =
 STNPLT =0
 \$mapfil=hipowo.gsf
@@ -172,26 +172,26 @@ mv gfs3.gif.004 gfs3_15.gif
 mv gfs3.gif.005 gfs3_16.gif
 mv gfs3.gif.006 gfs3_17.gif
 mv gfs3.gif.007 gfs3_18.gif
-keep gfs3_1[1-8].gif 
+keep gfs3_1[1-8].gif
 mv gfs3_1[1-8].gif $WEBPIX/
 #
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM = F60-F120-12
-GLEVEL  = 0          !0     
-GVCORD  = none!none        
-GFUNC   = (quo(pwtr,25.4)) !lft4              
+GLEVEL  = 0          !0
+GVCORD  = none!none
+GFUNC   = (quo(pwtr,25.4)) !lft4
 GVECT   =
 CINT    = .5;.75;1.0;1.25;1.5;1.75;2.0!-14.;-12.;-10.;-8.;-6.;-4.;-2.;0.;2.
-LINE    = 0              !15/1/2        
+LINE    = 0              !15/1/2
 TITLE   = 5/-2/ ~ GFS  PWTR AND LI    |^ PREC.WATER, LI  !0
 SCALE   = 0
 SKIP    = 0
 FINT    = .5;.75;1.0;1.25;1.5;1.75;2.0
 FLINE   = 0;21-25;28-30;14;15;2;5
-CTYPE   = c/f                !c                
-HILO    =                  !                 
+CTYPE   = c/f                !c
+HILO    =                  !
 HLSYM   =
 STNPLT =0
 \$mapfil=hipowo.gsf
@@ -221,6 +221,6 @@ mv gfs3.gif.002 gfs3_20a.gif
 mv gfs3.gif.003 gfs3_20b.gif
 mv gfs3.gif.004 gfs3_20c.gif
 mv gfs3.gif.005 gfs3_20d.gif
-keep gfs3_19.gif gfs3_20.gif gfs3_20[a-d].gif 
+keep gfs3_19.gif gfs3_20.gif gfs3_20[a-d].gif
 mv gfs3_19.gif gfs3_20.gif gfs3_20[a-d].gif $WEBPIX/
 #endif

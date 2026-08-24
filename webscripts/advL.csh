@@ -22,20 +22,20 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
     GVCORD   = pres !pres
     SCALE    = 0 !
     SKIP	= !/4;4
-    GFUNC = STAB(tmpc) 
+    GFUNC = STAB(tmpc)
     GLEVEL   = 850:500 !700
     GVECT   =  !WND
     CTYPE    = f
-    FINT     = 0.5  
+    FINT     = 0.5
     FLINE     = 14-19;21-24;26-30
     LINE = !32
     WIND = BK32
 
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-1/~ 850-500mb Lapse Rates (K/km), 700mb winds
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     STNPLT   =
 
     list

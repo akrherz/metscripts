@@ -10,7 +10,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00-f12-03
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -35,7 +35,7 @@ FINT	=
 FLINE	=
 CTYPE	= c
 HLSYM   = 2;1.5//21//hw
-HILO    = ! 25;2/H#;L#///30;30/y 
+HILO    = ! 25;2/H#;L#///30;30/y
 STNPLT  = 0
 \$mapfil=HIPOWO.GSF
 list
@@ -59,10 +59,10 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00-f12-03
-DEVICE	= $device 
+DEVICE	= $device
 GVCORD  = pres
 GLEVEL	= 500
-GVECT	= WND ! 
+GVECT	= WND !
 WIND    = bk31
 SKIP    = /4;4 !
 GFUNC	= (avor(wnd))           !(avor(wnd))           !hght
@@ -103,18 +103,18 @@ GDFILE	= $grid
 DEVICE	= $device
 GDATTIM	= F01-F15-01
 GLEVEL	= 0 ! 0 ! 0 !700
-GVCORD	= pres !   pres  !   none  
-GFUNC	= (quo(APCP01,25.4)) !(quo(APCP01,25.4)) ! MUL(0.01,MMSLA) 
+GVCORD	= pres !   pres  !   none
+GFUNC	= (quo(APCP01,25.4)) !(quo(APCP01,25.4)) ! MUL(0.01,MMSLA)
 GVECT	=
 CINT	= /.1/.1!0.10;0.20;0.30;0.50;0.75;1.00;1.25;1.5;1.75;2.0;2.25;2.5;3.0!4
-LINE	= 20//1/0           !30//1/0          ! 5/1/1/3 
+LINE	= 20//1/0           !30//1/0          ! 5/1/1/3
 TITLE	= 5/-2/ ~ RUC  01-HR TOTAL PCPN, MSLP|^ 01-HOURLY TOTAL PCPN, MSLP!0
-SCALE	= 0 ! ! 
+SCALE	= 0 ! !
 SKIP	= 0
 FINT    = 0.01;0.10;0.20;0.30;0.5;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.5;3.0
 FLINE   = 0;21-27;24;28-30;14;15;2;5
-CTYPE	= f                !c                ! c  
-HILO    =                  !                 !25;2////30;30/y 
+CTYPE	= f                !c                ! c
+HILO    =                  !                 !25;2////30;30/y
 HLSYM   = 2;1.5//21//hw
 STNPLT  = 0
 \$mapfil=HIPOWO.GSF
@@ -142,7 +142,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00-f12-03
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -154,11 +154,11 @@ GAREA	= grid
 PROJ	= lcc/25;-95;25
 LATLON	= 0
 
-GLEVEL	= 850                      !850     
-GVCORD	= pres                     !pres    
-GFUNC	= dwpc                     !hght   
-SCALE	= 0                        ! 0    
-CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20  ! 30     
+GLEVEL	= 850                      !850
+GVCORD	= pres                     !pres
+GFUNC	= dwpc                     !hght
+SCALE	= 0                        ! 0
+CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20  ! 30
 LINE	= 7/5/1/2                  ! 2/1/2/1
 GVECT	= WND
 WIND    = bk4
@@ -167,8 +167,8 @@ SKIP	= /4;4 !
 FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
 FLINE	= 0;26-16--1;14-8--2 !
 CTYPE	= c/f ! c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=HIPOWO.GSF
 list
@@ -200,8 +200,8 @@ GAREA	= grid
 GDATTIM	= f00-f12-03
 PROJ	= lcc/25;-95;25
 CLRBAR  = 31
-DEVICE	= $device 
-GLEVEL	= 700 
+DEVICE	= $device
+GLEVEL	= 700
 GVCORD  = pres !pres !pres
 GFUNC	= relh  !tmpc           !hght
 GVECT   = wnd  ! !
@@ -209,9 +209,9 @@ WIND    = bk2
 skip    = /4;4 !
 CINT	= 10;30;50;70;90 !-20;-10;-5;0;4;6;8;10;12;14;16;18   !30
 LINE	= 7/5/1/2               !4/2/2/1             !4/1/2/2
-HLSYM   = 
-HILO    = 
-SCALE	= 0  !0 !0 
+HLSYM   =
+HILO    =
+SCALE	= 0  !0 !0
 TITLE	= 5/-2/ ~ RUC  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
 FINT	= 10;30;50;70;90
 FLINE	= 0;11;17-23-2
@@ -242,8 +242,8 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 GAREA	= grid
 PROJ	= lcc/25;-95;25
 CLRBAR  = 31
-DEVICE	= $device 
-GLEVEL	= 250  
+DEVICE	= $device
+GLEVEL	= 250
 GDATTIM	= f00-f12-03
 GVCORD	= pres !pres  !pres
 GFUNC	= sped !hght  !div(wnd)
@@ -254,10 +254,10 @@ TITLE	= 5/-2/ ~ RUC  250 MB HGHTS, WIND SPEED (M/S) AND DIV|^ 250 MB HGHTS, SPEE
 SCALE	= 0 ! 0 ! 5
 SKIP	= 0 ! 0 ! 0
 FINT    = 10;20;30;40;50;60;70;80;90!!
-FLINE	= 0;26-16--2;14-8--2 
+FLINE	= 0;26-16--2;14-8--2
 CTYPE	= f              !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=HIPOWO.GSF
 list
@@ -268,7 +268,7 @@ EOF
 #
 # Copy ps.plt to different name for eta model
 
-if (-e ruc6.gif) then 
+if (-e ruc6.gif) then
   mv ruc6.gif $CURRENT/ruc25PF00.gif
   mv ruc6.gif.001 $CURRENT/ruc25PF03.gif
   mv ruc6.gif.002 $CURRENT/ruc25PF06.gif

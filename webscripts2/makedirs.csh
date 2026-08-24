@@ -21,7 +21,7 @@ mkdir -p ${d1}/pix/eta
 mkdir -p ${d1}/pix/eta/00z
 mkdir -p ${d1}/pix/eta/12z
 mkdir -p ${d1}/pix/gemwx
-mkdir -p ${d1}/pix/ltg 
+mkdir -p ${d1}/pix/ltg
 mkdir -p ${d1}/pix/ltg/Midwest_lightning_past_hour
 mkdir -p ${d1}/pix/ltg/US_lightning_past_hour
 mkdir -p ${d1}/pix/mos
@@ -100,4 +100,3 @@ mkdir -p ${d1}/text/records
 mkdir -p ${d1}/text/sao
 mkdir -p ${d1}/text/syn
 mkdir -p ${d1}/text/upa
-

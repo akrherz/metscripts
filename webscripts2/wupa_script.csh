@@ -1,4 +1,4 @@
-#! /bin/csh 
+#! /bin/csh
 
 source ~/projects/metscripts/COMMON.csh
 setenv LOGFILE 	logs/www_uaa.log
@@ -38,24 +38,24 @@ LATLON   = 0
 GLEVEL   = 850
 GVCORD   = pres
 SKIP     = /6/6
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(tmpc)    !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 5       !   30
 LINE     = 19/1/1   !  32/1/3
 FINT     = 5
 FLINE    = 25-22--1;18-16--1;14-10--1
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk32/0.9/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 850 MB HEIGHTS AND TEMPERATURES (C)
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
+SATFIL   =
+RADFIL   =
 STNPLT   =
 
 list
@@ -85,24 +85,24 @@ DEVICE	= GF|uaa_02.gif|720;540
 GLEVEL   = 700
 GVCORD   = pres
 SKIP     = /6/6
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(tmpc)    !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 5       !   30
 LINE     = 19/1/1   !  32/1/3
 FINT     = 5
 FLINE    = 25-22--1;18-16--1;14-10--1
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk32/0.9/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 700 MB HEIGHTS AND TEMPERATURES (C)
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
+SATFIL   =
+RADFIL   =
 STNPLT   =
 list
 run

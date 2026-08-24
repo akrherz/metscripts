@@ -10,7 +10,7 @@ $GEMEXE/gdcross_gf << EOF > $LOGFILE
     GDFILE	= $grid
     WIND	= bm5
     SCALE	= 0
-    GVECT	= 
+    GVECT	=
     GDATTIM	= f00
     GFUNC	= XAV(UREL)
     GVCORD   = PRES
@@ -23,8 +23,8 @@ $GEMEXE/gdcross_gf << EOF > $LOGFILE
     LINE	= 3/1/1
     BORDER	= 1/1/3
     CONTUR	= 1
-    FINT	= 
-    FLINE	= 
+    FINT	=
+    FLINE	=
     TEXT	= 1/22/1/hw
 
     list

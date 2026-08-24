@@ -11,7 +11,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f06-f54-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -36,7 +36,7 @@ FINT	=
 FLINE	=
 CTYPE	= c
 HLSYM   = 2;1.5//21//hw
-HILO    = ! 25;2/H#;L#///30;30/y 
+HILO    = ! 25;2/H#;L#///30;30/y
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -95,7 +95,7 @@ EOF
 #
 # Copy ps.plt to different name for eta model
 if (-e eta4.gif) then
- 
+
   cp eta4.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_500mb_heights_vorticity_f06.gif
   cp eta4.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_500mb_heights_vorticity_f18.gif
   cp eta4.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_500mb_heights_vorticity_f30.gif
@@ -144,7 +144,7 @@ EOF
 # Copy ps.plt to different name for eta model
 #mv ps.plt ps.plt_eta
 if (-e eta4.gif) then
- 
+
   cp eta4.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f06.gif
   cp eta4.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f18.gif
   cp eta4.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f30.gif

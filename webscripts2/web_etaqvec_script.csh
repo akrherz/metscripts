@@ -32,13 +32,13 @@ WIND    = an32/.5/1//.3
 SKIP    = /2;2
 SCALE   = 0
 CINT    = -60;-40;-30;-25;-20;-15;-10;-6;-4;-2;0;2;4;6;10;15;20;25;30;40;60
-LINE    = 2/1/1/2  
+LINE    = 2/1/1/2
 TITLE   = 5/-2/ ~ ETA 600-700MB Fn-VECTOR DIVERGENCE |^ Fn-VECTOR DIV
 FINT    = -60;-40;-30;-25;-20;-15;-10;-6;-4;-2;0;2;4;6;10;15;20;25;30;40;60
 FLINE   = 0;30-16--1;14-10--1
 CTYPE   = c/f
-HILO    = 
-STNPLT  =0 
+HILO    =
+STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run
@@ -67,7 +67,7 @@ mv etaq.gif.006 etaq_07.gif
 mv etaq.gif.007 etaq_08.gif
 mv etaq.gif.008 etaq_09.gif
 mv etaq.gif.009 etaq_10.gif
-keep etaq_0[1-9].gif etaq_10.gif 
+keep etaq_0[1-9].gif etaq_10.gif
 mv etaq_0[1-9].gif etaq_10.gif $WEBPIX/
 #
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -91,15 +91,15 @@ GFUNC   = mul[1e15,sm9s(div(vasv(qvec(ldf(hght),sm5v(vlav(wnd))),kcrs(thrm(hght)
 GVECT   = smul[4e9,(vasv(qvec(ldf(hght),sm5v(vlav(wnd))),kcrs(thrm(hght))))]
 WIND    = an32/.5/1//.3
 SKIP    = /2;2
-SCALE   = 
+SCALE   =
 CINT    = -60;-40;-30;-25;-20;-15;-10;-6;-4;-2;0;2;4;6;10;15;20;25;30;40;60
-LINE    = 2/1/1/2  
+LINE    = 2/1/1/2
 TITLE   = 5/-2/ ~ ETA 700-850MB Fn-VECTOR DIVERGENCE |^ Fn-VECTOR DIV
 FINT    = -60;-40;-30;-25;-20;-15;-10;-6;-4;-2;0;2;4;6;10;15;20;25;30;40;60
 FLINE   = 0;30-16--1;14-10--1
 CTYPE   = c/f
-HILO    = 
-STNPLT  =0 
+HILO    =
+STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run
@@ -128,5 +128,5 @@ mv etaq.gif.006 etaq_17.gif
 mv etaq.gif.007 etaq_18.gif
 mv etaq.gif.008 etaq_19.gif
 mv etaq.gif.009 etaq_20.gif
-keep etaq_1[1-9].gif etaq_20.gif 
+keep etaq_1[1-9].gif etaq_20.gif
 mv etaq_1[1-9].gif etaq_20.gif $WEBPIX/

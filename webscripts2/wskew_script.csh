@@ -1,4 +1,4 @@
-#! /bin/csh 
+#! /bin/csh
 # 05 Mar 2003	Check this out and see why she fails
 
 source ~/projects/metscripts/COMMON.csh

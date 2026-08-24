@@ -58,8 +58,8 @@ if (-e ruc1c.gif) then
   mv ruc1c.gif.001 ruc1b_08.gif
   mv ruc1c.gif.002 ruc1b_08a.gif
   mv ruc1c.gif.003 ruc1b_08b.gif
-  keep ruc1b_0[7-8].gif 
-  keep ruc1b_08[a-b].gif 
+  keep ruc1b_0[7-8].gif
+  keep ruc1b_08[a-b].gif
   mv ruc1b_0[7-8].gif $WEBPIX/
   mv ruc1b_08[a-b].gif $WEBPIX/
 endif
@@ -86,13 +86,13 @@ STNPLT =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
-                                                                                                 
+
+
 exit
 EOF
 # Copy images to different name for eta model
 if (-e ruc1c.gif) then
- 
+
   cp ruc1c.gif ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_PWTR_LI_SRH_f00.gif
   cp ruc1c.gif.001 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_PWTR_LI_SRH_f01.gif
   cp ruc1c.gif.002 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_PWTR_LI_SRH_f02.gif
@@ -102,7 +102,7 @@ if (-e ruc1c.gif) then
   mv ruc1c.gif.001 ruc1c_02.gif
   mv ruc1c.gif.002 ruc1c_03.gif
   mv ruc1c.gif.003 ruc1c_04.gif
-  keep ruc1c_0[1-4].gif 
+  keep ruc1c_0[1-4].gif
   mv ruc1c_0[1-4].gif $WEBPIX/
 endif
 
@@ -128,7 +128,7 @@ HILO    =                  !
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
+
 exit
 EOF
 
@@ -143,7 +143,7 @@ if (-e ruc1c.gif) then
   mv ruc1c.gif.001 ruc1c_06.gif
   mv ruc1c.gif.002 ruc1c_07.gif
   mv ruc1c.gif.003 ruc1c_08.gif
-  keep ruc1c_0[5-8].gif 
+  keep ruc1c_0[5-8].gif
   mv ruc1c_0[5-8].gif $WEBPIX/
 endif
 
@@ -169,7 +169,7 @@ STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
+
 exit
 EOF
 
@@ -192,31 +192,31 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE  = $grid
 GDATTIM = F00-F03-01
-GLEVEL  = 1000:0  
+GLEVEL  = 1000:0
 GVCORD  = hght
 GFUNC   = hlcy
 GVECT   =
 CINT    = 50.;100.;150.;200.;250.;300.;400.
 LINE    = 3/5/2
-TITLE   = 5/-2/ ~ RUC  0-1KM HELICITY    |^ 0-1KM HELICITY  
+TITLE   = 5/-2/ ~ RUC  0-1KM HELICITY    |^ 0-1KM HELICITY
 SCALE   = 0
 SKIP    = 0
 FINT    = 50.;100.;150.;200.;250.;300.;400.
 FLINE   = 0;26-16--2;14-8--2
 CTYPE   =  c/f
-HILO    = 
+HILO    =
 HLSYM   =
 STNPLT =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
-                                                                                                 
+
+
 exit
 EOF
 # Copy images to different name for eta model
 if (-e ruc1c.gif) then
- 
+
   cp ruc1c.gif ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_0_to_1km_SRH_f00.gif
   cp ruc1c.gif.001 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_0_to_1km_SRH_f01.gif
   cp ruc1c.gif.002 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_0_to_1km_SRH_f02.gif
@@ -226,7 +226,6 @@ if (-e ruc1c.gif) then
   mv ruc1c.gif.001 ruc1c_11.gif
   mv ruc1c.gif.002 ruc1c_12.gif
   mv ruc1c.gif.003 ruc1c_13.gif
-  keep ruc1c_1[0-3].gif 
+  keep ruc1c_1[0-3].gif
   mv ruc1c_1[0-3].gif $WEBPIX/
 endif
-

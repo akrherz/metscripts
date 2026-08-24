@@ -23,4 +23,3 @@ rm -f combine.err
 cp final.gif /mtarchive/data/${date1}/pix/gemwx/${DATE}${hh}_gemwx.gif
 cp final.gif /webpix/gemwx.gif
 keep /webpix/gemwx.gif
-

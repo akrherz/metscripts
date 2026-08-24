@@ -1,4 +1,4 @@
-#! /bin/csh 
+#! /bin/csh
 #
 
 source ~/projects/metscripts/COMMON.csh
@@ -40,25 +40,25 @@ LATLON   = 0
 GLEVEL   = 300
 GVCORD   = pres
 SKIP     = /6/6
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(sped)    !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 25;35;45;55;65;75;85;95      !   120
 LINE     = 19/1/1   !   32/1/3
 FINT     = 25;35;45;55;65;75;85;95
 FLINE    = 27-21--3;18-16--2;14-4--2
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk32/0.9/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 300 MB HEIGHTS AND WIND SPEEDS (M/S)
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
-STNPLT   =  
+SATFIL   =
+RADFIL   =
+STNPLT   =
 list
 run
 
@@ -86,25 +86,25 @@ DEVICE	= GF|ua1_02.gif|720;540
 GLEVEL   = 200
 GVCORD   = pres
 SKIP     = /6/6
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(sped)    !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 25;35;45;55;65;75;85;95      !   120
 LINE     = 19/1/1   !   32/1/3
 FINT     = 25;35;45;55;65;75;85;95
 FLINE    = 27-21--3;18-16--2;14-4--2
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk32/0.9/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 200 MB HEIGHTS AND WIND SPEEDS (M/S)
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
-STNPLT   =  
+SATFIL   =
+RADFIL   =
+STNPLT   =
 list
 run
 

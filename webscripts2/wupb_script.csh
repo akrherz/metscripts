@@ -1,4 +1,4 @@
-#! /bin/csh 
+#! /bin/csh
 
 source ~/projects/metscripts/COMMON.csh
 
@@ -36,25 +36,25 @@ LATLON   = 0
 GLEVEL   = 500
 GVCORD   = pres
 SKIP     = /6/6
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(tmpc)    !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 5       !   60
 LINE     = 19/1/1   !  32/1/3
 FINT     = 5
 FLINE    = 25-22--1;18-16--1;14-10--1
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk32/0.9/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 500 MB HEIGHTS AND TEMPERATURES (C)
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
-STNPLT   =  
+SATFIL   =
+RADFIL   =
+STNPLT   =
 \$mapfil =
 list
 run
@@ -84,25 +84,25 @@ DEVICE	= GF|uab_02.gif|720;540
 GLEVEL   = 500
 GVCORD   = pres
 SKIP     = /8/8
-SCALE    = 
+SCALE    =
 GFUNC    = sm9s(sm9s(sm9s(avor(obs))))   !   sm9s(hght)
 CTYPE    = c/f     !   c
-CONTUR   = 
+CONTUR   =
 CINT     = 2       !   60
 LINE     = 19/5/1   !   31/1/3
 FINT     = 10;14;18;20;22;24;26;28;30
 FLINE    = 0;24-22--1;18-16--1;14-4--1
-HILO     = 
+HILO     =
 HLSYM    = 2;1.5//21//hw
 CLRBAR   = 0
-GVECT    = WND 
+GVECT    = WND
 WIND     = bk31/1.1/1
-REFVEC   = 
+REFVEC   =
 TITLE    = 31/-2/~ 500 MB HEIGHTS AND VORTICITY
 TEXT     = 1.0/2//hw
-SATFIL   = 
-RADFIL   = 
-STNPLT   = 
+SATFIL   =
+RADFIL   =
+STNPLT   =
 list
 run
 

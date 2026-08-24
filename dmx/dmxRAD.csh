@@ -1,4 +1,4 @@
-#!/bin/csh 
+#!/bin/csh
 
 source ../COMMON.csh
 set yy=`date -u +%y`
@@ -38,10 +38,10 @@ gpmap_gf << EOF > $LOGFILE
     MAP      = 5/1/1
     GAREA    = dsm*
     PROJ     = rad
-    SATFIL   = 
+    SATFIL   =
     RADFIL   = ${grid}
     LATLON   = 0
-    PANEL    = 0 
+    PANEL    = 0
     TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${tm}
     TEXT     = 1/2/1/hw
     LUTFIL   = RADAR

@@ -12,10 +12,10 @@ $GEMEXE/gpmap_gf << EOF > $LOGFILE
 DEVICE   = $device
 GAREA    = dsm*
 PROJ     = rad
-SATFIL   = 
+SATFIL   =
 RADFIL   = ${grid}
 LATLON   = 0
-PANEL    = 0 
+PANEL    = 0
 TITLE    = 31/-2/~ RADAR EST. STORM TOTAL PRECIP THRU MIDNIGHT (06Z)
 #TITLE    = 1
 TEXT     = 1/2/1/hw

@@ -10,9 +10,9 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
 DEVICE	= GF|sfc2_01.gif|964;624
 AREA     = 20;-128;53;-54
 GAREA    = 20;-116;51;-62
-SATFIL   = 
-RADFIL   = 
-STNPLT  =  
+SATFIL   =
+RADFIL   =
+STNPLT  =
 SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
 DATTIM   = ${date}/${hh}00
 SFFILE   = $grid
@@ -27,7 +27,7 @@ PROJ     = lcc
 FILTER   = 0.8
 TEXT     = 0.66/2/1/hw
 SKPMIS   = NO
-\$mapfil = 
+\$mapfil =
 list
 run
 

@@ -23,8 +23,8 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
 DEVICE	= GF|tmp2_01.gif|720;540
 AREA     = 20;-128;53;-54
 GAREA    = 20;-116;51;-62
-SATFIL   = 
-RADFIL   = 
+SATFIL   =
+RADFIL   =
 SFPARM   = tmpf
 DATTIM   = ${date}/18
 SFFILE   = $grid
