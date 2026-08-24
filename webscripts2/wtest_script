@@ -1,19 +1,19 @@
-#! /bin/csh 
+#! /bin/csh
 ########################################################
 # Script for plotting forecasts from current day's ETA
 # model to gif for display on web.  Also will plot
 # current hour surface data and upper air data
 #
 # Can be run from cron.
-# Invoke with 1 argument: 00 or 12 for the model run 
-# 
+# Invoke with 1 argument: 00 or 12 for the model run
+#
 ########################################################
 #
-# source the 5.2 environment variables 
+# source the 5.2 environment variables
 #
 source /nawips/Gemenviron
 setenv DISPLAY mesonet.agron.iastate.edu:3.0
-# cd to temporary directory. This is where the Nmeta file 
+# cd to temporary directory. This is where the Nmeta file
 # will be kept while the script is running.
 #
 cd ~/webscripts/www
@@ -51,7 +51,7 @@ $GEMEXE/sflist << EOF >> $LOGFILE
 \$RESPOND = YES
 AREA     = ia
 GAREA    = ia
-STNPLT  =  
+STNPLT  =
 SFPARM   = tmpc
 DATTIM   = ${date}/${hh}00
 SFFILE   = $grid

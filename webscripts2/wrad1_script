@@ -1,15 +1,15 @@
-#! /bin/csh 
+#! /bin/csh
 ########################################################
 #
 # Can be run from cron.
-# 
+#
 ########################################################
 #
-# source the 5.2 environment variables 
+# source the 5.2 environment variables
 #
 source /nawips/Gemenviron
 #
-# cd to temporary directory. This is where the Nmeta file 
+# cd to temporary directory. This is where the Nmeta file
 # will be kept while the script is running.
 #
 cd www
@@ -51,11 +51,11 @@ DEVICE   = $device
 MAP      = 5/1/1
 GAREA    = dmx*
 PROJ     = rad
-SATFIL   = 
+SATFIL   =
 RADFIL   = ${grid}05.DMX
 LATLON   = 0
-PANEL    = 0 
-#TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${hh}:10 
+PANEL    = 0
+#TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${hh}:10
 TITLE    = 1
 TEXT     = 1/2/1/hw
 CLEAR    = yes

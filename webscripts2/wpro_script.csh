@@ -11,15 +11,15 @@ set grid=/data/gempak/profiler/${DATE}${1}_pro.gem
 
 sncross << EOF > $LOGFILE
 \$RESPOND = YES
-DEVICE	= $device 
+DEVICE	= $device
 CXSTNS   = slai4
-SNPARM   =     
+SNPARM   =
 SNFILE   = $grid
 DATTIM   = all
 VCOORD   = hght
 PTYPE    = lin
 YAXIS    = 500/12000/1000
-TAXIS    = 
+TAXIS    =
 LINE     = 31/1/1/1
 BORDER   = 5
 CINT     = 5
@@ -32,8 +32,8 @@ TEXT     = 0.8/21/1/hw
 CURVE    = 2
 CLRBAR   = 0
 CONTUR   = 3/3
-FINT     = 
-FLINE    = 
+FINT     =
+FLINE    =
 CTYPE    = c
 list
 run

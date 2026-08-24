@@ -1,4 +1,4 @@
-#! /bin/csh  
+#! /bin/csh
 # 19 Mar 2003	Make sure counties are not on maps...
 
 source ../COMMON.csh
@@ -13,7 +13,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f96-f240-24
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -25,24 +25,24 @@ GAREA	= 17.529;-129.296;53.771;-22.374
 PROJ	= str/90;-105;0
 LATLON	= 0
 
-GFUNC =  hght  ! pmsl@0%NONE 
+GFUNC =  hght  ! pmsl@0%NONE
 GLEVEL = 500   !0     ! 1000
 GVECT =        !      ! wind@1000%PRES
-WIND  =        !      ! Bk32/0.8/2 
-GVCORD=  PRES            
-PROJ  =   str/+90;-100;0/1;3;1;2  
-GAREA =  10;-125;50;-20         
+WIND  =        !      ! Bk32/0.8/2
+GVCORD=  PRES
+PROJ  =   str/+90;-100;0/1;3;1;2
+GAREA =  10;-125;50;-20
 SKIP  =  /5;5
 SCALE =  999
-CTYPE =  c/f ! c                               
+CTYPE =  c/f ! c
 CINT  =  60 ! 4
-LINE  =  15/1/2/1 ! 32/1/2/1  
+LINE  =  15/1/2/1 ! 32/1/2/1
 FINT  =  4800;4920;5040;5160;5280;5400;5520;5640;5760;5880;6000 !
 FLINE =  30-22--1;18-10--1!
 HILO  =  !25;2/H#;L#///30;30/y !
-HLSYM =   
-REFVEC=                 
-STNPLT=  
+HLSYM =
+REFVEC=
+STNPLT=
 TITLE   = 31/-2/  ~  MRF 500mb HGHT, WIND (knts), MSL Press|^ 500mb HGHT WND & PMSL!0
 \$mapfil=
 list
@@ -56,7 +56,7 @@ EOF
 #$GEMEXE/gpend
 
 #
-# Move ps file and rename to mrf 
+# Move ps file and rename to mrf
 cp mrf.gif ${ddir2}/pix/mrf/mrf_${DATE}${1}_500mb_HGHT_winds_MSLP_f96.gif
 cp mrf.gif.001 ${ddir2}/pix/mrf/mrf_${DATE}${1}_500mb_HGHT_winds_MSLP_f120.gif
 cp mrf.gif.002 ${ddir2}/pix/mrf/mrf_${DATE}${1}_500mb_HGHT_winds_MSLP_f144.gif

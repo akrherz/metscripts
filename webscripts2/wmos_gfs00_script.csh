@@ -17,9 +17,9 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
 DEVICE	= $device
 AREA     = 39.5;-98;45;-88
 GAREA    = 39.5;-98;45;-88
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tdyf
 DATTIM   = ${date1}/00
 SFFILE   = $grid
@@ -57,9 +57,9 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 DEVICE	= $device
 AREA     = 39.5;-98;45;-88
 GAREA    = 39.5;-98;45;-88
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tntf
 DATTIM   = ${date1}/12
 SFFILE   = $grid
@@ -97,9 +97,9 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 DEVICE	= $device
 AREA     = 39.5;-98;45;-88
 GAREA    = 39.5;-98;45;-88
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tdyf
 DATTIM   = ${date2}/00
 SFFILE   = $grid
@@ -137,9 +137,9 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 DEVICE	= $device
 AREA     = 39.5;-98;45;-88
 GAREA    = 39.5;-98;45;-88
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tntf
 DATTIM   = ${date2}/12
 SFFILE   = $grid
@@ -177,9 +177,9 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 DEVICE	= $device
 AREA     = 39.5;-98;45;-88
 GAREA    = 39.5;-98;45;-88
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tdyf
 DATTIM   = ${date3}/00
 SFFILE   = $grid
@@ -236,8 +236,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -276,8 +276,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -316,8 +316,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -356,8 +356,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -396,8 +396,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -436,8 +436,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -476,8 +476,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -516,8 +516,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -556,8 +556,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 
@@ -596,8 +596,8 @@ TEXT     = 0.70/2/1/hw
 SKPMIS   = NO
 list
 run
-                                                                                            
-                                                                                            
+
+
 exit
 EOF
 

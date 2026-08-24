@@ -37,7 +37,7 @@ STNPLT=0
 
 GDATTIM	= f06
 GFUNC   = (quo(APCP06,25.4)) !(tmpc) ! (tmpc)! (tmpc)
-DEVICE	= $device 
+DEVICE	= $device
 run
 
 GDATTIM	= f12
@@ -89,7 +89,7 @@ if (-e gfs2.gif) then
   cp gfs2.gif.004 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f30.gif
   cp gfs2.gif.005 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f36.gif
   cp gfs2.gif.006 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f42.gif
-  cp gfs2.gif.007 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f48.gif 
+  cp gfs2.gif.007 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f48.gif
 
   mv gfs2.gif gfs2_01.gif
   mv gfs2.gif.001 gfs2_02.gif
@@ -134,7 +134,7 @@ STNPLT=0
 
 GDATTIM	= f60
 GFUNC   = (quo(sub(APCP60, APCP48^F48),25.4)) !(tmpc) ! (tmpc)! (tmpc)
-DEVICE	= $device 
+DEVICE	= $device
 run
 
 GDATTIM	= f72
@@ -191,7 +191,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f06-f48-06
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -203,11 +203,11 @@ GAREA	= 15;-129;60;-45
 PROJ	= lcc/25;-95;25
 LATLON	= 0
 
-GLEVEL	= 850                      !850    !850 
-GVCORD	= pres                     !pres   !pres 
+GLEVEL	= 850                      !850    !850
+GVCORD	= pres                     !pres   !pres
 GFUNC	= dwpc                     !hght   !tmpc
 SCALE	= 0                        ! 0    !0
-CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20!30 !5    
+CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20!30 !5
 LINE	= 7/5/1/2                  ! 2/1/2/1 !32/5/2/2
 GVECT	= WND
 WIND    = bk4/0.9
@@ -216,8 +216,8 @@ SKIP	= /12;12 !
 FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
 FLINE	= 27;26-16--1;14-8--2 !
 CTYPE	= f ! c !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -230,7 +230,7 @@ EOF
 # Run GPEND to clean up
 # Copy ps.plt to different name for eta model
 if (-e gfs2.gif) then
-  
+
   cp gfs2.gif ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f06.gif
   cp gfs2.gif.001 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f12.gif
   cp gfs2.gif.002 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f18.gif
@@ -239,7 +239,7 @@ if (-e gfs2.gif) then
   cp gfs2.gif.005 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f36.gif
   cp gfs2.gif.006 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f42.gif
   cp gfs2.gif.007 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_850mb_heights_T_Td_winds_f48.gif
-  
+
   mv gfs2.gif gfs2_11.gif
   mv gfs2.gif.001 gfs2_12.gif
   mv gfs2.gif.002 gfs2_13.gif
@@ -255,7 +255,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f60-f120-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -271,7 +271,7 @@ GLEVEL	= 850                      !850     !850
 GVCORD	= pres                     !pres    !pres
 GFUNC	= dwpc                     !hght    !tmpc
 SCALE	= 0                        ! 0      !0
-CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20!30!5     
+CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20!30!5
 LINE	= 7/5/1/2                  ! 2/1/2/1 !32/5/2/2
 GVECT	= WND
 WIND    = bk4/0.9
@@ -280,8 +280,8 @@ SKIP	= /12;12 !
 FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
 FLINE	= 27;26-16--1;14-8--2 !
 CTYPE	= f ! c  !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -321,7 +321,7 @@ PROJ	= lcc/25;-95;25
 CLRBAR  = 31
 GDATTIM	= f06-f48-06
 
-GLEVEL	= 700 
+GLEVEL	= 700
 GVCORD  = pres !pres !pres
 GFUNC	= relh   !tmpc           !hght
 GVECT   = wnd  ! !
@@ -329,9 +329,9 @@ WIND    = bk2/0.8
 skip    = /12;12 !
 CINT	= 10;30;50;70;90 !-20;-10;-5;0;4;6;8;10;12;14;16;18   !30
 LINE	= 7/5/1/2               !32/2/2/1             !4/1/2/2
-HLSYM   = 
-HILO    = 
-SCALE	= 0  !0 !0 
+HLSYM   =
+HILO    =
+SCALE	= 0  !0 !0
 TITLE	= 5/-2/ ~ GFS  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
 FINT	= 10;30;50;70;90
 FLINE	= 15;11;17-23-2
@@ -348,7 +348,7 @@ EOF
 #
 # Copy ps.plt to different name for eta model
 if (-e gfs2.gif) then
- 
+
   cp gfs2.gif ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f06.gif
   cp gfs2.gif.001 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f12.gif
   cp gfs2.gif.002 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f18.gif
@@ -366,7 +366,7 @@ if (-e gfs2.gif) then
   mv gfs2.gif.005 gfs2_26.gif
   mv gfs2.gif.006 gfs2_27.gif
   mv gfs2.gif.007 gfs2_28.gif
-  keep gfs2_2[1-8].gif  
+  keep gfs2_2[1-8].gif
   mv gfs2_2[1-8].gif $WEBPIX/
 endif
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -376,7 +376,7 @@ PROJ	= lcc/25;-95;25
 CLRBAR  = 31
 GDATTIM	= f60-f120-12
 
-GLEVEL	= 700 
+GLEVEL	= 700
 GVCORD  = pres !pres !pres
 GFUNC	= relh  !tmpc           !hght
 GVECT   = wnd  ! !
@@ -384,9 +384,9 @@ WIND    = bk2/0.8
 skip    = /12;12 !
 CINT	= 10;30;50;70;90 !-20;-10;-5;0;4;6;8;10;12;14;16;18   !30
 LINE	= 7/5/1/2               !32/2/2/1             !4/1/2/2
-HLSYM   = 
-HILO    = 
-SCALE	= 0  !0 !0 
+HLSYM   =
+HILO    =
+SCALE	= 0  !0 !0
 TITLE	= 5/-2/ ~ GFS  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
 FINT	= 10;30;50;70;90
 FLINE	= 15;11;17-23-2
@@ -403,13 +403,13 @@ EOF
 #
 # Copy ps.plt to different name for eta model
 if (-e gfs2.gif) then
- 
+
   cp gfs2.gif ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f60.gif
   cp gfs2.gif.001 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f72.gif
   cp gfs2.gif.002 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f84.gif
   cp gfs2.gif.003 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f96.gif
   cp gfs2.gif.004 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f108.gif
-  cp gfs2.gif.005 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f120.gif 
+  cp gfs2.gif.005 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_700mb_heights_RH_Temps_f120.gif
 
   mv gfs2.gif gfs2_29.gif
   mv gfs2.gif.001 gfs2_30.gif
@@ -417,7 +417,7 @@ if (-e gfs2.gif) then
   mv gfs2.gif.003 gfs2_30b.gif
   mv gfs2.gif.004 gfs2_30c.gif
   mv gfs2.gif.005 gfs2_30d.gif
-  keep gfs2_29.gif gfs2_30.gif gfs2_30[a-d].gif  
+  keep gfs2_29.gif gfs2_30.gif gfs2_30[a-d].gif
   mv gfs2_29.gif gfs2_30.gif gfs2_30[a-d].gif $WEBPIX/
 endif
 # Run GDPLOT and generate GFS model gfs
@@ -429,7 +429,7 @@ PROJ	= lcc/25;-95;25
 CLRBAR  = 31
 GDATTIM	= f06-f48-06
 
-GLEVEL	= 250  
+GLEVEL	= 250
 GVCORD	= pres !pres  !pres
 GFUNC	= sped !hght  !sm9s(sm9s(sm9s(div(wnd))))
 GVECT	= ! !
@@ -439,10 +439,10 @@ TITLE	= 5/-2/ ~ GFS  250 MB HGHTS, WIND SPEED (M/S) AND DIV|^ 250 MB HGHTS, SPEE
 SCALE	= 0 ! 0 ! 5
 SKIP	= 0 ! 0 ! 0
 FINT    = 10;20;30;40;50;60;70;80;90!!
-FLINE	= 0;26-16--2;14-8--2 
+FLINE	= 0;26-16--2;14-8--2
 CTYPE	= f              !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -473,7 +473,7 @@ if (-e gfs2.gif) then
   mv gfs2.gif.005 gfs2_36.gif
   mv gfs2.gif.006 gfs2_37.gif
   mv gfs2.gif.007 gfs2_38.gif
-  keep gfs2_3[1-8].gif 
+  keep gfs2_3[1-8].gif
   mv gfs2_3[1-8].gif $WEBPIX/
 endif
 
@@ -486,7 +486,7 @@ PROJ	= lcc/25;-95;25
 CLRBAR  = 31
 GDATTIM	= f60-f120-12
 
-GLEVEL	= 250  
+GLEVEL	= 250
 GVCORD	= pres !pres  !pres
 GFUNC	= sped !hght  !sm9s(sm9s(sm9s(div(wnd))))
 GVECT	= ! !
@@ -496,10 +496,10 @@ TITLE	= 5/-2/ ~ GFS  250 MB HGHTS, WIND SPEED (M/S) AND DIV|^ 250 MB HGHTS, SPEE
 SCALE	= 0 ! 0 ! 5
 SKIP	= 0 ! 0 ! 0
 FINT    = 10;20;30;40;50;60;70;80;90!!
-FLINE	= 0;26-16--2;14-8--2 
+FLINE	= 0;26-16--2;14-8--2
 CTYPE	= f              !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -512,7 +512,7 @@ EOF
 # Copy ps.plt to different name for eta model
 #mv ps.plt ps.plt_eta
 if (-e gfs2.gif) then
- 
+
   cp gfs2.gif ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_250mb_heights_winds_DIV_f60.gif
   cp gfs2.gif.001 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_250mb_heights_winds_DIV_f72.gif
   cp gfs2.gif.002 ${ddir2}/pix/gfs/${1}z/gfs_${DATE}${1}_250mb_heights_winds_DIV_f84.gif
@@ -526,7 +526,7 @@ if (-e gfs2.gif) then
   mv gfs2.gif.003 gfs2_40b.gif
   mv gfs2.gif.004 gfs2_40c.gif
   mv gfs2.gif.005 gfs2_40d.gif
-  keep gfs2_39.gif gfs2_40.gif gfs2_40[a-d].gif 
+  keep gfs2_39.gif gfs2_40.gif gfs2_40[a-d].gif
   mv gfs2_39.gif gfs2_40.gif gfs2_40[a-d].gif $WEBPIX/
 endif
 
@@ -544,7 +544,7 @@ CLRBAR  = 31
 GAREA   = 15;-129;60;-45
 PROJ    = lcc/25;-95;25
 LATLON  = 0
-                                                                                                 
+
 GLEVEL  = 2      !2 !10
 GVCORD  = hght
 GFUNC   = dwpf!tmpf!
@@ -611,7 +611,7 @@ CLRBAR  = 31
 GAREA   = 15;-129;60;-45
 PROJ    = lcc/25;-95;25
 LATLON  = 0
-                                                                                                 
+
 GLEVEL  =        !2 !10
 GVCORD  = hght
 GFUNC   =     !tmpf!
@@ -644,5 +644,5 @@ mv gfs2.gif gfs2_50a.gif
 mv gfs2.gif.001 gfs2_50b.gif
 mv gfs2.gif.002 gfs2_50c.gif
 mv gfs2.gif.003 gfs2_50d.gif
-keep gfs2_50[a-d].gif 
+keep gfs2_50[a-d].gif
 mv  gfs2_50[a-d].gif $WEBPIX/

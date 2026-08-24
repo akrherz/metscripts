@@ -14,9 +14,9 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
     DEVICE	= GF|${OUTPUT0}|720;540
     AREA     = 20;-128;53;-54
     GAREA    = 20;-116;51;-62
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT  =  
+    SATFIL   =
+    RADFIL   =
+    STNPLT  =
     SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
     DATTIM   = ${date}/${hh}00
     SFFILE   = $grid
@@ -42,9 +42,9 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
     DEVICE	= GF|${OUTPUT05}|720;540
     AREA    = 37;-101;44;-87
     GAREA    = 37;-101;44;-87
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT  =  
+    SATFIL   =
+    RADFIL   =
+    STNPLT  =
     SFPARM   = skyc:0.65;tmpf;wsym:0.65;rmsl;;dwpf;brbk:0.65
     DATTIM   = ${date}/${hh}00
     SFFILE   = $grid

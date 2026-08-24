@@ -14,9 +14,9 @@ $GEMEXE/sfmap_gf << EOF > $LOGFILE
 DEVICE	= GF|tmp_01.gif|720;540
 AREA     = 20;-128;53;-54
 GAREA    = 20;-116;51;-62
-SATFIL   = 
-RADFIL   = 
-STNPLT   =   
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = tmpf
 DATTIM   = ${date}/12
 SFFILE   = $grid
@@ -54,13 +54,13 @@ $GEMEXE/sfmap_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 DEVICE	= GF|tmp_02.gif|720;540
 AREA     = dset
-SATFIL   = 
-RADFIL   = 
-STNPLT   =  
+SATFIL   =
+RADFIL   =
+STNPLT   =
 SFPARM   = p24i
 DATTIM   = ${date}/12
 SFFILE   = $grid
-COLORS   = 5 
+COLORS   = 5
 MAP      = 15/1/2
 LATLON   = 0
 MARKER   = 0
@@ -85,7 +85,7 @@ EOF
 #
 # Rename ps file to indicate sfc data
 if (-e tmp_02.gif) then
-cp tmp_02.gif ${ddir2}/pix/tmp/${DATE}_24hr_precip.gif  
+cp tmp_02.gif ${ddir2}/pix/tmp/${DATE}_24hr_precip.gif
 mv tmp_02.gif $WEBPIX//tmp_02.gif
 keep $WEBPIX//tmp_02.gif
 endif

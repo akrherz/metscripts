@@ -3,8 +3,8 @@ PATH=/usr/bin:/bin:~/bin:/usr/sbin:/sbin:~/projects/metscripts/scripts
 CRON_TZ="UTC"
 TZ="UTC"
 PROJDIR="projects/metscripts"
-1,11-60/5 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh
-6 * * * * cd $PROJDIR/dmx; csh dmxRAD.csh save
+1,11-60/5 * * * * cd $PROJDIR/dmx; bash dmxRAD.sh
+6 * * * * cd $PROJDIR/dmx; bash dmxRAD.sh save
 
 12 12 * * * python3 $PROJDIR/mtarchive/archive_awc.py
 13 13 * * * python3 $PROJDIR/mtarchive/archive_awc.py $(date --date '2 days ago' +'\%Y \%m \%d')
@@ -89,10 +89,10 @@ PROJDIR="projects/metscripts"
 30 14 * * * cd $PROJDIR/webscripts2; csh wtmp_script.csh
 30 19 * * * cd $PROJDIR/webscripts2; csh wtmp2_script.csh
 
-24  * * * * cd $PROJDIR/webscripts; csh surface.csh 
-19  * * * * cd $PROJDIR/webscripts; csh surfacePlot.csh 
- 4 16,17 * * * cd $PROJDIR/webscripts; csh eta.csh 12 
-48 3,4 * * * cd $PROJDIR/webscripts; csh eta.csh 00 
+24  * * * * cd $PROJDIR/webscripts; csh surface.csh
+19  * * * * cd $PROJDIR/webscripts; csh surfacePlot.csh
+ 4 16,17 * * * cd $PROJDIR/webscripts; csh eta.csh 12
+48 3,4 * * * cd $PROJDIR/webscripts; csh eta.csh 00
 4 18 * * * cd $PROJDIR/webscripts; csh gfs.csh 12
 48 5 * * * cd $PROJDIR/webscripts; csh gfs.csh 00
 29 16 * * * cd $PROJDIR/webscripts; csh advL.csh 12
@@ -107,7 +107,7 @@ PROJDIR="projects/metscripts"
 50 23 * * * cd $PROJDIR/webscripts; csh ruc.csh 21
 50 13 * * * cd $PROJDIR/webscripts; sh skewAll.sh 12
 50 1 * * * cd $PROJDIR/webscripts; sh skewAll.sh 00
-15 5 * * * cd $PROJDIR/webscripts; csh upperAir.csh 00 
-15 17 * * * cd $PROJDIR/webscripts; csh upperAir.csh 12 
-15 08 * * * cd $PROJDIR/webscripts; csh hemis.csh 00 
-16 08 * * * cd $PROJDIR/webscripts; csh zonalWind.csh 00 
+15 5 * * * cd $PROJDIR/webscripts; csh upperAir.csh 00
+15 17 * * * cd $PROJDIR/webscripts; csh upperAir.csh 12
+15 08 * * * cd $PROJDIR/webscripts; csh hemis.csh 00
+16 08 * * * cd $PROJDIR/webscripts; csh zonalWind.csh 00

@@ -12,7 +12,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f06-f54-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -56,7 +56,7 @@ if (-e eta3.gif) then
   cp eta3.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_CAPE_CIN_0to6km_shear_f30.gif
   cp eta3.gif.003 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_CAPE_CIN_0to6km_shear_f42.gif
   cp eta3.gif.004 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_CAPE_CIN_0to6km_shear_f54.gif
- 
+
   mv eta3.gif eta3_01.gif
   mv eta3.gif.001 eta3_02.gif
   mv eta3.gif.002 eta3_03.gif
@@ -96,13 +96,13 @@ exit
 EOF
 #
 if (-e eta3.gif) then
-   
+
   cp eta3.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_PWTR_LI_SRH_f06.gif
   cp eta3.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_PWTR_LI_SRH_f18.gif
   cp eta3.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_PWTR_LI_SRH_f30.gif
   cp eta3.gif.003 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_PWTR_LI_SRH_f42.gif
   cp eta3.gif.004 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_PWTR_LI_SRH_f54.gif
- 
+
   mv eta3.gif eta3_05.gif
   mv eta3.gif.001 eta3_06.gif
   mv eta3.gif.002 eta3_07.gif
@@ -117,7 +117,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f06-f54-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -153,13 +153,13 @@ EOF
 # Copy ps.plt to different name for eta model
 #mv ps.plt ps.plt_eta
 if (-e eta3.gif) then
- 
+
   cp eta3.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f06.gif
   cp eta3.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f18.gif
   cp eta3.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f30.gif
   cp eta3.gif.003 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f42.gif
   cp eta3.gif.004 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_2m_850mb_700mb_temps_12hr_precip_f54.gif
- 
+
   mv eta3.gif eta3_09.gif
   mv eta3.gif.001 eta3_10.gif
   mv eta3.gif.002 eta3_11.gif

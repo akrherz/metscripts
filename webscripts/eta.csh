@@ -23,7 +23,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 
     GDFILE	= $grid
     GDATTIM	= ${dattim}
-    DEVICE	= $device 
+    DEVICE	= $device
     PANEL	= 0
     TEXT	= 1.2/21//hw
     CONTUR	= 1
@@ -48,7 +48,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
     FLINE	=
     CTYPE	= c
     HLSYM   = 2;1.5//21//hw
-    HILO    = ! 25;2/H#;L#///30;30/y 
+    HILO    = ! 25;2/H#;L#///30;30/y
     STNPLT  = 0
     \$mapfil=HIPOWO.GSF
     list
@@ -70,9 +70,9 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
     GDFILE	= $grid
     GVCORD  = pres
-    DEVICE	= $device 
+    DEVICE	= $device
     GLEVEL	= 500
-    GVECT	= WND ! 
+    GVECT	= WND !
     WIND    = bk31
     SKIP    = /8;8 !
     GFUNC	= (avor(wnd))           !(avor(wnd))           !hght
@@ -104,7 +104,7 @@ endif
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
     GDFILE	= $grid
-    DEVICE	= $device 
+    DEVICE	= $device
     GDATTIM	= ${dattim}
     GLEVEL	= 0                !0                !0           !700
     GVCORD	= none             !none             !none        !pres
@@ -173,7 +173,7 @@ endif
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GDFILE	= $grid
     GDATTIM	= ${dattim}
-    DEVICE	= $device 
+    DEVICE	= $device
     PANEL	= 0
     TEXT	= 1.2/21//hw
     CONTUR	= 1
@@ -219,7 +219,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
     GDFILE	= $grid
     GDATTIM	= ${dattim}
-    DEVICE	= $device 
+    DEVICE	= $device
     PANEL	= 0
     TEXT	= 1.2/21//hw
     CONTUR	= 1
@@ -264,7 +264,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
     GDFILE	= $grid
     GDATTIM	= ${dattim}
-    DEVICE	= $device 
+    DEVICE	= $device
     PANEL	= 0
     TEXT	= 1.2/21//hw
     CONTUR	= 1
@@ -276,11 +276,11 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     PROJ	= lcc/25;-95;25
     LATLON	= 0
 
-    GLEVEL	= 850                      !850     
-    GVCORD	= pres                     !pres    
-    GFUNC	= dwpc                     !hght   
-    SCALE	= 0                        ! 0    
-    CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20  ! 30     
+    GLEVEL	= 850                      !850
+    GVCORD	= pres                     !pres
+    GFUNC	= dwpc                     !hght
+    SCALE	= 0                        ! 0
+    CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20  ! 30
     LINE	= 7/5/1/2                  ! 2/1/2/1
     GVECT	= WND
     WIND    = bk4
@@ -289,8 +289,8 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
     FLINE	= 0;26-16--1;14-8--2 !
     CTYPE	= c/f ! c
-    HLSYM   = 
-    HILO    = 
+    HLSYM   =
+    HILO    =
     STNPLT  = 0
     \$mapfil=HIPOWO.GSF
     list
@@ -301,7 +301,7 @@ EOF
 
 if (-e eta1.gif) then
   csh ../scripts/saveEta.csh eta1 eta85P${date}${1} eta85P
-endif 
+endif
 
 ###################################################
 # NAM 250 hPa plot
@@ -312,7 +312,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     PROJ	= lcc/25;-95;25
     CLRBAR  = 31
 
-    GLEVEL	= 250  
+    GLEVEL	= 250
     GVCORD	= pres !pres  !pres
     GFUNC	= sped !hght  !div(wnd)
     GVECT	= ! !
@@ -322,10 +322,10 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     SCALE	= 0 ! 0 ! 5
     SKIP	= 0 ! 0 ! 0
     FINT    = 10;20;30;40;50;60;70;80;90!!
-    FLINE	= 0;26-16--2;14-8--2 
+    FLINE	= 0;26-16--2;14-8--2
     CTYPE	= f              !c
-    HLSYM   = 
-    HILO    = 
+    HLSYM   =
+    HILO    =
     STNPLT  = 0
     \$mapfil=HIPOWO.GSF
     list
@@ -336,19 +336,19 @@ EOF
 
 if (-e eta1.gif) then
   csh ../scripts/saveEta.csh eta1 eta25P${date}${1} eta25P
-endif 
+endif
 
 ################################################
 # NAM 700 hPa Plots
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
-    DEVICE	= $device 
+    DEVICE	= $device
     GAREA	= grid
     PROJ	= lcc/25;-95;25
     CLRBAR  = 31
 
-    GLEVEL	= 700 
+    GLEVEL	= 700
     GVCORD  = pres !pres !pres
     GFUNC	= relh  !tmpc           !hght
     GVECT   = wnd  ! !
@@ -356,9 +356,9 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     skip    = /4;4 !
     CINT	= 10;30;50;70;90 !-20;-10;-5;0;4;6;8;10;12;14;16;18   !30
     LINE	= 7/5/1/2               !4/2/2/1             !4/1/2/2
-    HLSYM   = 
-    HILO    = 
-    SCALE	= 0  !0 !0 
+    HLSYM   =
+    HILO    =
+    SCALE	= 0  !0 !0
     TITLE	= 5/-2/ ~ NAM  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
     FINT	= 10;30;50;70;90
     FLINE	= 0;11;17-23-2
@@ -392,7 +392,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 
     GDFILE	= $grid
     GDATTIM	= ${dattim}
-    DEVICE	= $device 
+    DEVICE	= $device
     PANEL	= 0
     TEXT	= 1.2/21//hw
     CONTUR	= 1
@@ -406,9 +406,9 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GLEVEL  = 0                !2      !2
     GVCORD  = none             !hght   !hght
     GFUNC=quo(mul(cape,hlcy@3000:0%pdly),160000.)!dwpf!tmpf
-    GVECT   =                  !       !  
-    WIND    =                  !       ! 
-    SKIP    = 0                !       ! 
+    GVECT   =                  !       !
+    WIND    =                  !       !
+    SKIP    = 0                !       !
     SCALE   = 0 ! 0 ! 0
     CINT    = 0;0.5;1;1.5;2;3;4;5;6;7;8!45;50;55;60;65;70;75;80!60;70;75;80;85;90;95;100
     LINE    = 3/1/1/2           !15/1/2 ! 31/1/1/1
@@ -416,7 +416,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     FINT    = 1;1.5;2;3;4;5;6;7;8!
     FLINE   = 0;26-16--2;14-8--2
     CTYPE   = f                !c ! c
-    HILO    =                  !  ! 
+    HILO    =                  !  !
     STNPLT  =0
     \$mapfil=HIPOWO.GSF
     list

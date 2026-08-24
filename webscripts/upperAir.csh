@@ -27,24 +27,24 @@ gdplot << EOF > $LOGFILE
     GLEVEL   = 850
     GVCORD   = pres
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = tmpc    !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5       !   30
     LINE     = 19/1/1   !  32/1/3
     FINT     = 5
     FLINE    = 25-22--1;18-16--1;14-10--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 850 MB HEIGHTS AND TEMPERATURES (C)
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     STNPLT   =
 
     list
@@ -57,8 +57,8 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     \$RESPOND = YES
     AREA     = ${AREA}
     GAREA    = ${AREA}
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
     LEVELS   = 850
@@ -93,24 +93,24 @@ gdplot << EOF >> $LOGFILE
     GLEVEL   = 700
     GVCORD   = pres
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = tmpc    !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5       !   30
     LINE     = 19/1/1   !  32/1/3
     FINT     = 5
     FLINE    = 25-22--1;18-16--1;14-10--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 700 MB HEIGHTS AND TEMPERATURES (C)
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     STNPLT   =
     list
     run
@@ -122,7 +122,7 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     AREA     = ${AREA}
     GAREA    = ${AREA}
     SATFIL   =
-    RADFIL   = 
+    RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
     LEVELS   = 700
@@ -167,25 +167,25 @@ $GEMEXE/gdplot << EOF >> $LOGFILE
     GLEVEL   = 500
     GVCORD   = pres
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = tmpc    !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5       !   60
     LINE     = 19/1/1   !  32/1/3
     FINT     = 5
     FLINE    = 25-22--1;18-16--1;14-10--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 500 MB HEIGHTS AND TEMPERATURES (C)
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   =  
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -195,7 +195,7 @@ EOF
 $GEMEXE/snmap << EOF >> $LOGFILE
     AREA     = ${AREA}
     GAREA    = ${AREA}
-    SATFIL   = 
+    SATFIL   =
     RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
@@ -232,25 +232,25 @@ $GEMEXE/gdplot << EOF >> $LOGFILE
     GLEVEL   = 500
     GVCORD   = pres
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = avor(obs)   !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 2       !   60
     LINE     = 19/5/1   !   31/1/3
     FINT     = 10;14;18;20;22;24;26;28;30
     FLINE    = 0;24-22--1;18-16--1;14-4--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 500 MB HEIGHTS AND VORTICITY
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   = 
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -260,7 +260,7 @@ EOF
 $GEMEXE/snmap << EOF >> $LOGFILE
     AREA     = ${AREA}
     GAREA    = ${AREA}
-    SATFIL   = 
+    SATFIL   =
     RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
@@ -305,26 +305,26 @@ $GEMEXE/gdplot << EOF >> $LOGFILE
 
     GLEVEL   = 300
     GVCORD   = pres
-    SKIP     = /4/4	
-    SCALE    = 
+    SKIP     = /4/4
+    SCALE    =
     GFUNC    = sped    !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 25;35;45;55;65;75;85;95      !   120
     LINE     = 19/1/1   !   32/1/3
     FINT     = 25;35;45;55;65;75;85;95
     FLINE    = 27-21--3;18-16--2;14-4--2
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 300 MB HEIGHTS AND WIND SPEEDS (M/S)
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   =  
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -335,7 +335,7 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     AREA     = ${AREA}
     GAREA    = ${AREA}
     SATFIL   = /data/mcidas/AREA02\03\;04;05;06
-    RADFIL   = 
+    RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
     LEVELS   = 300
@@ -351,8 +351,8 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     PROJ     = lcc/35;-95;20
     FILTER   = no
     TEXT     = 0.8/21/1/HW
-    LUTFIL   = 
-    STNPLT   = 
+    LUTFIL   =
+    STNPLT   =
     list
     run
 
@@ -362,32 +362,32 @@ EOF
 
 $GEMEXE/gpend
 
-$GEMEXE/gdplot << EOF >> $LOGFILE	
+$GEMEXE/gdplot << EOF >> $LOGFILE
     GDFILE	= $grid
     GDATTIM	= f00
     DEVICE	= GIF|up200.gif|720;540
     GLEVEL   = 200
     GVCORD   = pres
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = sped    !   hght
     CTYPE    = c/f     !   c
-    CONTUR   = 
+    CONTUR   =
     CINT     = 25;35;45;55;65;75;85;95      !   120
     LINE     = 19/1/1   !   32/1/3
     FINT     = 25;35;45;55;65;75;85;95
     FLINE    = 27-21--3;18-16--2;14-4--2
-    HILO     = 	
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = 0
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ 200 MB HEIGHTS AND WIND SPEEDS (M/S)
     TEXT     = 1.0/2//hw
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   =  
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -398,14 +398,14 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     AREA     = ${AREA}
     GAREA    = ${AREA}
     SATFIL   = /data/mcidas/AREA02\03\;04;05;06
-    RADFIL   = 
+    RADFIL   =
     SNPARM   = ;tmpc;dpdc;rstz;brbk:1:2
     DATTIM   = ${date}/${1}
     LEVELS   = 200
     VCOORD   = pres
     SNFILE   = $sgrid
     COLORS   = 32
-    LATLON   = 0	
+    LATLON   = 0
     MARKER   = 32/15
     TITLE    = 0
     CLEAR    = no
@@ -414,8 +414,8 @@ $GEMEXE/snmap << EOF >> $LOGFILE
     PROJ     = lcc/35;-95;20
     FILTER   = no
     TEXT     = 0.8/21/1/HW
-    LUTFIL   = 
-    STNPLT   = 
+    LUTFIL   =
+    STNPLT   =
     list
     run
 

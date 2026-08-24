@@ -1,4 +1,4 @@
-#!/bin/csh 
+#!/bin/csh
 # 23 Feb 2003:	Use _gif driver
 #		Do error checking...
 # 24 Feb 2003:	Don't use a variable called 'time'
@@ -32,10 +32,10 @@ $GEMEXE/gpmap_gf << EOF > $LOGFILE
 DEVICE   = $device
 GAREA    = dset
 PROJ     = rad
-SATFIL   = 
+SATFIL   =
 RADFIL   = ${grid}
 LATLON   = 0
-PANEL    = 0 
+PANEL    = 0
 TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - ${tm}
 #TITLE    = 1
 TEXT     = 1/2/1/hw

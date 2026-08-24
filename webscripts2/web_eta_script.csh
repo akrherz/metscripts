@@ -10,7 +10,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f12-f60-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -35,7 +35,7 @@ FINT	=
 FLINE	=
 CTYPE	= c
 HLSYM   = 2;1.5//21//hw
-HILO    = ! 25;2/H#;L#///30;30/y 
+HILO    = ! 25;2/H#;L#///30;30/y
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -71,7 +71,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 GDFILE	= $grid
 GVCORD  = pres
 GLEVEL	= 500
-GVECT	= WND ! 
+GVECT	= WND !
 WIND    = bk31
 SKIP    = /6;6 !
 GFUNC	= sm9s(sm9s(sm9s(avor(wnd)))) !sm9s(sm9s(sm9s(avor(wnd))))   !hght
@@ -144,7 +144,7 @@ EOF
 #mv ps.plt ps.plt_eta
 
 cp eta.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f12.gif
-cp eta.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f24.gif 
+cp eta.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f24.gif
 cp eta.gif.002 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f36.gif
 cp eta.gif.003 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f48.gif
 cp eta.gif.004 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_12hr_precip_MSLP_700VV_f60.gif
@@ -158,5 +158,3 @@ keep eta_09.gif eta_1[0-2].gif eta_12b.gif
 mv eta_09.gif eta_1[0-2].gif eta_12b.gif $WEBPIX/
 #
 #endif
-
-

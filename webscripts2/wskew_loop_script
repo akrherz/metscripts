@@ -1,17 +1,17 @@
-#! /bin/csh 
+#! /bin/csh
 ########################################################
-# Script for plotting 6am and noon temps for use 
+# Script for plotting 6am and noon temps for use
 # primarily in MT206 forecast contest
 #
 # Can be run from cron.
-# 
+#
 ########################################################
 #
-# source the 5.2 environment variables 
+# source the 5.2 environment variables
 #
 source /nawips/Gemenviron
 setenv DISPLAY mesonet.agron.iastate.edu:3.0
-# cd to temporary directory. This is where the Nmeta file 
+# cd to temporary directory. This is where the Nmeta file
 # will be kept while the script is running.
 #
 cd ~/webscripts/www

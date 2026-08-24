@@ -14,7 +14,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f06-f60-06
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -28,9 +28,9 @@ LATLON	= 0
 GLEVEL  = 0                !2      !2
 GVCORD  = none             !hght   !hght
 GFUNC=quo(mul(cape,hlcy@3000:0%hght),160000.)!dwpf!tmpf
-GVECT   =                  !       !  
-WIND    =                  !       ! 
-SKIP    = 0                !       ! 
+GVECT   =                  !       !
+WIND    =                  !       !
+SKIP    = 0                !       !
 SCALE   = 0 ! 0 ! 0
 CINT    = 0;0.5;1;1.5;2;3;4;5;6;7;8!45;50;55;60;65;70;75;80!60;70;75;80;85;90;95;100
 LINE    = 3/1/1/2           !15/1/2 ! 31/1/1/1
@@ -38,7 +38,7 @@ TITLE   = 5/-2/ ~ ETA EHI, SFC T & DEW POINT   |^ EHI, SFC T & DEW POINT ! 0
 FINT    = 1;1.5;2;3;4;5;6;7;8!
 FLINE   = 0;26-16--2;14-8--2
 CTYPE   = f                !c ! c
-HILO    =                  !  ! 
+HILO    =                  !  !
 STNPLT  =0
 \$mapfil=hipowo.gsf
 list
@@ -76,14 +76,14 @@ keep eta6_0[1-8].gif eta6_08b.gif eta6_08c.gif
 mv eta6_0[1-8].gif eta6_08b.gif eta6_08c.gif $WEBPIX/
 #
 #
-#! /bin/csh 
+#! /bin/csh
 # Run GDPLOT and generate ETA model gfs
 #
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f60
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -95,8 +95,8 @@ GAREA	= grid
 PROJ	= lcc/25;-95;25
 LATLON	= 0
 
-GLEVEL	= 850                      !850   !850  
-GVCORD	= pres                     !pres   !pres 
+GLEVEL	= 850                      !850   !850
+GVCORD	= pres                     !pres   !pres
 GFUNC	= dwpc                     !hght   !tmpc
 SCALE	= 0                        ! 0    !0
 CINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20  ! 30     !4
@@ -108,8 +108,8 @@ SKIP	= /4;4 !
 FINT	= -20;-16;-12;-8;-4;0;4;8;10;12;14;16;18;20
 FLINE	= 27;26-16--1;14-8--2 !
 CTYPE	= f ! c  ! c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -124,7 +124,7 @@ EOF
 # Copy ps.plt to different name for eta model
 cp eta6.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_850mb_heights_T_Td_winds_f60.gif
 mv eta6.gif eta6_09.gif
-keep eta6_09.gif 
+keep eta6_09.gif
 mv eta6_09.gif $WEBPIX/
 #
 # Run GDPLOT and generate ETA model gfs
@@ -136,7 +136,7 @@ PROJ	= lcc/25;-95;25
 GDATTIM	= f60
 CLRBAR  = 31
 
-GLEVEL	= 700 
+GLEVEL	= 700
 GVCORD  = pres !pres !pres
 GFUNC	= relh  !tmpc           !hght
 GVECT   = wnd  ! !
@@ -144,9 +144,9 @@ WIND    = bk2
 skip    = /4;4 !
 CINT	= 10;30;50;70;90 !-20;-10;-5;0;4;6;8;10;12;14;16;18   !30
 LINE	= 7/5/1/2               !32/1/1/1             !4/1/2/2
-HLSYM   = 
-HILO    = 
-SCALE	= 0  !0 !0 
+HLSYM   =
+HILO    =
+SCALE	= 0  !0 !0
 TITLE	= 5/-2/ ~ ETA  700 HEIGHTS, RH and TEMP|^ 700 HGHT, RH AND TEMP!0!0
 FINT	= 10;30;50;70;90
 FLINE	= 15;11;17-23-2
@@ -164,7 +164,7 @@ EOF
 # Copy ps.plt to different name for eta model
 cp eta6.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_700mb_heights_RH_Temps_f60.gif
 mv eta6.gif eta6_10.gif
-keep eta6_10.gif 
+keep eta6_10.gif
 mv eta6_10.gif $WEBPIX/
 
 # Run GDPLOT and generate ETA model gfs
@@ -176,7 +176,7 @@ PROJ	= lcc/25;-95;25
 CLRBAR  = 31
 GDATTIM	= f60
 
-GLEVEL	= 250  
+GLEVEL	= 250
 GVCORD	= pres !pres  !pres
 GFUNC	= sped !hght  !sm9s(sm9s(sm9s(sm9s(div(wnd)))))
 GVECT	= ! !
@@ -186,10 +186,10 @@ TITLE	= 5/-2/ ~ ETA  250 MB HGHTS, WIND SPEED (M/S) AND DIV|^ 250 MB HGHTS, SPEE
 SCALE	= 0 ! 0 ! 5
 SKIP	= 0 ! 0 ! 0
 FINT    = 10;20;30;40;50;60;70;80;90!!
-FLINE	= 0;26-16--2;14-8--2 
+FLINE	= 0;26-16--2;14-8--2
 CTYPE	= f              !c
-HLSYM   = 
-HILO    = 
+HLSYM   =
+HILO    =
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -204,7 +204,7 @@ EOF
 #mv ps.plt ps.plt_eta
 cp eta6.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_250mb_heights_winds_DIV_f60.gif
 mv eta6.gif eta6_11.gif
-keep eta6_11.gif 
+keep eta6_11.gif
 mv eta6_11.gif $WEBPIX/
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -283,21 +283,21 @@ GAREA   = 22;-120;53;-64
 PROJ    = lcc/25;-95;25
 LATLON  = 0
 
-GLEVEL  = 2   !0 
+GLEVEL  = 2   !0
 GVCORD  = hght!none
 GFUNC   = mul(150,sub(tmpc,dwpc))!quo(mul(cape%none@0,hlcy@3000:0%hght),160000.)
-GVECT   =     
-WIND    = 
-SKIP    = 
+GVECT   =
+WIND    =
+SKIP    =
 SCALE   = 0!0
-CINT    = 200!1 
+CINT    = 200!1
 LINE    = 2/1/1/2 !5/1/2/2
 TITLE   = 5/-2/ ~ ETA LCL HEIGHT AND EHI|^ LCL HEIGHT & EHI
 FINT    = 200;600;800;1000;1200;1400;1600;1800;2000;2200;2400;2600;3000;3600;4600 !
 FLINE   = 0;27-16--1;14-8--1 !
-CTYPE   = c/f         !c 
-HILO    =                  
-STNPLT  =0 
+CTYPE   = c/f         !c
+HILO    =
+STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run
@@ -347,18 +347,18 @@ LATLON  = 0
 GLEVEL  = 180:0
 GVCORD  = pdly
 GFUNC   = quo(sub(mul(lft4,-644.),416.),mul(mag(vsub(wnd@600%pres,wnd@10%hght)),mag(vsub(wnd@600%pres,wnd@10%hght))))
-GVECT   =     
-WIND    = 
-SKIP    = 
+GVECT   =
+WIND    =
+SKIP    =
 SCALE   = 0!0
 CINT    = 15;25;35;45;75
-LINE    = 5/1/1/3 
+LINE    = 5/1/1/3
 TITLE   = 5/-2/ ~ ETA BRN| ETA BRN
 FINT    =  15;25;35;45;75
-FLINE   = 0;26-16--2;14-8--2 
+FLINE   = 0;26-16--2;14-8--2
 CTYPE   = cf
-HILO    =                  
-STNPLT  =0 
+HILO    =
+STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run

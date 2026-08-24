@@ -9,7 +9,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f06-f48-06
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -34,7 +34,7 @@ FINT	=
 FLINE	=
 CTYPE	= c
 HLSYM   = 2;1.5//21//hw
-HILO    = ! 25;2/H#;L#//20/15;15/y 
+HILO    = ! 25;2/H#;L#//20/15;15/y
 STNPLT  = 0
 \$mapfil=
 list
@@ -67,7 +67,7 @@ mv gfs.gif.004 gfs_05.gif
 mv gfs.gif.005 gfs_06.gif
 mv gfs.gif.006 gfs_07.gif
 mv gfs.gif.007 gfs_08.gif
-keep gfs_0[1-8].gif 
+keep gfs_0[1-8].gif
 mv gfs_0[1-8].gif $WEBPIX/
 
 #
@@ -77,7 +77,7 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f60-f120-12
-DEVICE	= $device 
+DEVICE	= $device
 PANEL	= 0
 TEXT	= 1.2/21//hw
 CONTUR	= 1
@@ -102,7 +102,7 @@ FINT	=
 FLINE	=
 CTYPE	= c
 HLSYM   = 2;1.5//21//hw
-HILO    = ! 25;2/H#;L#//20/30;30/y 
+HILO    = ! 25;2/H#;L#//20/30;30/y
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 list
@@ -126,7 +126,7 @@ mv gfs.gif.002 gfs_10a.gif
 mv gfs.gif.003 gfs_10b.gif
 mv gfs.gif.004 gfs_10c.gif
 mv gfs.gif.005 gfs_10d.gif
-keep gfs_09.gif gfs_10.gif gfs_10[a-d].gif 
+keep gfs_09.gif gfs_10.gif gfs_10[a-d].gif
 mv gfs_09.gif gfs_10.gif gfs_10[a-d].gif $WEBPIX/
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -135,7 +135,7 @@ GDFILE	= $grid
 GDATTIM	= f06-f48-06
 GVCORD  = pres
 GLEVEL	= 500
-GVECT	= WND ! 
+GVECT	= WND !
 WIND    = bk31/0.9
 SKIP    = /16;16 ! /16;16
 GFUNC	= sm9s(sm9s(avor(wnd)))           !sm9s(sm9s(avor(wnd)))     !hght
@@ -177,7 +177,7 @@ mv gfs.gif.004 gfs_15.gif
 mv gfs.gif.005 gfs_16.gif
 mv gfs.gif.006 gfs_17.gif
 mv gfs.gif.007 gfs_18.gif
-keep gfs_1[1-8].gif 
+keep gfs_1[1-8].gif
 mv gfs_1[1-8].gif $WEBPIX/
 
 $GEMEXE/gdplot_gf << EOF >> $LOGFILE
@@ -186,7 +186,7 @@ GDFILE	= $grid
 GDATTIM	= f60-f120-12
 GVCORD  = pres
 GLEVEL	= 500
-GVECT	= WND ! 
+GVECT	= WND !
 WIND    = bk31/0.9
 SKIP    = /16;16 !
 GFUNC	= sm9s(sm9s(avor(wnd)))           !sm9s(sm9s(avor(wnd)))     !hght
@@ -224,7 +224,7 @@ mv gfs.gif.002 gfs_20a.gif
 mv gfs.gif.003 gfs_20b.gif
 mv gfs.gif.004 gfs_20c.gif
 mv gfs.gif.005 gfs_20d.gif
-keep gfs_19.gif gfs_20.gif gfs_20[a-d].gif 
+keep gfs_19.gif gfs_20.gif gfs_20[a-d].gif
 mv gfs_19.gif gfs_20.gif gfs_20[a-d].gif $WEBPIX/
 
 # Run GDPLOT and generate GFS model gfs
@@ -247,7 +247,7 @@ HLSYM   = 2;1.5//21//hw
 STNPLT  = 0
 \$mapfil=hipowo.gsf
 
-DEVICE	= $device 
+DEVICE	= $device
 GDATTIM	= F06
 TITLE	= 5/-2/ ~ GFS 6-HR TOTAL PCPN, MSLP, 700 VV|^ 6-HRLY TOT PCPN, MSLP, 700 VV!0!0
 GFUNC   = (quo(APCP06,25.4)) !(quo(APCP06,25.4)) ! emsl@0%none !VVEL@700%pres
@@ -353,5 +353,5 @@ mv gfs.gif.011 gfs_30b.gif
 mv gfs.gif.012 gfs_30c.gif
 mv gfs.gif.013 gfs_30d.gif
 
-keep gfs_2?.gif gfs_30.gif gfs_30[a-d].gif 
+keep gfs_2?.gif gfs_30.gif gfs_30[a-d].gif
 mv gfs_2?.gif gfs_30.gif gfs_30[a-d].gif $WEBPIX/

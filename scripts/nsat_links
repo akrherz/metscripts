@@ -16,18 +16,18 @@
 #
 # nids_links:Set up links to the directory containing McIDAS AREA files.
 #
-#            The date,time, platform, and resolution are determined 
-#            by opening the AREA file and extracting the valid time 
+#            The date,time, platform, and resolution are determined
+#            by opening the AREA file and extracting the valid time
 #            information using a program called areaInfo.
 #
-#            areaInfo returns 3 strings: 
+#            areaInfo returns 3 strings:
 #                TYPE_yymmdd_hhmm  Platform Resolution
 #
 #            TYPE is IR, VIS, WV
-#            
+#
 #            Platform is one of the reconized satellite types:
 #                GOES-7, GOES-8, GOES-9, etc.
-#            
+#
 #            Resolution is the resolution of the image such as:
 #                1km, 2km, 4km, 8km, 16km, 24km
 #
@@ -58,11 +58,11 @@ source /home/ldm/nawips/Gemenviron
 #
 set areadir=/data/mcidas
 
-# Directory to hold the links 
+# Directory to hold the links
 
 set NSAT=/data/gempak/images/sat
 
-############################################################################## 
+##############################################################################
 # AREA files via IDD
 # AREA012x = Goes-W vis  (Goes-7 / Goes-9)
 # AREA013x = Goes-W ir   (Goes-7 / Goes-9)

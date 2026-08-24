@@ -1,5 +1,5 @@
 #!/bin/csh
-# This file simply saves the ETA plots into the current and archive 
+# This file simply saves the ETA plots into the current and archive
 
 source ../COMMON.csh
 
@@ -7,42 +7,42 @@ if (-f ${1}.gif ) then
 	mv ${1}.gif $CURRENT/${3}F00.gif
 else
 	cp black.gif $CURRENT/${3}F00.gif
-	echo Did not find "${1}.gif" 
+	echo Did not find "${1}.gif"
 endif
 
 if (-f ${1}.gif.001 ) then
 	mv ${1}.gif.001 $CURRENT/${3}F06.gif
 else
 	cp black.gif $CURRENT/${3}F06.gif
-	echo Did not find "${1}.gif.001" 
+	echo Did not find "${1}.gif.001"
 endif
 
 if (-f ${1}.gif.002 ) then
 	mv ${1}.gif.002 $CURRENT/${3}F12.gif
 else
 	cp black.gif $CURRENT/${3}F12.gif
-	echo Did not find "${1}.gif.002" 
+	echo Did not find "${1}.gif.002"
 endif
 
 if (-f ${1}.gif.003 ) then
 	mv ${1}.gif.003 $CURRENT/${3}F18.gif
 else
 	cp black.gif $CURRENT/${3}F18.gif
-	echo Did not find "${1}.gif.003" 
+	echo Did not find "${1}.gif.003"
 endif
 
 if (-f ${1}.gif.004 ) then
 	mv ${1}.gif.004 $CURRENT/${3}F24.gif
 else
 	cp black.gif $CURRENT/${3}F24.gif
-	echo Did not find "${1}.gif.004" 
+	echo Did not find "${1}.gif.004"
 endif
 
 if (-f ${1}.gif.005 ) then
 	mv ${1}.gif.005 $CURRENT/${3}F30.gif
 else
 	cp black.gif $CURRENT/${3}F30.gif
-	echo Did not find "${1}.gif.005" 
+	echo Did not find "${1}.gif.005"
 endif
 
 if (-f ${1}.gif.006 ) then
@@ -55,14 +55,14 @@ if (-f ${1}.gif.007 ) then
 	mv ${1}.gif.007 $CURRENT/${3}F42.gif
 else
 	cp black.gif $CURRENT/${3}F42.gif
-	echo Did not find "${1}.gif.007" 
+	echo Did not find "${1}.gif.007"
 endif
 
 if (-f ${1}.gif.008 ) then
 	mv ${1}.gif.008 $CURRENT/${3}F48.gif
 else
 	cp black.gif $CURRENT/${3}F48.gif
-	echo Did not find "${1}.gif.008" 
+	echo Did not find "${1}.gif.008"
 endif
 
 if (-f ${1}.gif.009 ) then
@@ -76,5 +76,5 @@ if (-f ${1}.gif.010 ) then
 	mv ${1}.gif.010 $CURRENT/${3}F60.gif
 else
 	cp black.gif $CURRENT/${3}F60.gif
-	echo Did not find "${1}.gif.010" 
+	echo Did not find "${1}.gif.010"
 endif

@@ -26,9 +26,9 @@ $GEMEXE/oagrid << EOF > $LOGFILE
     EXTEND = 2;2;2;2
     DTAAREA= 15;-140;60;-50
     SOURCE = SF
-    SNFILE = 
+    SNFILE =
     SFFILE = $grid
-    SNPARM = 
+    SNPARM =
     SFPARM = tmpc;dwpc;pmsl;uwnd;vwnd
     DATTIM = ${date}/${hh}00
     LEVELS = 0
@@ -50,7 +50,7 @@ $GEMEXE/oabsfc << EOF >> $LOGFILE
     SFPARM  = tmpc;dwpc;pmsl;uwnd;vwnd
     DATTIM  = ${date}/${hh}00
     DTAAREA = 15;-140;60;-50
-    GUESS   =                  
+    GUESS   =
     GAMMA   = 0.3
     SEARCH  = 20/EX
     NPASS   = 2
@@ -84,24 +84,24 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GLEVEL   = 0
     GVCORD   = none
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = tmpf
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5
     LINE     = 32/1/1
     FINT     = 5
     FLINE    = 28-16--1;14-11--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE TEMPERATURE (F) AND WINDS
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   = 
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -126,24 +126,24 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GLEVEL   = 0
     GVCORD   = none
     SKIP     = /1/1
-    SCALE    = 
+    SCALE    =
     GFUNC    = tmpf
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5
     LINE     = 32/1/1
     FINT     = 5
     FLINE    = 28-16--1;14-11--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE TEMPERATURE (F) AND WINDS
-    SATFIL   = 
-    RADFIL   = 
-    STNPLT   = 
+    SATFIL   =
+    RADFIL   =
+    STNPLT   =
     list
     run
 
@@ -162,26 +162,26 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = dwpf
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5
     LINE     = 32/1/1
     FINT     = 5
     FLINE    = 28-16--1;14-4--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE DEW POINT (F) AND WINDS
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 
@@ -198,26 +198,26 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /1/1
-    SCALE    = 
+    SCALE    =
     GFUNC    = dwpf
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 5
     LINE     = 32/1/1
     FINT     = 5
     FLINE    = 28-16--1;14-4--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE DEW POINT (F) AND WINDS
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 
@@ -235,27 +235,27 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = div((smul(mixr(dwpc,pmsl),wnd)))
     CTYPE    = c/f
-    CONTUR   = 
-    CINT     = -12;-8;-6;-4;-2;0;2;4;6;8 
+    CONTUR   =
+    CINT     = -12;-8;-6;-4;-2;0;2;4;6;8
     LINE     = 32/1/1
-    FINT     = -12;-8;-6;-4;-2;0;2;4;6;8  
+    FINT     = -12;-8;-6;-4;-2;0;2;4;6;8
     FLINE    = 15-18-1;21;22;23-27-1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE MOISTURE DIVERGENCE
     CLEAR    = yes
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 
@@ -270,27 +270,27 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /1/1
-    SCALE    = 
+    SCALE    =
     GFUNC    = div((smul(mixr(dwpc,pmsl),wnd))
     CTYPE    = c/f
-    CONTUR   = 
-    CINT     = -12;-8;-6;-4;-2;0;2;4;6;8 
+    CONTUR   =
+    CINT     = -12;-8;-6;-4;-2;0;2;4;6;8
     LINE     = 32/1/1
-    FINT     = -12;-8;-6;-4;-2;0;2;4;6;8  
+    FINT     = -12;-8;-6;-4;-2;0;2;4;6;8
     FLINE    = 15-18-1;21;22;23-27-1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE MOISTURE DIVERGENCE
     CLEAR    = yes
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 
@@ -308,27 +308,27 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /4/4
-    SCALE    = 
+    SCALE    =
     GFUNC    = thte(pmsl,tmpc,dwpc)
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 4
     LINE     = 32/1/1
-    FINT     = 4  
+    FINT     = 4
     FLINE    = 30-16--1;14-3--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE THETA-E (K)
     CLEAR    = yes
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 
@@ -347,27 +347,27 @@ $GEMEXE/gdplot_gf << EOF >> $LOGFILE
     GVCORD   = none
     PANEL    = 0
     SKIP     = /1/1
-    SCALE    = 
+    SCALE    =
     GFUNC    = thte(pmsl,tmpc,dwpc)
     CTYPE    = c/f
-    CONTUR   = 
+    CONTUR   =
     CINT     = 4
     LINE     = 32/1/1
-    FINT     = 4  
+    FINT     = 4
     FLINE    = 30-16--1;14-3--1
-    HILO     = 
+    HILO     =
     HLSYM    = 2;1.5//21//hw
     CLRBAR   = 0
-    GVECT    = WND 
+    GVECT    = WND
     WIND     = bk32/1.0/2
-    REFVEC   = 
+    REFVEC   =
     TITLE    = 31/-2/~ SURFACE THETA-E (K)
     CLEAR    = yes
-    SATFIL   = 
-    RADFIL   = 
+    SATFIL   =
+    RADFIL   =
     PROJ     = lcc
     LATLON   = 0
-    STNPLT   = 
+    STNPLT   =
     list
     run
 

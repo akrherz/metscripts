@@ -25,7 +25,7 @@ gdplot << EOF > $LOGFILE
     HLSYM	 = 2;1/3/2//HW
     CLRBAR   = 0
     GVECT	 =
-    WIND	 = 
+    WIND	 =
     REFVEC   =
     TITLE   = 31/-2/~ 500 mb HGHT
     TEXT	 = 1.2/21/1/HW
@@ -37,7 +37,7 @@ gdplot << EOF > $LOGFILE
     DEVICE   = $device
     STNPLT   =
     SATFIL   = /data/mcidas/AREA02\03\;04;05;06
-    RADFIL   = 
+    RADFIL   =
     LUTFIL   =
 
     list
@@ -53,7 +53,7 @@ gdplot << EOF >> $LOGFILE
     CLEAR    = no
     list
     run
-    
+
     exit
 EOF
 #
@@ -86,7 +86,7 @@ gdplot << EOF >> $LOGFILE
     HLSYM	 = 2;1/3/2//HW
     CLRBAR   = 0
     GVECT	 =
-    WIND	 = 
+    WIND	 =
     REFVEC   =
     TITLE   = 31/-2/~ 500 mb HGHT
     TEXT	 = 1.2/21/1/HW
@@ -98,7 +98,7 @@ gdplot << EOF >> $LOGFILE
     DEVICE   = $device
     STNPLT   =
     SATFIL   = /data/mcidas/AREA02\03\;04;05;06
-    RADFIL   = 
+    RADFIL   =
     LUTFIL   =
 
     list
@@ -113,7 +113,7 @@ $GEMEXE/gdplot << EOF >> $LOGFILE
     CLEAR    = no
     list
     run
-    
+
     exit
 EOF
 

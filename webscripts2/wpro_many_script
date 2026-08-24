@@ -1,18 +1,18 @@
-#! /bin/csh 
+#! /bin/csh
 ########################################################
-# Script for plotting 6am and noon temps for use 
+# Script for plotting 6am and noon temps for use
 # primarily in MT206 forecast contest
 #
 # Can be run from cron.
-# 
+#
 ########################################################
 #
-# source the 5.2 environment variables 
+# source the 5.2 environment variables
 #
 source /nawips/Gemenviron
 setenv DISPLAY mesonet.agron.iastate.edu:3
 #
-# cd to temporary directory. This is where the Nmeta file 
+# cd to temporary directory. This is where the Nmeta file
 # will be kept while the script is running.
 #
 cd ~/webscripts/www
@@ -51,15 +51,15 @@ set full=`grep ^K${station} stationlist`
 #
 $GEMEXE/sncross2 << EOF >> $LOGFILE
 \$RESPOND = YES
-DEVICE	= $device 
+DEVICE	= $device
 CXSTNS   = $station
-SNPARM   =     
+SNPARM   =
 SNFILE   = $grid
 DATTIM   = all
 VCOORD   = hght
 PTYPE    = lin
 YAXIS    = 500/12000/1000
-TAXIS    = 
+TAXIS    =
 LINE     = 31/1/1/1
 BORDER   = 5
 CINT     = 5
@@ -72,8 +72,8 @@ TEXT     = 0.8/21/1/hw
 CURVE    = 2
 CLRBAR   = 0
 CONTUR   = 3/3
-FINT     = 
-FLINE    = 
+FINT     =
+FLINE    =
 CTYPE    = c
 list
 run

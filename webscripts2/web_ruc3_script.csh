@@ -89,8 +89,8 @@ STNPLT =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
-                                                                                                 
+
+
 exit
 EOF
 
@@ -108,7 +108,7 @@ if (-e ruc2.gif) then
   mv ruc2.gif.002 ruc2_23.gif
   mv ruc2.gif.003 ruc2_24.gif
   mv ruc2.gif.004 ruc2_25.gif
-  keep ruc2_2[1-5].gif 
+  keep ruc2_2[1-5].gif
   mv ruc2_2[1-5].gif $WEBPIX/
 endif
 
@@ -134,8 +134,8 @@ STNPLT =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
-                                                                                                 
+
+
 exit
 EOF
 
@@ -177,7 +177,7 @@ HILO    =                  !
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
+
 exit
 EOF
 
@@ -194,7 +194,7 @@ if (-e ruc2.gif) then
   mv ruc2.gif.002 ruc2_33.gif
   mv ruc2.gif.003 ruc2_34.gif
   mv ruc2.gif.004 ruc2_35.gif
-  keep ruc2_3[1-5].gif 
+  keep ruc2_3[1-5].gif
   mv ruc2_3[1-5].gif $WEBPIX/
 endif
 
@@ -220,17 +220,17 @@ STNPLT  =0
 \$mapfil=hipowo.gsf
 list
 run
-                                                                                                 
+
 exit
 EOF
 
 if (-e ruc2.gif) then
- 
+
   cp ruc2.gif ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f00.gif
   cp ruc2.gif.001 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f03.gif
   cp ruc2.gif.002 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f06.gif
   cp ruc2.gif.003 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f09.gif
-  cp ruc2.gif.004 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f12.gif  
+  cp ruc2.gif.004 ${ddir2}/pix/ruc/${1}z/ruc_${DATE}${1}_EHI_sfcT_Td_f12.gif
 
   mv ruc2.gif ruc2_36.gif
   mv ruc2.gif.001 ruc2_37.gif
