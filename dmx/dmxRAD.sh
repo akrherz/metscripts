@@ -60,7 +60,9 @@ EOF
 
 cd "$CURRENT/restricted"
 for num in 11 10 9 8 7 6 5 4 3 2 1 0; do
-    mv "dmxRAD_${num}.gif" "dmxRAD_$((num + 1)).gif" || true
+     if [[ -e "dmxRAD_${num}.gif" ]]; then
+        mv -- "dmxRAD_${num}.gif" "dmxRAD_$((num + 1)).gif"
+    fi
 done
 
 cd ~/projects/metscripts/dmx
