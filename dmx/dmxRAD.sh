@@ -16,11 +16,8 @@ export DATA_DIR=/data/gempak/nexrad/NIDS/DMX/N0B
 export LOGFILE=www_rad.log
 
 device="GF|dmxRAD.gif"
-# shellcheck disable=SC2012
-file="$(ls -1t ${DATA_DIR}/ | head -1)"
-if [ -z "$file" ]; then
-  exit 2
-fi
+file="$(find ${DATA_DIR}/ -type f -printf '%T@ %p\n' | sort -n | tail -n 1 | cut -d' ' -f2-)"
+file="$(basename "$file")"
 
 tmp="$(echo "${file}" | cut -c 7-12)"
 tmp2="$(echo "${file}" | cut -c 14-16)"
@@ -60,7 +57,7 @@ EOF
 
 cd "$CURRENT/restricted"
 for num in 11 10 9 8 7 6 5 4 3 2 1 0; do
-    mv "dmxRAD_${num}.gif" "dmxRAD_$((num + 1)).gif"
+    mv "dmxRAD_${num}.gif" "dmxRAD_$((num + 1)).gif" || true
 done
 
 cd ~/projects/metscripts/dmx
