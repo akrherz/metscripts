@@ -17,6 +17,9 @@ export LOGFILE=www_rad.log
 
 device="GF|dmxRAD.gif"
 file="$(find ${DATA_DIR}/ -type f -printf '%T@ %p\n' | sort -n | tail -n 1 | cut -d' ' -f2-)"
+if [[ -z "$file" ]]; then
+    exit 2
+fi
 file="$(basename "$file")"
 
 tmp="$(echo "${file}" | cut -c 7-12)"
