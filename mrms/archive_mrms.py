@@ -26,7 +26,8 @@ def do(mydir: str, reporterror: bool = True):
         "rsync",
         "-a",
         "--remove-source-files",
-        f'--rsync-path="mkdir -p {remotepath} && rsync"',
+        "--rsync-path",
+        f"mkdir -p {remotepath} && rsync",
         zipfn,
         f"meteor_ldm@iemvm2.agron.iastate.edu:{remotepath}",
     )
