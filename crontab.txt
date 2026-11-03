@@ -95,8 +95,8 @@ PROJDIR="projects/metscripts"
 48 3,4 * * * cd $PROJDIR/webscripts; csh eta.csh 00
 4 18 * * * cd $PROJDIR/webscripts; csh gfs.csh 12
 48 5 * * * cd $PROJDIR/webscripts; csh gfs.csh 00
-29 16 * * * cd $PROJDIR/webscripts; csh advL.csh 12
-03 06 * * * cd $PROJDIR/webscripts; csh advL.csh 00
+29 16 * * * cd $PROJDIR/webscripts; bash advL.sh 12
+03 06 * * * cd $PROJDIR/webscripts; bash advL.sh 00
 50 1 * * * cd $PROJDIR/webscripts; csh ruc.csh 00
 50 4 * * * cd $PROJDIR/webscripts; csh ruc.csh 03
 50  7 * * * cd $PROJDIR/webscripts; csh ruc.csh 06

@@ -1,11 +1,12 @@
+#!/bin/bash
 
-source ../COMMON.csh
+. ../COMMON.sh
 
-setenv LOGFILE  logs/www_advl.log
+LOGFILE="logs/www_advl.log"
 
-set grid=${MODEL}/nam/${DATE}${1}_nam212.gem
+grid="${MODEL}/rrfs/${DATE}${1}_rrfs13km.gem"
 
-$GEMEXE/gdplot_gf << EOF > $LOGFILE
+gdplot_gf << EOF > $LOGFILE
     GDFILE  = $grid
     GDATTIM = f00
     DEVICE  = GF|advL.gif|720;540
@@ -32,7 +33,7 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
     WIND = BK32
 
     REFVEC   =
-    TITLE    = 31/-1/~ 850-500mb Lapse Rates (K/km), 700mb winds
+    TITLE    = 31/-1/~ 850-500mb RRFS Lapse Rates (K/km), 700mb winds
     TEXT     = 1.0/2//hw
     SATFIL   =
     RADFIL   =
@@ -44,4 +45,4 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
     exit
 EOF
 
-mv advL.gif $CURRENT
+mv advL.gif "$CURRENT"
