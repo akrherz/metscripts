@@ -1,13 +1,13 @@
-#!/bin/csh
+#!/bin/bash
 
-source ../COMMON.csh
-setenv LOGFILE 	logs/www_theta.log
+. ../COMMON.sh
+LOGFILE=logs/www_theta.log
 
-set device="GF|theta.gif"
-set grid=${MODEL}/nam/${DATE}${1}_nam212.gem
-set grid1=tht1.grd
+device="GF|theta.gif"
+grid=${MODEL}/rrfs/${DATE}${1}_rrfs13km.gem
+grid1=tht1.grd
 
-$GEMEXE/gdvint << EOF > $LOGFILE
+gdvint << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE = $grid
 GDOUTF = $grid1
@@ -23,7 +23,8 @@ run
 
 exit
 EOF
-$GEMEXE/gdvint << EOF >> $LOGFILE
+
+gdvint << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE = $grid
 GDOUTF = $grid1
@@ -39,7 +40,8 @@ run
 
 exit
 EOF
-$GEMEXE/gdvint << EOF >> $LOGFILE
+
+gdvint << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE = $grid
 GDOUTF = $grid1
@@ -55,7 +57,8 @@ run
 
 exit
 EOF
-$GEMEXE/gdvint << EOF >> $LOGFILE
+
+gdvint << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE = $grid
 GDOUTF = $grid1
@@ -74,9 +77,9 @@ EOF
 gpend
 
 ##GAREA   = 17;-122;53;-60
-# Run GDPLOT and generate ETA isentropic gfs
+# Run GDPLOT and generate RRFS isentropic gfs
 #
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f12-f48-12
@@ -100,7 +103,7 @@ CINT	= ! 30        ! 1;2;3;4;5;6;8;10;12;14;16;18
 LINE	= ! 2/1/2    !   32/5/2
 GVECT	=  wnd
 WIND  =   bk32//3
-TITLE	= ! 5/-2/ ~ ETA 290K PRES(RED), MIXR(BLACK), RH(color)
+TITLE	= ! 5/-2/ ~ RRFS 290K PRES(RED), MIXR(BLACK), RH(color)
 SKIP	=  /2;2 ! /2;2
 FINT	= 20 ! !
 FLINE	= 20;18-17--1;21-24 !  !
@@ -120,7 +123,7 @@ EOF
 #
 #$GEMEXE/gpend
 
-# Copy ps.plt to different name for eta model
+# Copy ps.plt to different name for RRFS model
 
 cp theta.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_290K_theta_mixr_RH_f12.gif
 cp theta.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_290K_theta_mixr_RH_f24.gif
@@ -134,9 +137,9 @@ mv theta.gif.002 $WEBPIX//theta_03.gif
 mv theta.gif.003 $WEBPIX//theta_04.gif
 #keep $WEBPIX//theta_0[1-4].gif
 #
-# Run GDPLOT and generate ETA model gfs
+# Run GDPLOT and generate RRFS model gfs
 #
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f12-f48-12
@@ -160,7 +163,7 @@ CINT	= ! 30        ! 1;2;3;4;5;6;8;10;12;14;16;18
 LINE	= ! 2/1/2    !   32/5/2
 GVECT	= wnd
 WIND  =   bk32//3
-TITLE	= ! 5/-2/ ~ ETA 300K PRES(RED), MIXR(BLACK), RH(color)
+TITLE	= ! 5/-2/ ~ RRFS 300K PRES(RED), MIXR(BLACK), RH(color)
 SKIP	= /2;2 ! /2;2
 FINT	= 20 ! !
 FLINE	= 20;18-17--1;21-24 ! !
@@ -179,7 +182,7 @@ EOF
 #
 #$GEMEXE/gpend
 
-# Copy ps.plt to different name for eta model
+# Copy ps.plt to different name for RRFS model
 
 cp theta.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_300K_theta_mixr_RH_f12.gif
 cp theta.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_300K_theta_mixr_RH_f24.gif
@@ -193,9 +196,9 @@ mv theta.gif.002 $WEBPIX//theta_07.gif
 mv theta.gif.003 $WEBPIX//theta_08.gif
 #keep $WEBPIX//theta_0[5-8].gif
 
-# Run GDPLOT and generate ETA model gfs
+# Run GDPLOT and generate RRFS model gfs
 #
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid1
 GDATTIM	= f12-f48-12
@@ -219,7 +222,7 @@ CINT	= ! 30        ! 1;2;3;4;5;6;8;10;12;14;16;18
 LINE	= ! 2/1/2    !   32/5/2
 GVECT	=  wnd
 WIND  =    bk32//3
-TITLE	= ! 5/-2/ ~ ETA 310K PRES(RED), MIXR(BLACK), RH(color)
+TITLE	= ! 5/-2/ ~ RRFS 310K PRES(RED), MIXR(BLACK), RH(color)
 SKIP	= /2;2 ! /2;2
 FINT	= 20 ! !
 FLINE	= 20;18-17;21-24 ! !
@@ -238,7 +241,7 @@ EOF
 #
 #$GEMEXE/gpend
 
-# Copy ps.plt to different name for eta model
+# Copy ps.plt to different name for RRFS model
 
 cp theta.gif ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_310K_theta_mixr_RH_f12.gif
 cp theta.gif.001 ${ddir2}/pix/eta/${1}z/eta_${DATE}${1}_310K_theta_mixr_RH_f24.gif

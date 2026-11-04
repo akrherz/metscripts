@@ -44,8 +44,8 @@ PROJDIR="projects/metscripts"
 54  5 * * * cd $PROJDIR/webscripts2; csh web_gfsqvec_script.csh 00
 
 12 13 * * * cd $PROJDIR/webscripts2; csh web_mrf_script.csh 00
- 0 18 * * * cd $PROJDIR/webscripts2; csh web_theta_script.csh 12
-30  6 * * * cd $PROJDIR/webscripts2; csh web_theta_script.csh 00
+ 0 18 * * * cd $PROJDIR/webscripts2; bash web_theta_script.sh 12
+30  6 * * * cd $PROJDIR/webscripts2; bash web_theta_script.sh 00
 50  1 * * * cd $PROJDIR/webscripts2; sh do_rucs.sh 00
 50  4 * * * cd $PROJDIR/webscripts2; sh do_rucs.sh 03
 50  7 * * * cd $PROJDIR/webscripts2; sh do_rucs.sh 06
