@@ -1,11 +1,11 @@
-source ../COMMON.csh
+#!/bin/bash
 
-setenv LOGFILE  logs/www_lap.log
+. ../COMMON.sh
 
-set grid=${MODEL}/nam/${DATE}${1}_nam212.gem
-set grid1=${MODEL}/nam/${DATE}${1}_nam211.gem
+LOGFILE=logs/www_lap.log
+grid="${MODEL}/rrfs/${DATE}${1}_rrfs13km.gem"
 
-$GEMEXE/gdplot_gf << EOF > $LOGFILE
+gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
         GDFILE  = $grid
         GDATTIM = f00
@@ -45,15 +45,15 @@ $GEMEXE/gdplot_gf << EOF > $LOGFILE
         exit
 EOF
 
-cp lap.gif ${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_850mb_500mb_lapse_rates_700mb_winds_f00.gif
-if (-e lap.gif) then
-  mv lap.gif $WEBPIX/lap01.gif
-  keep $WEBPIX/lap01.gif
-endif
+cp lap.gif "${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_850mb_500mb_lapse_rates_700mb_winds_f00.gif"
+if [ -e lap.gif ]; then
+  mv lap.gif "$WEBPIX/lap01.gif"
+  keep "$WEBPIX/lap01.gif"
+fi
 
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE  = $grid
 GDATTIM = f00
@@ -88,17 +88,17 @@ run
 exit
 EOF
 
-cp lap2.gif ${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_CAPE_CIN_850mb_wind_f00.gif
-if (-e lap2.gif) then
-mv lap2.gif $WEBPIX/lap02.gif
-keep $WEBPIX/lap02.gif
-endif
+cp lap2.gif "${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_CAPE_CIN_850mb_wind_f00.gif"
+if [ -e lap2.gif ]; then
+mv lap2.gif "$WEBPIX/lap02.gif"
+keep "$WEBPIX/lap02.gif"
+fi
 
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
-GDFILE  = $grid1
+GDFILE  = $grid
 GDATTIM = F00
 DEVICE  = GF|lap3.gif|720;540
 GLEVEL  = 0!180:0!3000:0
@@ -124,17 +124,17 @@ run
 exit
 EOF
 
-cp lap3.gif ${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_PWTR_LI_Helicity_f00.gif
-if (-e lap3.gif) then
-mv lap3.gif $WEBPIX/lap03.gif
-keep $WEBPIX/lap03.gif
-endif
+cp lap3.gif "${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_PWTR_LI_Helicity_f00.gif"
+if [ -e lap3.gif ]; then
+mv lap3.gif "$WEBPIX/lap03.gif"
+keep "$WEBPIX/lap03.gif"
+fi
 
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
-GDFILE  = $grid1
+GDFILE  = $grid
 GDATTIM = f00
 DEVICE  = GF|lap4.gif|720;540
 PANEL   = 0
@@ -169,8 +169,8 @@ run
 exit
 EOF
 
-cp lap4.gif ${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_EHI_sfcT_Td_f00.gif
-if (-e lap4.gif) then
-mv lap4.gif $WEBPIX/lap04.gif
-keep $WEBPIX/lap04.gif
-endif
+cp lap4.gif "${ddir}${DATE2}/pix/lapse/${1}z/${DATE}${1}_EHI_sfcT_Td_f00.gif"
+if [ -e lap4.gif ]; then
+mv lap4.gif "$WEBPIX/lap04.gif"
+keep "$WEBPIX/lap04.gif"
+fi

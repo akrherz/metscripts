@@ -21,8 +21,8 @@ PROJDIR="projects/metscripts"
 40 1  * * * cd $PROJDIR/newdifax2; csh get_difax.csh 00
 
 # NAM stuff
-01 04 * * * cd $PROJDIR/webscripts2; csh wlapse_script.csh 00
-01 15 * * * cd $PROJDIR/webscripts2; csh wlapse_script.csh 12
+01 04 * * * cd $PROJDIR/webscripts2; bash wlapse_script.sh 00
+01 15 * * * cd $PROJDIR/webscripts2; bash wlapse_script.sh 12
 
 # GFS MOS
 55 04 * * * cd $PROJDIR/webscripts2; csh wmos_gfs00_script.csh 00

@@ -55,12 +55,6 @@ mkdir -p ${ddir}/${date1}/gempak/mos
 mygetter gempak/mos/${date2}00_gmos.gem ${ddir}/${date1}/gempak/mos/${date2}00_gmos.gem
 mygetter gempak/mos/${date2}12_gmos.gem ${ddir}/${date1}/gempak/mos/${date2}12_gmos.gem
 
-mkdir -p ${ddir}/${date1}/gempak/model
-mygetter gempak/model/nam/${date2}00_nam212.gem ${ddir}/${date1}/gempak/model/${date2}00_nam212.gem
-mygetter gempak/model/nam/${date2}12_nam212.gem ${ddir}/${date1}/gempak/model/${date2}12_nam212.gem
-mygetter gempak/model/nam/${date2}00_nam211.gem ${ddir}/${date1}/gempak/model/${date2}00_nam211.gem
-mygetter gempak/model/nam/${date2}12_nam211.gem ${ddir}/${date1}/gempak/model/${date2}12_nam211.gem
-
 mkdir -p ${ddir}/${date1}/gempak/surface/sao
 mygetter gempak/surface/${date2}_sao.gem ${ddir}/${date1}/gempak/surface/sao/${date2}_sao.gem
 
