@@ -11,7 +11,8 @@ export WEBPIX=/home/www/meteor/html/pix
 
 export DISPLAY=:1
 
-export ddir="/mnt/mtarchive2/data/"
+ddir="/mnt/mtarchive2/data/"
+export ddir
 
 yy="$(date -u +%y)"
 export yy

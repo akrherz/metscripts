@@ -1,5 +1,5 @@
 #!/bin/bash
 
-csh wupa_script.csh "$1"
-csh wupb_script.csh "$1"
-csh wup1_script.csh "$1"
+bash wupa_script.sh "$1"
+bash wupb_script.sh "$1"
+bash wup1_script.sh "$1"

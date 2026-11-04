@@ -1,7 +1,7 @@
-#! /bin/csh
+#!/bin/bash
 
-source ~/projects/metscripts/COMMON.csh
-setenv LOGFILE 	logs/www_uaa.log
+. ../COMMON.csh
+LOGFILE=logs/www_uaa.log
 #
 # Remove last upper grid file and upper ps plot
 #
@@ -12,14 +12,14 @@ rm -f uaa_0?.gif >& /dev/null
 # Set some variables for GDPLOT run
 #
 #set device="invgps|||C|P"
-set device="GF"
-set grid=/data/gempak/model/nam/${DATE}${1}_nam212.gem
+ddir="/mnt/mtarchive2/data/"
+grid=/data/gempak/model/rrfs/${DATE}${1}_rrfs13km.gem
 #
 # Run GDPLOT and generate analyzed 850,700 and 500 maps
 #
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF > $LOGFILE
+gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00
@@ -70,13 +70,13 @@ EOF
 # disabled 2001.04.13 geff@iastate.edu
 #$GEMEXE/gpend
 #
-cp uaa_01.gif ${ddir}${DATE2}/pix/ua/${DATE}${1}_850mb_heights_temps.gif
-mv uaa_01.gif $WEBPIX/uaa_01.gif
-keep $WEBPIX/uaa_01.gif
+cp uaa_01.gif "${ddir}${DATE2}/pix/ua/${DATE}${1}_850mb_heights_temps.gif"
+mv uaa_01.gif "$WEBPIX/uaa_01.gif"
+keep "$WEBPIX/uaa_01.gif"
 
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00
@@ -116,6 +116,6 @@ EOF
 # disabled 2001.04.13 geff@iastate.edu
 #$GEMEXE/gpend
 #
-cp uaa_02.gif ${ddir}${DATE2}/pix/ua/${DATE}${1}_700mb_heights_temps.gif
-mv uaa_02.gif $WEBPIX/uaa_02.gif
-keep $WEBPIX/uaa_02.gif
+cp uaa_02.gif "${ddir}${DATE2}/pix/ua/${DATE}${1}_700mb_heights_temps.gif"
+mv uaa_02.gif "$WEBPIX/uaa_02.gif"
+keep "$WEBPIX/uaa_02.gif"

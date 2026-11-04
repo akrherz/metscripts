@@ -1,8 +1,8 @@
-#! /bin/csh
+#!/bin/bash
 
-source ~/projects/metscripts/COMMON.csh
+. ../COMMON.sh
 
-setenv LOGFILE logs/www_uab
+LOGFILE=logs/www_uab
 #
 # Remove last upper grid file and upper ps plot
 #
@@ -12,12 +12,12 @@ rm -f uab_0?.gif >& /dev/null
 #
 # Set some variables for GDPLOT run
 #
-set device="GF"
-set grid=/data/gempak/model/nam/${DATE}${1}_nam212.gem
+ddir="/mnt/mtarchive2/data/"
+grid=/data/gempak/model/rrfs/${DATE}${1}_rrfs13km.gem
 #
 # Run GDPLOT and generate analyzed 850,700 and 500 maps
 #
-$GEMEXE/gdplot_gf << EOF > $LOGFILE
+gdplot_gf << EOF > $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00
@@ -69,13 +69,13 @@ EOF
 #$GEMEXE/gpend
 #
 # Rename ps plot to indicate upper air data
-cp uab_01.gif ${ddir}${DATE2}/pix/ua/${DATE}${1}_500mb_heights_temps.gif
-mv uab_01.gif $WEBPIX/uab_01.gif
-keep $WEBPIX/uab_01.gif
+cp uab_01.gif "${ddir}${DATE2}/pix/ua/${DATE}${1}_500mb_heights_temps.gif"
+mv uab_01.gif "$WEBPIX/uab_01.gif"
+keep "$WEBPIX/uab_01.gif"
 
 # changed 2001.04.13 geff@iastate.edu
 #$GEMEXE/gdplot << EOF >> $LOGFILE
-$GEMEXE/gdplot_gf << EOF >> $LOGFILE
+gdplot_gf << EOF >> $LOGFILE
 \$RESPOND = YES
 GDFILE	= $grid
 GDATTIM	= f00
@@ -116,6 +116,6 @@ EOF
 #$GEMEXE/gpend
 #
 # Rename ps plot to indicate upper air data
-cp uab_02.gif ${ddir}${DATE2}/pix/ua/${DATE}${1}_500mb_heights_vorticity.gif
-mv uab_02.gif $WEBPIX/uab_02.gif
-keep $WEBPIX/uab_02.gif
+cp uab_02.gif "${ddir}${DATE2}/pix/ua/${DATE}${1}_500mb_heights_vorticity.gif"
+mv uab_02.gif "$WEBPIX/uab_02.gif"
+keep "$WEBPIX/uab_02.gif"
