@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../COMMON.csh
+. ../COMMON.sh
 LOGFILE=logs/www_uaa.log
 #
 # Remove last upper grid file and upper ps plot
